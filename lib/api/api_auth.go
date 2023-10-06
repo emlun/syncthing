@@ -163,7 +163,8 @@ func passwordAuthHandler(cookieName string, guiCfg config.GUIConfiguration, ldap
 
 func basicAuthHandler(cookieName string, guiCfg config.GUIConfiguration, ldapCfg config.LDAPConfiguration, evLogger events.Logger) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if _, ok := attemptBasicAuth(r, guiCfg, ldapCfg, evLogger); ok {
+		if username, ok := attemptBasicAuth(r, guiCfg, ldapCfg, evLogger); ok {
+			createSession(cookieName, username, guiCfg, evLogger, w, r)
 			http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
 			return
 		}

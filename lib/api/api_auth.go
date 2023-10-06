@@ -161,6 +161,18 @@ func passwordAuthHandler(cookieName string, guiCfg config.GUIConfiguration, ldap
 	})
 }
 
+func basicAuthHandler(cookieName string, guiCfg config.GUIConfiguration, ldapCfg config.LDAPConfiguration, evLogger events.Logger) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if _, ok := attemptBasicAuth(r, guiCfg, ldapCfg, evLogger); ok {
+			http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
+			return
+		}
+
+		unauthorized(w)
+		return
+	})
+}
+
 func attemptBasicAuth(r *http.Request, guiCfg config.GUIConfiguration, ldapCfg config.LDAPConfiguration, evLogger events.Logger) (string, bool) {
 	username, password, ok := r.BasicAuth()
 	if !ok {

@@ -957,6 +957,10 @@ func TestApiCache(t *testing.T) {
 }
 
 func startHTTP(cfg config.Wrapper) (string, context.CancelFunc, error) {
+	return startHTTPWithShutdownTimeout(cfg, 0)
+}
+
+func startHTTPWithShutdownTimeout(cfg config.Wrapper, shutdownTimeout time.Duration) (string, context.CancelFunc, error) {
 	m := new(modelmocks.Model)
 	assetDir := "../../gui"
 	eventSub := new(eventmocks.BufferedSubscription)
@@ -983,6 +987,10 @@ func startHTTP(cfg config.Wrapper) (string, context.CancelFunc, error) {
 	kdb := db.NewMiscDataNamespace(mdb)
 	svc := New(protocol.LocalDeviceID, cfg, assetDir, "syncthing", m, eventSub, diskEventSub, events.NoopLogger, discoverer, connections, urService, mockedSummary, errorLog, systemLog, false, kdb).(*service)
 	svc.started = addrChan
+
+	if shutdownTimeout > 0*time.Millisecond {
+		svc.shutdownTimeout = shutdownTimeout
+	}
 
 	// Actually start the API service
 	supervisor := suture.New("API test", suture.Spec{
@@ -2785,6 +2793,9 @@ func guiConfigEqual(a config.GUIConfiguration, b config.GUIConfiguration) bool {
 func TestWebauthnConfigChanges(t *testing.T) {
 	t.Parallel()
 
+	// This test needs a longer-than-default shutdown timeout when running on GitHub Actions
+	shutdownTimeout := testutil.IfNotCI(0, 5000*time.Millisecond)
+
 	const testAPIKey = "foobarbaz"
 	initialGuiCfg := config.GUIConfiguration{
 		RawAddress:     "127.0.0.1:0",
@@ -2823,7 +2834,7 @@ func TestWebauthnConfigChanges(t *testing.T) {
 		})
 
 		startHttpServer := func(t *testing.T) (func(string) *http.Response, func(string, string, any)) {
-			baseURL, cancel, err := startHTTP(w)
+			baseURL, cancel, err := startHTTPWithShutdownTimeout(w, shutdownTimeout)
 			t.Cleanup(cancel)
 			testutil.FatalIfErr(t, err)
 

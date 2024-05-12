@@ -2794,7 +2794,7 @@ func TestWebauthnConfigChanges(t *testing.T) {
 	t.Parallel()
 
 	// This test needs a longer-than-default shutdown timeout when running on GitHub Actions
-	shutdownTimeout := testutil.IfNotCI(0, 2000*time.Millisecond)
+	shutdownTimeout := testutil.IfNotCI(0, 1000*time.Millisecond)
 
 	const testAPIKey = "foobarbaz"
 	initialGuiCfg := config.GUIConfiguration{

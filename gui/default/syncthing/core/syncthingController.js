@@ -589,19 +589,44 @@ angular.module('syncthing.core')
             }).error($scope.emitHTTPError);
         }
 
-        $scope.isAuthEnabled = function () {
-            // This function should match IsAuthEnabled() in guiconfiguration.go
-            var guiCfg = $scope.config && $scope.config.gui;
-            if (guiCfg) {
-                return (guiCfg.authMode === 'ldap'
-                    || (guiCfg.user && guiCfg.password)
-                    || ((($scope.webauthn || {}).state || {}).credentials || []).some(function (c) {
-                        return c.rpId === guiCfg.webauthnRpId;
-                    })
-                );
-            }
-            return false;
+        function withGuiCfgDefaultArg(fn) {
+            return function (guiCfg) {
+                return fn(guiCfg || ($scope.config && $scope.config.gui) || {});
+            };
+        }
+
+        $scope.isAuthEnabled = withGuiCfgDefaultArg(function (guiCfg) {
+            return guiCfg.requireAuth || false;
+        });
+
+        $scope.isAuthConfigured = withGuiCfgDefaultArg(function (guiCfg) {
+            return $scope.isPasswordAuthConfigured(guiCfg) || $scope.isWebauthnAuthConfigured(guiCfg);
+        });
+
+        $scope.isPasswordAuthConfigured = withGuiCfgDefaultArg(function (guiCfg) {
+            return (guiCfg.authMode === 'ldap'
+                || (guiCfg.user && guiCfg.password)
+            );
+        });
+
+        /** At least one WebAuthn credential is configured */
+        $scope.isWebauthnAuthConfigured = function () {
+            return ((($scope.webauthn || {}).state || {}).credentials || []).length > 0;
         };
+
+        /** WebAuthn is configured and usable with the current RP ID setting */
+        $scope.isWebauthnAuthReady = withGuiCfgDefaultArg(function (guiCfg) {
+            return ($scope.isWebauthnAuthConfigured() &&
+                $scope.webauthn.state.credentials.some(function (c) {
+                    return c.rpId === guiCfg.webauthnRpId;
+                })
+            );
+        });
+
+        /** Authentication is configured and usable with the current RP ID setting */
+        $scope.isAuthReady = withGuiCfgDefaultArg(function (guiCfg) {
+            return $scope.isPasswordAuthConfigured(guiCfg) || $scope.isWebauthnAuthReady(guiCfg);
+        });
 
         function refreshNoAuthWarning() {
             if (!$scope.system || !$scope.config || !$scope.config.gui) {
@@ -620,7 +645,7 @@ angular.module('syncthing.core')
                 && !$scope.isAuthEnabled()
                 && !guiCfg.insecureAdminAccess;
 
-            if ($scope.isAuthEnabled()) {
+            if ($scope.isAuthEnabled() && $scope.isAuthConfigured()) {
                 $scope.dismissNotification('guiAuthentication');
             }
         }
@@ -2011,6 +2036,26 @@ angular.module('syncthing.core')
             } else {
                 return false;
             }
+        };
+
+        $scope.settingsValid = function () {
+            for (var key in $scope.settingsValid.validators) {
+                var validateFunc = $scope.settingsValid.validators[key];
+                if (validateFunc()) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        $scope.settingsValid.validators = {
+            authenticationPossible: function () {
+                return !($scope.isAuthEnabled($scope.tmpGUI) && !$scope.isAuthReady($scope.tmpGUI));
+            },
+        };
+        $scope.settingsValid.warnings = {
+            authenticationConfiguredButNotEnabled: function () {
+                return !$scope.isAuthEnabled($scope.tmpGUI) && $scope.isAuthConfigured($scope.tmpGUI);
+            },
         };
 
         $scope.saveSettings = function () {

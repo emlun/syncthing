@@ -19,7 +19,7 @@ import (
 	"github.com/syncthing/syncthing/lib/rand"
 )
 
-func (c GUIConfiguration) IsPasswordAuthEnabled() bool {
+func (c GUIConfiguration) IsPasswordAuthConfigured() bool {
 	return c.AuthMode == AuthModeLDAP || (len(c.User) > 0 && len(c.Password) > 0)
 }
 

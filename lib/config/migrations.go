@@ -114,6 +114,9 @@ func migrateToConfigV38(cfg *Configuration) {
 	if cfg.GUI.WebauthnOrigin == "" {
 		cfg.GUI.WebauthnOrigin = defaultGuiCfg.WebauthnOrigin
 	}
+
+	// requireAuth option added
+	cfg.GUI.RequireAuth = cfg.GUI.IsPasswordAuthConfigured()
 }
 
 func migrateToConfigV37(cfg *Configuration) {

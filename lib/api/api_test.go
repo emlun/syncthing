@@ -602,6 +602,53 @@ func httpPostCsrf(url string, body any, csrfTokenName, csrfTokenValue string, t 
 	return httpRequest(http.MethodPost, url, body, "", "", "", "", csrfTokenName, csrfTokenValue, nil, t)
 }
 
+func TestRequireAuth(t *testing.T) {
+	t.Parallel()
+
+	httpGetNoAuth := func(url string) *http.Response {
+		t.Helper()
+		return httpGet(url, "", "", "", "", nil, t)
+	}
+
+	startServer := func(t *testing.T, requireAuth bool) string {
+		cfg := newMockedConfig()
+		cfg.GUIReturns(withTestDefaults(config.GUIConfiguration{
+			RequireAuth: requireAuth,
+			RawAddress:  "127.0.0.1:0",
+		}))
+		baseURL, cancel, _, err := startHTTP(cfg)
+		if err != nil {
+			t.Fatal(err)
+		}
+		t.Cleanup(cancel)
+		return baseURL
+	}
+
+	t.Run("unauthed request is rejected when RequireAuth is set", func(t *testing.T) {
+		t.Parallel()
+		baseUrl := startServer(t, true)
+		resp := httpGetNoAuth(baseUrl + "/meta.js")
+		if resp.StatusCode != http.StatusForbidden {
+			t.Errorf("Unexpected non-403 return code %d for unauthed request", resp.StatusCode)
+		}
+		if hasSessionCookie(resp.Cookies()) {
+			t.Errorf("Unexpected session cookie for unauthed request")
+		}
+	})
+
+	t.Run("unauthed request is accepted when RequireAuth is not set", func(t *testing.T) {
+		t.Parallel()
+		baseUrl := startServer(t, false)
+		resp := httpGetNoAuth(baseUrl + "/meta.js")
+		if resp.StatusCode != http.StatusOK {
+			t.Errorf("Unexpected non-200 return code %d for unauthed request", resp.StatusCode)
+		}
+		if hasSessionCookie(resp.Cookies()) {
+			t.Errorf("Unexpected session cookie for unauthed request")
+		}
+	})
+}
+
 func TestHTTPLogin(t *testing.T) {
 	t.Parallel()
 
@@ -623,6 +670,7 @@ func TestHTTPLogin(t *testing.T) {
 	testWith := func(sendBasicAuthPrompt bool, expectedOkStatus int, expectedFailStatus int, path string) {
 		cfg := newMockedConfig()
 		cfg.GUIReturns(withTestDefaults(config.GUIConfiguration{
+			RequireAuth:         true,
 			User:                "üser",
 			Password:            "$2a$10$IdIZTxTg/dCNuNEGlmLynOjqg4B1FvDKuIV5e0BB3pnWVHNb8.GSq", // bcrypt of "räksmörgås" in UTF-8
 			RawAddress:          "127.0.0.1:0",
@@ -790,6 +838,7 @@ func TestHtmlFormLogin(t *testing.T) {
 
 	cfg := newMockedConfig()
 	cfg.GUIReturns(withTestDefaults(config.GUIConfiguration{
+		RequireAuth:         true,
 		User:                "üser",
 		Password:            "$2a$10$IdIZTxTg/dCNuNEGlmLynOjqg4B1FvDKuIV5e0BB3pnWVHNb8.GSq", // bcrypt of "räksmörgås" in UTF-8
 		SendBasicAuthPrompt: false,
@@ -2204,6 +2253,7 @@ func TestWebauthnAuthentication(t *testing.T) {
 		t.Helper()
 		cfg := newMockedConfig()
 		cfg.GUIReturns(withTestDefaults(config.GUIConfiguration{
+			RequireAuth:    true,
 			User:           "user",
 			RawAddress:     "localhost:0",
 			WebauthnRpId:   rpId,
@@ -2644,49 +2694,6 @@ func TestWebauthnAuthentication(t *testing.T) {
 		testutil.AssertEqual(t, t.Errorf, options.Response.AllowedCredentials[0].CredentialID.String(), "BBBB",
 			"Expected only credentials with RpId=%s in allowCredentials, got: %v", "localhost", options.Response.AllowedCredentials)
 	})
-
-	t.Run("Auth is required with a WebAuthn credential set", func(t *testing.T) {
-		t.Parallel()
-		httpGet, _, _ := startServer(t, "", "", []config.WebauthnCredential{
-			{
-				ID:   "AAAA",
-				RpId: "localhost",
-			},
-		})
-		csrfRresp := httpGet("/", "", "")
-		csrfRresp.Body.Close()
-		var csrfTokenName, csrfTokenValue string
-		for _, cookie := range csrfRresp.Cookies() {
-			if strings.HasPrefix(cookie.Name, "CSRF-Token") {
-				csrfTokenName = cookie.Name
-				csrfTokenValue = cookie.Value
-				break
-			}
-		}
-
-		resp := httpGet("/rest/config", csrfTokenName, csrfTokenValue)
-		testutil.AssertEqual(t, t.Errorf, resp.StatusCode, http.StatusForbidden,
-			"Expected auth to be required with WebAuthn credential set")
-	})
-
-	t.Run("No auth required when no password and no WebAuthn credentials set", func(t *testing.T) {
-		t.Parallel()
-		httpGet, _, _ := startServer(t, "", "", []config.WebauthnCredential{})
-		csrfRresp := httpGet("/", "", "")
-		csrfRresp.Body.Close()
-		var csrfTokenName, csrfTokenValue string
-		for _, cookie := range csrfRresp.Cookies() {
-			if strings.HasPrefix(cookie.Name, "CSRF-Token") {
-				csrfTokenName = cookie.Name
-				csrfTokenValue = cookie.Value
-				break
-			}
-		}
-
-		resp := httpGet("/rest/config", csrfTokenName, csrfTokenValue)
-		testutil.AssertEqual(t, t.Errorf, resp.StatusCode, http.StatusOK,
-			"Expected no auth to be required with neither password nor WebAuthn credentials set")
-	})
 }
 
 func TestPasswordOrWebauthnAuthentication(t *testing.T) {
@@ -2704,9 +2711,10 @@ func TestPasswordOrWebauthnAuthentication(t *testing.T) {
 
 		cfg := newMockedConfig()
 		cfg.GUIReturns(withTestDefaults(config.GUIConfiguration{
-			User:       "user",
-			Password:   password,
-			RawAddress: "localhost:0",
+			RequireAuth: true,
+			User:        "user",
+			Password:    password,
+			RawAddress:  "localhost:0",
 
 			// Don't need TLS in this test because the password enables the auth middleware,
 			// and there's no browser to prevent us from generating a WebAuthn response without HTTPS

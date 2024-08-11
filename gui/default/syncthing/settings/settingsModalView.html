@@ -127,7 +127,28 @@
           </div>
 
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input id="UseTLS" type="checkbox" ng-model="tmpGUI.requireAuth" />
+                    <span class="{{
+                                  !settingsValid.validators.authenticationPossible()
+                                  ? 'text-danger'
+                                  : (settingsValid.warnings.authenticationConfiguredButNotEnabled()
+                                      ? 'text-warning'
+                                      : ''
+                                    )
+                                 }}">
+                      <span translate>Require authentication</span>
+                      <span class="fas fa-exclamation-circle" ng-if="!settingsValid.validators.authenticationPossible()"></span>
+                      <span class="fas fa-exclamation-triangle" ng-if="settingsValid.warnings.authenticationConfiguredButNotEnabled()"></span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
               <div class="form-group">
                 <div class="checkbox">
                   <label>
@@ -136,7 +157,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div class="form-group">
                 <div class="checkbox">
                   <label>
@@ -150,13 +171,20 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label translate for="user">GUI Authentication User</label>
+                <label for="user" class="{{!tmpGUI.user && !settingsValid.validators.authenticationPossible() ? 'text-warning' : ''}}">
+                  <span translate>GUI Authentication User</span>
+                  <span class="fas fa-exclamation-triangle" ng-if="!tmpGUI.user && !settingsValid.validators.authenticationPossible()"></span>
+                </label>
                 <input id="user" class="form-control" type="text" name="user" ng-model="tmpGUI.user" autocomplete="username" />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label translate for="password">GUI Authentication Password</label>
+                <label for="password" class="{{!tmpGUI.password && !settingsValid.validators.authenticationPossible() ? 'text-warning' : ''}}">
+                  <span translate>GUI Authentication Password</span>
+                  <span class="fas fa-exclamation-triangle" ng-if="!tmpGUI.password && !settingsValid.validators.authenticationPossible()"></span>
+                </label>
+
                 <input id="password" class="form-control" type="password" name="password" ng-model="tmpGUI.password" ng-trim="false" autocomplete="new-password" />
               </div>
             </div>
@@ -171,7 +199,10 @@
                 <thead>
                   <tr>
                     <th colspan="1000">
-                      <label translate>WebAuthn Credentials</label>
+                      <label class="{{!settingsValid.validators.authenticationPossible() ? 'text-warning' : ''}}">
+                        <span translate>WebAuthn Credentials</span>
+                        <span class="fas fa-exclamation-triangle" ng-if="!settingsValid.validators.authenticationPossible()"></span>
+                      </label>
                       <a href="{{docsURL('users/webauthn')}}" target="_blank">
                         <span class="fas fa-question-circle"></span>&nbsp;<span translate>Help</span>
                       </a>
@@ -301,7 +332,12 @@
               <table class="table-striped table" ng-repeat="_ in webauthn.state.credentials | filter:{rpId: '!'+tmpGUI.webauthnRpId}:true | limitTo:1">
                 <thead>
                   <tr>
-                    <th colspan="1000"><label translate>Ineligible WebAuthn Credentials</label></th>
+                    <th colspan="1000">
+                      <label class="{{!settingsValid.validators.authenticationPossible() ? 'text-warning' : ''}}">
+                        <span translate>Ineligible WebAuthn Credentials</span>
+                        <span class="fas fa-exclamation-triangle" ng-if="!settingsValid.validators.authenticationPossible()"></span>
+                      </label>
+                    </th>
                   </tr>
                   <tr>
                     <td colspan="1000">
@@ -526,12 +562,28 @@
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary btn-sm" ng-click="saveSettings()">
-      <span class="fas fa-check"></span>&nbsp;<span translate>Save</span>
-    </button>
-    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
-      <span class="fas fa-times"></span>&nbsp;<span translate>Close</span>
-    </button>
+    <div class="row">
+      <div class="col-md-9 text-left">
+        <p ng-if="!settingsValid.validators.authenticationPossible()" class="text-danger">
+          <span class="fas fa-exclamation-circle"></span>
+          <span translate>GUI requires authentication but no login credentials are set.</span>
+        </p>
+
+        <p class="text-warning" ng-if="settingsValid.warnings.authenticationConfiguredButNotEnabled()">
+          <span class="fas fa-exclamation-triangle"></span>
+          <span translate>GUI authentication is configured but not enabled. Please consider enabling it in the GUI tab.</span>
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <button type="button" class="btn btn-primary btn-sm" ng-click="saveSettings()" ng-disabled="!settingsValid()">
+          <span class="fas fa-check"></span>&nbsp;<span translate>Save</span>
+        </button>
+        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+          <span class="fas fa-times"></span>&nbsp;<span translate>Close</span>
+        </button>
+      </div>
+    </div>
   </div>
 
 </modal>

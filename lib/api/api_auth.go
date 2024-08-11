@@ -190,7 +190,7 @@ func (m *basicAuthAndSessionMiddleware) handleLogout(w http.ResponseWriter, r *h
 }
 
 func auth(username string, password string, guiCfg config.GUIConfiguration, ldapCfg config.LDAPConfiguration) bool {
-	if guiCfg.IsPasswordAuthEnabled() {
+	if guiCfg.IsPasswordAuthConfigured() {
 		if guiCfg.AuthMode == config.AuthModeLDAP {
 			return authLDAP(username, password, ldapCfg)
 		} else {

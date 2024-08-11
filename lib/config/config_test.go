@@ -804,14 +804,14 @@ func TestGUIPasswordHash(t *testing.T) {
 
 	c.User = "foo"
 	// Setting the password to empty disables password auth
-	if !c.IsPasswordAuthEnabled() {
-		t.Errorf("Authentication not enabled despite password being set")
+	if !c.IsPasswordAuthConfigured() {
+		t.Errorf("Password authentication not enabled despite password being set")
 	}
 	if err := c.SetPassword(""); err != nil {
 		t.Fatal(err)
 	}
-	if c.IsPasswordAuthEnabled() {
-		t.Errorf("Authentication still enabled after unsetting password")
+	if c.IsPasswordAuthConfigured() {
+		t.Errorf("Password authentication still enabled after unsetting password")
 	}
 }
 

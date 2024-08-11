@@ -25,6 +25,7 @@ message GUIConfiguration {
     string   webauthn_user_id             = 15 [(ext.xml) = "webauthnUserId"];
     string   webauthn_rp_id               = 16 [(ext.xml) = "webauthnRpId", (ext.default) = "localhost"];
     string   webauthn_origin              = 17 [(ext.xml) = "webauthnOrigin", (ext.default) = "https://localhost:8384"];
+    bool     require_auth                 = 18 [(ext.xml) = "requireAuth"];
 }
 
 // WebauthnCredentials are managed in the config GUI but are stored in DB

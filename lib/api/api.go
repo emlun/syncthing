@@ -377,8 +377,8 @@ func (s *service) Serve(ctx context.Context) error {
 	// Add our version and ID as a header to responses
 	handler = withDetailsMiddleware(s.id, handler)
 
-	// Wrap everything in auth, if user/password is set or WebAuthn is enabled.
-	if isAuthEnabled(&webauthnService, guiCfg) {
+	// Wrap everything in auth if enabled
+	if guiCfg.RequireAuth {
 		tokenCookieManager := newTokenCookieManager(s.id.Short().String(), guiCfg, s.evLogger, s.miscDB)
 		authMW := newBasicAuthAndSessionMiddleware(tokenCookieManager, guiCfg, s.cfg.LDAP(), handler, s.evLogger)
 		handler = authMW
@@ -510,15 +510,6 @@ func (s *service) CommitConfiguration(from, to config.Configuration) bool {
 	s.configChanged <- struct{}{}
 
 	return true
-}
-
-func isAuthEnabled(webauthnService *webauthnService, guiCfg config.GUIConfiguration) bool {
-	// This function should match isAuthEnabled() in syncthingController.js
-	webauthnReady, err := webauthnService.IsAuthReady(guiCfg)
-	if err != nil {
-		webauthnReady = false
-	}
-	return guiCfg.IsPasswordAuthEnabled() || webauthnReady
 }
 
 func (s *service) fatal(err *svcutil.FatalErr) {

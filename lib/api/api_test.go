@@ -2195,8 +2195,6 @@ func TestWebauthnRegistration(t *testing.T) {
 					ID:            base64.URLEncoding.EncodeToString([]byte{1, 2, 3, 4}),
 					RpId:          "localhost",
 					PublicKeyCose: base64.URLEncoding.EncodeToString(publicKeyCose),
-					SignCount:     0,
-					RequireUv:     false,
 				},
 			},
 		)
@@ -2309,9 +2307,9 @@ func TestWebauthnAuthentication(t *testing.T) {
 			t.Helper()
 			startResp := httpPost("/rest/noauth/auth/webauthn-start", nil)
 			testutil.AssertEqual(t, t.Fatalf, startResp.StatusCode, http.StatusOK,
-				"Failed to start WebAuthn registration: status %d", startResp.StatusCode)
+				"Failed to start WebAuthn authentication: status %d", startResp.StatusCode)
 			testutil.AssertFalse(t, t.Errorf, hasSessionCookie(startResp.Cookies()),
-				"Expected no session cookie when starting WebAuthn registration")
+				"Expected no session cookie when starting WebAuthn authentication")
 
 			var options webauthnProtocol.CredentialAssertion
 			testutil.FatalIfErr(t, unmarshalTo(startResp.Body, &options), "Failed to unmarshal CredentialAssertion")
@@ -2453,11 +2451,6 @@ func TestWebauthnAuthentication(t *testing.T) {
 		t.Parallel()
 		credentials := []config.WebauthnCredential{
 			{
-				ID:            base64.URLEncoding.EncodeToString([]byte{1, 2, 3, 4}),
-				RpId:          "localhost",
-				PublicKeyCose: base64.URLEncoding.EncodeToString(publicKeyCose),
-			},
-			{
 				ID:            base64.URLEncoding.EncodeToString([]byte{5, 6, 7, 8}),
 				RpId:          "custom-host",
 				PublicKeyCose: base64.URLEncoding.EncodeToString(publicKeyCose),
@@ -2480,8 +2473,9 @@ func TestWebauthnAuthentication(t *testing.T) {
 			t.Parallel()
 			_, httpPost, getAssertionOptions := startServer(t, "custom-host", "https://origin-other-than-rp-id", credentials)
 			options := getAssertionOptions()
+			options.Response.RelyingPartyID = "localhost"
 
-			cred := createWebauthnAssertionResponse(options, []byte{1, 2, 3, 4}, privateKey, "https://origin-other-than-rp-id", false, 1, t)
+			cred := createWebauthnAssertionResponse(options, []byte{5, 6, 7, 8}, privateKey, "https://origin-other-than-rp-id", false, 1, t)
 
 			finishResp := httpPost("/rest/noauth/auth/webauthn-finish", webauthnAuthResponse(false, cred))
 			testutil.AssertEqual(t, t.Fatalf, finishResp.StatusCode, http.StatusForbidden,
@@ -2527,15 +2521,16 @@ func TestWebauthnAuthentication(t *testing.T) {
 
 		t.Run("with wrong RP ID", func(t *testing.T) {
 			t.Parallel()
-			_, httpPost, getAssertionOptions := startServer(t, "not-localhost", "", append(credentials,
+			_, httpPost, getAssertionOptions := startServer(t, "localhost", "", append(credentials,
 				config.WebauthnCredential{
 					ID:            base64.URLEncoding.EncodeToString([]byte{5, 6, 7, 8}),
-					RpId:          "not-localhost",
+					RpId:          "localhost",
 					PublicKeyCose: base64.URLEncoding.EncodeToString(publicKeyCose),
 					SignCount:     17,
 					RequireUv:     false,
 				}))
 			options := getAssertionOptions()
+			options.Response.RelyingPartyID = "not-localhost"
 
 			cred := createWebauthnAssertionResponse(options, []byte{1, 2, 3, 4}, privateKey, "https://localhost:8384", false, 18, t)
 
@@ -2839,9 +2834,10 @@ func TestWebauthnConfigChanges(t *testing.T) {
 		WebauthnUserId: "AAAA",
 	})
 
-	initTest := func(t *testing.T) (config.Configuration, func(*testing.T) (func(string) *http.Response, func(string, string, any))) {
+	initTest := func(t *testing.T) (config.GUIConfiguration, func(*testing.T) (func(string) *http.Response, func(string, string, any))) {
+		guiCfg := initialGuiCfg.Copy()
 		cfg := config.Configuration{
-			GUI: initialGuiCfg.Copy(),
+			GUI: guiCfg,
 		}
 
 		tmpFile, err := os.CreateTemp("", "syncthing-testConfig-Webauthn-*")
@@ -2889,7 +2885,7 @@ func TestWebauthnConfigChanges(t *testing.T) {
 			return get, mod
 		}
 
-		return cfg, startHttpServer
+		return guiCfg, startHttpServer
 	}
 
 	guiCfgPath := "/rest/config/gui"
@@ -2897,10 +2893,9 @@ func TestWebauthnConfigChanges(t *testing.T) {
 	testCanEditConfig := func(propName string, modify func(*config.GUIConfiguration), verify func(config.GUIConfiguration) bool) {
 		t.Run(fmt.Sprintf("Can edit GUIConfiguration.%s", propName), func(t *testing.T) {
 			t.Parallel()
-			cfg, startHttpServer := initTest(t)
+			guiCfg, startHttpServer := initTest(t)
 			{
 				_, mod := startHttpServer(t)
-				guiCfg := cfg.GUI.Copy()
 				modify(&guiCfg)
 				mod(http.MethodPut, guiCfgPath, guiCfg)
 			}

@@ -7,6 +7,7 @@
 package config
 
 import (
+	"net"
 	"net/url"
 	"os"
 	"path"
@@ -111,8 +112,28 @@ func migrateToConfigV38(cfg *Configuration) {
 	if cfg.GUI.WebauthnRpId == "" {
 		cfg.GUI.WebauthnRpId = defaultGuiCfg.WebauthnRpId
 	}
-	if cfg.GUI.WebauthnOrigin == "" {
-		cfg.GUI.WebauthnOrigin = defaultGuiCfg.WebauthnOrigin
+	if len(cfg.GUI.RawWebauthnOrigins) == 0 {
+		_, port, err := net.SplitHostPort(cfg.GUI.RawAddress)
+		if err != nil {
+			_, defaultPort, err := net.SplitHostPort(defaultGuiCfg.RawAddress)
+			if err != nil {
+				defaultPort = ""
+			}
+			port = defaultPort
+		}
+		port = ":" + port
+		if port == ":443" {
+			cfg.GUI.RawWebauthnOrigins = append(cfg.GUI.RawWebauthnOrigins, "https://"+cfg.GUI.WebauthnRpId)
+		} else {
+			cfg.GUI.RawWebauthnOrigins = append(cfg.GUI.RawWebauthnOrigins, "https://"+cfg.GUI.WebauthnRpId+port)
+		}
+		if !cfg.GUI.RawUseTLS {
+			if port == ":80" {
+				cfg.GUI.RawWebauthnOrigins = append(cfg.GUI.RawWebauthnOrigins, "http://"+cfg.GUI.WebauthnRpId)
+			} else {
+				cfg.GUI.RawWebauthnOrigins = append(cfg.GUI.RawWebauthnOrigins, "http://"+cfg.GUI.WebauthnRpId+port)
+			}
+		}
 	}
 
 	// requireAuth option added

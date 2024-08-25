@@ -8,6 +8,7 @@ package config
 
 import (
 	"encoding/base64"
+	"net"
 	"net/url"
 	"os"
 	"regexp"
@@ -161,6 +162,30 @@ func (c GUIConfiguration) IsValidAPIKey(apiKey string) bool {
 	}
 }
 
+func (c *GUIConfiguration) WebauthnOrigins() ([]string, error) {
+	origins := c.RawWebauthnOrigins
+	if len(origins) == 0 {
+		_, port, err := net.SplitHostPort(c.Address())
+		if err != nil {
+			return nil, err
+		}
+		port = ":" + port
+		if port == ":443" {
+			origins = append(origins, "https://"+c.WebauthnRpId)
+		} else {
+			origins = append(origins, "https://"+c.WebauthnRpId+port)
+		}
+		if !c.UseTLS() {
+			if port == ":80" {
+				origins = append(origins, "http://"+c.WebauthnRpId)
+			} else {
+				origins = append(origins, "http://"+c.WebauthnRpId+port)
+			}
+		}
+	}
+	return origins, nil
+}
+
 func (c *GUIConfiguration) prepare() error {
 	if c.APIKey == "" {
 		c.APIKey = rand.String(32)
@@ -180,30 +205,4 @@ func (c *GUIConfiguration) prepare() error {
 
 func (c GUIConfiguration) Copy() GUIConfiguration {
 	return c
-}
-
-func (s *WebauthnState) Copy() WebauthnState {
-	c := *s
-	c.Credentials = make([]WebauthnCredential, len(s.Credentials))
-	for i := range s.Credentials {
-		c.Credentials[i] = s.Credentials[i].Copy()
-	}
-	return c
-}
-
-func (g *WebauthnCredential) Copy() WebauthnCredential {
-	c := *g
-	if c.Transports != nil {
-		c.Transports = make([]string, len(c.Transports))
-		copy(c.Transports, g.Transports)
-	}
-	return c
-}
-
-func (c *WebauthnCredential) NicknameOrID() string {
-	if c.Nickname != "" {
-		return c.Nickname
-	} else {
-		return c.ID
-	}
 }

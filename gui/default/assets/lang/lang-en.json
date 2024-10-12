@@ -232,7 +232,6 @@
     "Last Month": "Last Month",
     "Last Scan": "Last Scan",
     "Last seen": "Last seen",
-    "Last used: {%lastUseTime%}": "Last used: {{lastUseTime}}",
     "Latest Change": "Latest Change",
     "Learn more": "Learn more",
     "Learn more at {%url%}": "Learn more at {{url}}",
@@ -322,7 +321,6 @@
     "QUIC LAN": "QUIC LAN",
     "QUIC WAN": "QUIC WAN",
     "Quick guide to supported patterns": "Quick guide to supported patterns",
-    "RP ID": "RP ID",
     "Random": "Random",
     "Receive Encrypted": "Receive Encrypted",
     "Receive Only": "Receive Only",
@@ -577,10 +575,15 @@
         "webauthn": {
             "credentials": {
                 "columnHeading": {
+                    "actions": "Actions",
                     "createTime": "Created",
                     "lastUseTime": "Last used",
                     "name": "Name",
                     "require2fa": "2FA"
+                },
+                "label": {
+                    "createTime": "Created:",
+                    "lastUseTime": "Last used:"
                 }
             },
             "ineligibleCredentials": {

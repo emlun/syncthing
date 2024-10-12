@@ -565,10 +565,105 @@ html[lang|="ko"] i {
     user-select: all;
 }
 
-.webauthn-credentials table.table > tbody > tr > td {
-  vertical-align: middle;
-}
-
 .webauthn-credentials .webauthn-credential-card {
   margin-bottom: 1em;
+}
+
+.webauthn-credentials .header {
+  display: none;
+}
+
+.webauthn-credentials-card label {
+  margin-right: 0.5em;
+}
+
+@supports (display: grid) and (grid-template-columns: subgrid) {
+  .webauthn-credentials {
+    align-items: baseline;
+    column-gap: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1em;
+  }
+
+  @media (min-width: 40rem) {
+    .webauthn-credentials {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .webauthn-credentials .webauthn-credential-card {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .webauthn-credentials {
+      grid-template-columns: 1fr repeat(5, max-content);
+      grid-template-areas:
+        'name created last-used require-2fa actions';
+    }
+
+    .webauthn-credentials .header,
+    .webauthn-credential-card,
+    .webauthn-credential-card > .panel-body {
+      display: grid;
+      grid-template-columns: subgrid;
+    }
+
+    .webauthn-credentials .header,
+    .webauthn-credential-card > .panel-body {
+      align-items: baseline;
+    }
+
+    .webauthn-credential-card, .webauthn-credentials .header {
+      grid-column: 1 / -1;
+    }
+
+    .webauthn-credential-card > .panel-heading {
+      grid-column: 1 / 2;
+    }
+
+    .webauthn-credential-card > .panel-body {
+      grid-column: 2 / -1;
+      padding: 0;
+    }
+
+    .webauthn-credential-card.panel {
+      /* !important needed to override theme.css */
+    /*   background-color: transparent !important; */
+      border: none !important;
+    }
+    .webauthn-credential-card.panel > .panel-heading {
+      /* !important needed to override theme.css */
+      background-color: transparent !important;
+      border: none !important;
+    }
+
+    .webauthn-credential-card.panel-default > .panel-heading {
+      padding: 0;
+    }
+
+    .webauthn-credential-card > .panel-body label,
+    .webauthn-credential-card > .panel-body .require-2fa a,
+    .webauthn-credential-card .time
+    {
+      display: none;
+    }
+
+    .webauthn-credentials .name {
+      grid-area: name;
+    }
+    .webauthn-credentials .created {
+      grid-area: created;
+    }
+    .webauthn-credentials .last-used {
+      grid-area: last-used;
+    }
+    .webauthn-credentials .require-2fa {
+      grid-area: require-2fa;
+    }
+    .webauthn-credentials .actions {
+      grid-area: actions;
+    }
+  }
 }

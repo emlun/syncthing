@@ -169,7 +169,6 @@
     "GUI": "GUI",
     "GUI Authentication Password": "Sandi Otentikasi GUI",
     "GUI Authentication User": "Pengguna Otentikasi GUI",
-    "GUI Authentication: Set User and Password": "Otentikasi GUI: Atur Pengguna dan Sandi",
     "GUI Listen Address": "Alamat Pendengaran GUI",
     "GUI Theme": "Tema GUI",
     "General": "Umum",
@@ -182,7 +181,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Namun, pengaturan anda sekarang mengindikasi anda mungkin tidak ingin fitur diaktifkan. Kami telah menonaktifkan pelaporan crash otomatis untuk anda.",
     "Identification": "Identifikasi",
     "If untrusted, enter encryption password": "Jika tidak dipercaya, masukkan sandi enkripsi",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Jika Anda ingin mencegah pengguna lain dalam komputer ini untuk mengakses Syncthing dan melihat file Anda, pertimbangkan mengatur otentikasi.",
     "Ignore": "Abaikan",
     "Ignore Patterns": "Pola Pengabaian",
     "Ignore Permissions": "Abaikan Izin Berkas",
@@ -260,7 +258,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Pemindaian periodik pada interval tertentu dan gagal menyiapkan fitur melihat perubahan, mengulang setiap 1 menit:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Tambahkan ke daftar pengabaian secara permanen, menekan notifikasi berikutnya.",
     "Please consult the release notes before performing a major upgrade.": "Mohon lihat catatan rilis sebelum melakukan peningkatan besar.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Mohon atur sebuah pengguna dan sandi otentikasi GUI di menu Settings.",
     "Please wait": "Mohon tunggu",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefiks mengindikasi bahwa berkas dapat dihapus jika mencegah penghapusan direktori",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefiks mengindikasi bahwa pola harus dicocokkan tanpa kepekaan kapital",
@@ -357,7 +354,6 @@
     "Take me back": "Bawa saya kembali",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Alamat GUI diambil alih oleh parameter memulai Syncthing. Perubahan disini tidak akan memiliki efek saat pengambilan alih aktif.",
     "The Syncthing Authors": "Pencipta-pencipta Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Antarmuka admin Syncthing telah dikonfigurasi untuk mengizinkan akses jarak jauh tanpa sandi.",
     "The aggregated statistics are publicly available at the URL below.": "Pengumpulan statistik tersedia untuk umum pada URL di bawah.",
     "The cleanup interval cannot be blank.": "Interval pembersihan tidak dapat kosong.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Konfigurasi telah disimpan namun tidak diaktifkan. Syncthing harus memulai ulang untuk mengaktifkan konfigurasi baru.",
@@ -392,7 +388,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Mereka diulang secara otomatis dan akan disinkron ketika galat telah terselesaikan.",
     "This Device": "Perangkat Ini",
     "This Month": "Bulan Ini",
-    "This can easily give hackers access to read and change any files on your computer.": "Ini dapat dengan mudah memberi peretas akses untuk melihat dan mengubah file apapun dalam komputer anda.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Perangkat ini tidak dapat menemukan perangkat lain secara otomatis atau mengumumkan alamat sendiri untuk dapat ditemukan oleh perangkat lain. Hanya perangkat dengan konfigurasi alamat statik dapat menyambung.",
     "This is a major version upgrade.": "Ini adalah peningkatan versi besar.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Pengaturan ini mengontrol jumlah penyimpanan kosong yang dibutuhkan dalam penyimpanan utama (contoh database indeks).",
@@ -422,7 +417,6 @@
     "Usage reporting is always enabled for candidate releases.": "Pelaporan penggunaan selalu aktif untuk rilis kandidat.",
     "Use HTTPS for GUI": "Gunakan HTTPS untuk GUI",
     "Use notifications from the filesystem to detect changed items.": "Gunakan notifikasi dari filesistem untuk melihat perubahan berkas.",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Nama pengguna/sandi belum diatur untuk otentikasi GUI. Harap pertimbangkan menyiapkannya.",
     "Version": "Versi",
     "Versions": "Versi",
     "Versions Path": "Lokasi Versi",
@@ -457,6 +451,18 @@
     "full documentation": "dokumentasi penuh",
     "items": "berkas",
     "seconds": "detik",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Nama pengguna/sandi belum diatur untuk otentikasi GUI. Harap pertimbangkan menyiapkannya.",
+            "body-2": "Jika Anda ingin mencegah pengguna lain dalam komputer ini untuk mengakses Syncthing dan melihat file Anda, pertimbangkan mengatur otentikasi.",
+            "title": "Otentikasi GUI: Atur Pengguna dan Sandi"
+        },
+        "warning": {
+            "body-1": "Antarmuka admin Syncthing telah dikonfigurasi untuk mengizinkan akses jarak jauh tanpa sandi.",
+            "body-2": "Ini dapat dengan mudah memberi peretas akses untuk melihat dan mengubah file apapun dalam komputer anda.",
+            "body-3": "Mohon atur sebuah pengguna dan sandi otentikasi GUI di menu Settings."
+        }
+    },
     "theme": {
         "name": {
             "black": "Hitam",

@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS-certifikat",
     "GUI Authentication Password": "GUI-adgangskode",
     "GUI Authentication User": "GUI-brugernavn",
-    "GUI Authentication: Set User and Password": "GUI godkendelse: Angiv bruger og adgangskode",
     "GUI Listen Address": "GUI-lytteadresse",
     "GUI Override Directory": "Mappe til GUI-tilsidesættelse",
     "GUI Theme": "GUI-tema",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Dine nuværende indstillinger tyder dog på, at du måske ikke ønsker det aktiveret. Vi har deaktiveret automatisk nedbrudsrapportering for dig.",
     "Identification": "Identifikation",
     "If untrusted, enter encryption password": "Hvis ikke troværdig, indtast krypteringsadgangskode",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Hvis du vil forhindre andre brugere på denne computer i at få adgang til Syncthing og dermed til dine filer, skal du overveje at konfigurere godkendelse.",
     "Ignore": "Ignorér",
     "Ignore Patterns": "Ignoreringsmønstre",
     "Ignore Permissions": "Ignorér rettigheder",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodisk skanning med et givent interval og lykkedes ikke med at opsætte overvågning af ændringer; prøver igen hvert minut:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Permanent tilføj til ignore liste, undertrykker yderligere påmindelse.",
     "Please consult the release notes before performing a major upgrade.": "Tjek venligst udgivelsesnoterne før opgradering til en ny hovedversion.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Opret venligst en GUI-bruger og -adgangskode i opsætningen.",
     "Please wait": "Vent venligst",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Forstavelse, der indikerer, at filen kan slettes, hvis fjernelse at mappe undgåes",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Forstavelse, der indikerer det mønster, der skal sammenlignes uden versalfølsomhed",
@@ -415,7 +412,6 @@
     "Take me back": "Tag mig tilbage",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "GUI-adressen tilsidesættes af opstartsindstillingerne. Ændringer her vil ikke træde i kraft, så længe tilsidesættelsen er i kraft.",
     "The Syncthing Authors": "Syncthing udviklere",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthing-administationsfladen er sat op til at kunne fjernstyres uden adgangskode.",
     "The aggregated statistics are publicly available at the URL below.": "Den indsamlede statistik er offentligt tilgængelig på den nedenstående URL.",
     "The cleanup interval cannot be blank.": "Ryd op interval kan ikke være tom.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Konfigurationen er gemt, men ikke aktiveret. Syncthing skal genstarte for at aktivere den nye konfiguration.",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "De prøves igen automatisk og vil blive synkroniseret, når fejlen er løst.",
     "This Device": "Denne enhed",
     "This Month": "Denne måned",
-    "This can easily give hackers access to read and change any files on your computer.": "Dette gør det nemt for hackere at få adgang til at læse og ændre filer på din computer.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Denne enhed kan ikke automatisk opdage andre enheder eller annoncere egen adresse som skal findes af andre enheder. Kun enheder med statisk konfigurerede adresser kan oprette forbindelse.",
     "This is a major version upgrade.": "Dette er en ny hovedversion.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Denne indstilling styrer den krævede ledige plads på hjemmedrevet (dvs. drevet med indeksdatabasen).",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "Benyt notifikationer fra filsystemet til at finde filændringer.",
     "User": "Bruger",
     "User Home": "Brugerhjem",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Brugernavn/adgangskode er ikke indstillet til GUI-godkendelse. Overvej at konfigurere det.",
     "Using a QUIC connection over LAN": "Brug af en QUIC-forbindelse over LAN",
     "Using a QUIC connection over WAN": "Brug af en QUIC-forbindelse over WAN",
     "Using a direct TCP connection over LAN": "Brug af en direkte TCP-forbindelse via LAN",
@@ -540,6 +534,18 @@
     "modified": "ændret",
     "permit": "tillad",
     "seconds": "sekunder",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Brugernavn/adgangskode er ikke indstillet til GUI-godkendelse. Overvej at konfigurere det.",
+            "body-2": "Hvis du vil forhindre andre brugere på denne computer i at få adgang til Syncthing og dermed til dine filer, skal du overveje at konfigurere godkendelse.",
+            "title": "GUI godkendelse: Angiv bruger og adgangskode"
+        },
+        "warning": {
+            "body-1": "Syncthing-administationsfladen er sat op til at kunne fjernstyres uden adgangskode.",
+            "body-2": "Dette gør det nemt for hackere at få adgang til at læse og ændre filer på din computer.",
+            "body-3": "Opret venligst en GUI-bruger og -adgangskode i opsætningen."
+        }
+    },
     "theme": {
         "name": {
             "black": "Sort",

@@ -144,7 +144,6 @@
     "GUI / API HTTPS Certificate": "Certificado HTTPS GUI/API",
     "GUI Authentication Password": "Contrasinal de Autenticación da GUI",
     "GUI Authentication User": "Usuario de Autenticación da GUI",
-    "GUI Authentication: Set User and Password": "Autenticación da GUI: Establecer o Usuario e o Contrasinal",
     "GUI Listen Address": "Dirección de Escoita da GUI",
     "GUI Theme": "Tema da GUI",
     "General": "Xeral",
@@ -224,7 +223,6 @@
     "Pending changes": "Cambios pendentes",
     "Permanently add it to the ignore list, suppressing further notifications.": "Engadilo permanentemente á lista de ignorados, suprimindo notificacións futuras.",
     "Please consult the release notes before performing a major upgrade.": "Por favor consulte as notas de lanzamento antes de realizar unha actualización maior.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Por favor configure un Usuario e Contrasinal de Autenticación para a GUI no diálogo de Configuración.",
     "Please wait": "Por favor espere",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefixo que indica que o patrón debe coincidir sen distinguir maiúsculas e minúsculas",
     "Preparing to Sync": "Preparandose para Sincronizar",
@@ -335,7 +333,6 @@
     "Take me back": "Léveme de volta",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "A dirección da GUI sobrescríbese polas opcións de arranque. Os cambios aquí non terán efecto mentres que a invalidación estea activa.",
     "The Syncthing Authors": "Os Autores de Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "A inteface de aministración de Syncthing está configurada para permitir o acceso remoto sen ningún contrasinal.",
     "The aggregated statistics are publicly available at the URL below.": "As estatísticas agregadas son públicas na URL de debaixo.",
     "The cleanup interval cannot be blank.": "O intervalo de limpeza non pode estar en branco.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Gardouse a configuración pero non se activou. Ten que reiniciar Syncthing para activar a configuración nova.",
@@ -372,7 +369,6 @@
     "There are no folders to share with this device.": "Non hai cartafois que compartir con este dispositivo.",
     "This Device": "Este Dispositivo",
     "This Month": "Este Mes",
-    "This can easily give hackers access to read and change any files on your computer.": "Esto pode dar acceso fácil a hackers para ler e cambiar ficheiros no teu compturador.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Este dispositivo non pode descubrir outros dispositivos automaticamente ou anunciar a súa dirección a outros. So se poden contectar dispositivos con direccións estáticas configuradas.",
     "This is a major version upgrade.": "Esta é unha actualización maior.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Este axuste controla o espacio en disco dispoñible necesario no disco principal (p.ej. índice da base de datos).",
@@ -408,7 +404,6 @@
     "Use notifications from the filesystem to detect changed items.": "Utilizar notificacións do sistema de ficheiros para detectar os ficheiros cambiados.",
     "User": "Usuario",
     "User Home": "Inicio do Usuario",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Non se configuraron o usuario e contrasinal para a autenticación da GUI. Por favor considere configuralo.",
     "Using a QUIC connection over LAN": "Utilizando unha conexión QUIC en LAN",
     "Using a QUIC connection over WAN": "Utilizando unha conexión QUIC en WAN",
     "Using a direct TCP connection over LAN": "Utilizando unha conexión TCP directa en LAN",
@@ -452,6 +447,17 @@
     "modified": "modificado",
     "permit": "permitir",
     "seconds": "segundos",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Non se configuraron o usuario e contrasinal para a autenticación da GUI. Por favor considere configuralo.",
+            "title": "Autenticación da GUI: Establecer o Usuario e o Contrasinal"
+        },
+        "warning": {
+            "body-1": "A inteface de aministración de Syncthing está configurada para permitir o acceso remoto sen ningún contrasinal.",
+            "body-2": "Esto pode dar acceso fácil a hackers para ler e cambiar ficheiros no teu compturador.",
+            "body-3": "Por favor configure un Usuario e Contrasinal de Autenticación para a GUI no diálogo de Configuración."
+        }
+    },
     "theme": {
         "name": {
             "black": "Negro",

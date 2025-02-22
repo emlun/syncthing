@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "Πιστοποιητικό HTTPS για το GUI / API",
     "GUI Authentication Password": "Κωδικός για την πρόσβαση στη διεπαφή",
     "GUI Authentication User": "Χρηστώνυμο για την πρόσβαση στη διεπαφή",
-    "GUI Authentication: Set User and Password": "Έλεγχος ταυτότητας GUI: Ορισμός χρήστη και κωδικού πρόσβασης",
     "GUI Listen Address": "Διεύθυνση ακρόασης γραφικού περιβάλλοντος (GUI)",
     "GUI Override Directory": "Κατάλογος παράκαμψης GUI",
     "GUI Theme": "Θέμα GUI",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Ωστόσο, σύμφωνα με τις τρέχουσες ρυθμίσεις σας, μάλλον δεν επιθυμείτε αυτή τη λειτουργία. Οι αναφορές σφαλμάτων απενεργοποιήθηκαν.",
     "Identification": "Ταυτοποίηση",
     "If untrusted, enter encryption password": "Εάν δεν είναι αξιόπιστοι, εισαγάγετε έναν κωδικό πρόσβασης κρυπτογράφησης",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Εάν θέλετε να εμποδίσετε άλλους χρήστες σε αυτόν τον υπολογιστή να έχουν πρόσβαση στο Syncthing και μέσω αυτού στα αρχεία σας, εξετάστε το ενδεχόμενο να ρυθμίσετε τον έλεγχο ταυτότητας.",
     "Ignore": "Αγνόησε",
     "Ignore Patterns": "Πρότυπο για αγνόηση",
     "Ignore Permissions": "Αγνόησε τα δικαιώματα",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Τακτική σάρωση ανά καθορισμένο διάστημα και αποτυχία ενεργοποίησης επιτήρησης αλλαγών. Γίνεται νέα προσπάθεια κάθε 1m:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Προσθέστε το μόνιμα στη λίστα παράβλεψης, καταργώντας περαιτέρω ειδοποιήσεις.",
     "Please consult the release notes before performing a major upgrade.": "Παρακαλούμε, πριν από την εκτέλεση μιας σημαντικής αναβάθμισης, να συμβουλευτείς το σημείωμα που τη συνοδεύει.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Παρακαλώ όρισε στις ρυθμίσεις έναν χρήστη και έναν κωδικό πρόσβασης για τη διεπαφή.",
     "Please wait": "Παρακαλώ περιμένετε",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Πρόθεμα που δείχνει ότι το αρχείο θα μπορεί να διαγραφεί αν εμποδίζει τη διαγραφή καταλόγου",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Πρόθεμα που δείχνει ότι η αντιστοίχιση προτύπου θα γίνεται χωρίς διάκριση πεζών και κεφαλαίων χαρακτήρων",
@@ -415,7 +412,6 @@
     "Take me back": "Επιστροφή",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Η διεύθυνση του GUI έχει τροποποιηθεί μέσω παραμέτρων εκκίνησης. Οι αλλαγές εδώ δεν θα ισχύσουν όσο είναι ενεργές αυτές οι παράμετροι.",
     "The Syncthing Authors": "Οι δημιουργοί του Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Η διεπαφή διαχείρισης του Syncthing είναι ρυθμισμένη να επιτρέπει την πρόσβαση χωρίς κωδικό.",
     "The aggregated statistics are publicly available at the URL below.": "Τα στατιστικά που έχουν συλλεγεί είναι δημόσια διαθέσιμα στη παρακάτω διεύθυνση.",
     "The cleanup interval cannot be blank.": "Το διάστημα καθαρισμού δεν μπορεί να είναι κενό.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Οι ρυθμίσεις έχουν αποθηκευτεί αλλά δεν έχουν ενεργοποιηθεί. Πρέπει να επανεκκινήσεις το Syncthing για να ισχύσουν οι νέες ρυθμίσεις.",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Όταν επιλυθεί το σφάλμα θα κατεβούν και θα συχρονιστούν αυτόματα.",
     "This Device": "Αυτή η συσκευή",
     "This Month": "Αυτο το μηνα",
-    "This can easily give hackers access to read and change any files on your computer.": "Αυτό μπορεί εύκολα να δώσει πρόσβαση ανάγνωσης και επεξεργασίας αρχείων του υπολογιστή σας σε χάκερς.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Αυτή η συσκευή δεν μπορεί να ανακαλύψει αυτόματα άλλες συσκευές ή να ανακοινώσει τη δική της διεύθυνση που θα βρεθεί από άλλους. Μόνο συσκευές με στατικά διαμορφωμένες διευθύνσεις μπορούν να συνδεθούν.",
     "This is a major version upgrade.": "Αυτή είναι μια σημαντική αναβάθμιση.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Αυτή η επιλογή καθορίζει τον ελεύθερο χώρο που θα παραμένει ελεύθερος στον δίσκο όπου βρίσκεται ο κατάλογος της εφαρμογής (και συνεπώς η βάση δεδομένων ευρετηρίων).",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "Χρήση ειδοποιήσεων από το σύστημα αρχείων για την ανίχνευση αλλαγών.",
     "User": "Χρήστης",
     "User Home": "Αρχική σελίδα χρήστη",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Όνομα χρήστη/Κωδικός πρόσβασης δεν έχει οριστεί για τον έλεγχο ταυτότητας GUI. Παρακαλώ σκεφτείτε να το ρυθμίσετε.",
     "Using a QUIC connection over LAN": "Χρήση σύνδεσης QUIC μέσω LAN",
     "Using a QUIC connection over WAN": "Χρήση σύνδεσης QUIC μέσω WAN",
     "Using a direct TCP connection over LAN": "Χρήση απευθείας σύνδεσης TCP μέσω LAN",
@@ -540,6 +534,18 @@
     "modified": "τροποποιήθηκε",
     "permit": "επιτρέπετε",
     "seconds": "δευτερόλεπτα",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Όνομα χρήστη/Κωδικός πρόσβασης δεν έχει οριστεί για τον έλεγχο ταυτότητας GUI. Παρακαλώ σκεφτείτε να το ρυθμίσετε.",
+            "body-2": "Εάν θέλετε να εμποδίσετε άλλους χρήστες σε αυτόν τον υπολογιστή να έχουν πρόσβαση στο Syncthing και μέσω αυτού στα αρχεία σας, εξετάστε το ενδεχόμενο να ρυθμίσετε τον έλεγχο ταυτότητας.",
+            "title": "Έλεγχος ταυτότητας GUI: Ορισμός χρήστη και κωδικού πρόσβασης"
+        },
+        "warning": {
+            "body-1": "Η διεπαφή διαχείρισης του Syncthing είναι ρυθμισμένη να επιτρέπει την πρόσβαση χωρίς κωδικό.",
+            "body-2": "Αυτό μπορεί εύκολα να δώσει πρόσβαση ανάγνωσης και επεξεργασίας αρχείων του υπολογιστή σας σε χάκερς.",
+            "body-3": "Παρακαλώ όρισε στις ρυθμίσεις έναν χρήστη και έναν κωδικό πρόσβασης για τη διεπαφή."
+        }
+    },
     "theme": {
         "name": {
             "black": "Μαύρο",

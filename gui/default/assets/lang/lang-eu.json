@@ -155,7 +155,6 @@
     "GUI": "Interfaze grafikoa",
     "GUI Authentication Password": "Interfaze grafiko pasahitza",
     "GUI Authentication User": "Interfaze grafiko erabiltzaile baimendua",
-    "GUI Authentication: Set User and Password": "Interfaze grafikorako sarrera: Erabiltzailea eta pasahitza zehaztu",
     "GUI Listen Address": "Interfaze grafiko helbidea",
     "GUI Theme": "Interfaze grafiko tema",
     "General": "Orokorra",
@@ -168,7 +167,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Hala ere, zure ezarpenen arabera baliteke aktibatu nahi ez izatea. Txostenen bidalketa automatikoa desaktibatu dugu zuretzat.",
     "Identification": "Identifikazioa",
     "If untrusted, enter encryption password": "Fidagarria ez bada, idatzi enkriptatzeko pasahitza",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Ordenagailu honetako beste erabiltzaile batzuk Syncthing-era eta haren bidez zure fitxategietara sartzea eragotzi nahi baduzu, kontuan izan autentifikazioa konfiguratu behar duzula.",
     "Ignore": "Kontuan ez hartu",
     "Ignore Patterns": "Baztertzeak",
     "Ignore Permissions": "Baimenak kontuan ez hartu",
@@ -247,7 +245,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Emandako tartearen aldizkako miaketa, eta huts egin du aldaketak ikusteko ezarpenak, berriro saiatuz minuturo:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Behin betiko gehitu ezikusien zerrendara, jakinarazpen gehiago ezabatuz.",
     "Please consult the release notes before performing a major upgrade.": "Aktualizatze garrantzitsu bat egin baino lehen, bertsioaren oharrak begira itzazu.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Konfigurazio leihoan asma itzazu erabiltzale izen bat eta pasahitz bat",
     "Please wait": "Pazientzia pixka bat, otoi",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Aurrezenbaki honen bidez fitxategiak ezaba daitezke direktorioak ezabatzeko.",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Aurrizkia honek patroiak letra larririk eta minuskularik gabe bat etorri behar duela adierazten du",
@@ -344,7 +341,6 @@
     "Take me back": "Eraman nazazu atzera",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Erabiltzailearen Interfaze Grafikoaren GUI helbidea gainidatzita dago hasierako aukerengatik. Hemengo aldaketek ez dute ondoriorik izango gainidatzi aktibo dagoen bitartean.",
     "The Syncthing Authors": "Syncthing autoreak",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthing-en administrazio interfazea pentsatua da urrundikako helbideak pasahitzik gabe onartzeko !",
     "The aggregated statistics are publicly available at the URL below.": "Estadistikak zuzen bide honetan publikoki ikusgarriak dira",
     "The cleanup interval cannot be blank.": "Garbiketa tartea ez da hutsa izaiten ahal",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Konfigurazioa grabatua izan da bainan ez aktibatua. Syncthing berriz piztu behar da konfigurazio berria berriz aktibatzeko.",
@@ -377,7 +373,6 @@
     "There are no folders to share with this device.": "Ez dago gailu honekin partekatzeko karpetarik.",
     "They are retried automatically and will be synced when the error is resolved.": "Errorea zuzendua izanen delarik, automatikoki berriz entseatuak et sinkronizatuak izanen dira",
     "This Device": "Tresna hau",
-    "This can easily give hackers access to read and change any files on your computer.": "Hunek errexki irakurtzen eta aldatzen uzten ahal du zure ordenagailuko edozein fitxero, nahiz eta sartu denak ez haizu izan!",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Gailu honek ezin ditu automatikoki beste gailu batzuk aurkitu edo bere helbidea iragarri beste batzuek aurkitzeko. Estatikoki konfiguratutako helbideak dituzten gailuak bakarrik konekta daitezke.",
     "This is a major version upgrade.": "Aktualizatze garrantzitsu bat da",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Behar den espazio kontrolatzen du egokitze honek, zure erabiltzale partekatzea geritzatzen duen diskoan (hori da, indexazio datu-basean)",
@@ -406,7 +401,6 @@
     "Usage reporting is always enabled for candidate releases.": "Erabiltze estatiskitak aintzin-bertsioetan beti igorriak dira",
     "Use HTTPS for GUI": "HTTPS-a erabil ezazu GUI-arentzat",
     "Use notifications from the filesystem to detect changed items.": "Erabili fitxategi sistemaren jakinarazpenak aldatutako elementuak atzemateko",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Erabiltzaile-izena / pasahitza ez da konfiguratu interfaze grafikora sartzeko autentifikaziorako. Mesedez, konfiguratu.",
     "Version": "Bertsioa",
     "Versions": "Bertsioak",
     "Versions Path": "Bertsioen kokalekua",
@@ -440,6 +434,18 @@
     "full documentation": "Dokumentazio osoa",
     "items": "Elementuak",
     "seconds": "segunduak",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Erabiltzaile-izena / pasahitza ez da konfiguratu interfaze grafikora sartzeko autentifikaziorako. Mesedez, konfiguratu.",
+            "body-2": "Ordenagailu honetako beste erabiltzaile batzuk Syncthing-era eta haren bidez zure fitxategietara sartzea eragotzi nahi baduzu, kontuan izan autentifikazioa konfiguratu behar duzula.",
+            "title": "Interfaze grafikorako sarrera: Erabiltzailea eta pasahitza zehaztu"
+        },
+        "warning": {
+            "body-1": "Syncthing-en administrazio interfazea pentsatua da urrundikako helbideak pasahitzik gabe onartzeko !",
+            "body-2": "Hunek errexki irakurtzen eta aldatzen uzten ahal du zure ordenagailuko edozein fitxero, nahiz eta sartu denak ez haizu izan!",
+            "body-3": "Konfigurazio leihoan asma itzazu erabiltzale izen bat eta pasahitz bat"
+        }
+    },
     "{%device%} wants to share folder \"{%folder%}\".": "{{device}}k \"{{folder}}\" partekatze hontan gomitatzen zaitu.",
     "{%device%} wants to share folder \"{%folderlabel%}\" ({%folder%}).": "{{device}}k \"{{folderlabel}}\" ({{folder}}) hontan gomitatzen zaitu.",
     "{%reintroducer%} might reintroduce this device.": "{{reintroducer}} -ek gailu hau birsar lezake."

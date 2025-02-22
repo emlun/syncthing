@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "HTTPS-сертификат GUI/API",
     "GUI Authentication Password": "Пароль для доступа к панели управления",
     "GUI Authentication User": "Имя пользователя для доступа к панели управления",
-    "GUI Authentication: Set User and Password": "GUI аутентификация: Установите имя пользователя и пароль",
     "GUI Listen Address": "Адрес GUI",
     "GUI Override Directory": "Каталог переопределения графического интерфейса",
     "GUI Theme": "Тема оформления",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Ваши настройки указывают что вы не хотите, чтобы эта функция была включена. Мы отключили отправку отчетов о сбоях.",
     "Identification": "Идентификация",
     "If untrusted, enter encryption password": "Если ненадёжное, укажите пароль шифрования",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Если вы хотите запретить другим пользователям на этом компьютере доступ к Syncthing и через него к вашим файлам, подумайте о настройке аутентификации.",
     "Ignore": "Игнорировать",
     "Ignore Patterns": "Шаблоны игнорирования",
     "Ignore Permissions": "Игнорировать файловые права доступа",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Периодическое сканирование с заданным интервалом, неудачная настройка отслеживания изменений, повторная попытка каждую минуту:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Добавление в список игнорирования навсегда с подавлением будущих уведомлений.",
     "Please consult the release notes before performing a major upgrade.": "Перед проведением обновления основной версии ознакомьтесь, пожалуйста, с замечаниями к версии.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Установите имя пользователя и пароль для интерфейса в настройках.",
     "Please wait": "Пожалуйста, подождите",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Префикс, указывающий что файл может быть удалён, если он мешает удалить папку",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Префикс, указывающий что шаблон должен сопоставляться без учёта регистра",
@@ -415,7 +412,6 @@
     "Take me back": "Вернуться к редактированию",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Эти изменения не вступят в силу, пока адрес панели управления переопределён в настройках запуска.",
     "The Syncthing Authors": "Авторы Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Административный интерфейс Syncthing настроен для предоставления удаленного доступа без пароля.",
     "The aggregated statistics are publicly available at the URL below.": "Агрегированные статистические данные общедоступны по ссылке ниже.",
     "The cleanup interval cannot be blank.": "Интервал очистки должен быть заполнен.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Конфигурация была сохранена, но не активирована. Syncthing должен быть перезапущен для применения новой конфигурации.",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Будут синхронизированы автоматически когда ошибка будет исправлена.",
     "This Device": "Это устройство",
     "This Month": "Этот месяц",
-    "This can easily give hackers access to read and change any files on your computer.": "Это может дать доступ хакерам для чтения и изменения любых файлов на вашем компьютере.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Это устройство не может автоматически обнаруживать другие устройства или анонсировать свой адрес для обнаружения извне. Только устройства со статически заданными адресами могут подключиться.",
     "This is a major version upgrade.": "Это обновление основной версии продукта.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Эта настройка управляет свободным местом, необходимым на домашнем диске (например, для базы индексов).",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "Использовать уведомления от файловой системы для обнаружения изменённых объектов.",
     "User": "Пользователь",
     "User Home": "Папка пользователя",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Имя пользователя/пароль не был установлен для GUI-аутентификации. Настройте его.",
     "Using a QUIC connection over LAN": "Использовать QUIC-соединения в LAN",
     "Using a QUIC connection over WAN": "Использовать QUIC-соединения в WAN",
     "Using a direct TCP connection over LAN": "Использовать прямые TCP-соединения в LAN",
@@ -540,6 +534,18 @@
     "modified": "изменено",
     "permit": "разрешить",
     "seconds": "сек.",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Имя пользователя/пароль не был установлен для GUI-аутентификации. Настройте его.",
+            "body-2": "Если вы хотите запретить другим пользователям на этом компьютере доступ к Syncthing и через него к вашим файлам, подумайте о настройке аутентификации.",
+            "title": "GUI аутентификация: Установите имя пользователя и пароль"
+        },
+        "warning": {
+            "body-1": "Административный интерфейс Syncthing настроен для предоставления удаленного доступа без пароля.",
+            "body-2": "Это может дать доступ хакерам для чтения и изменения любых файлов на вашем компьютере.",
+            "body-3": "Установите имя пользователя и пароль для интерфейса в настройках."
+        }
+    },
     "theme": {
         "name": {
             "black": "Чёрная",

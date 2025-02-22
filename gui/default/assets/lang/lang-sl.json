@@ -155,7 +155,6 @@
     "GUI": "Vmesnik",
     "GUI Authentication Password": "Geslo overjanja vmesnika",
     "GUI Authentication User": "Uporabniško ime overjanja vmesnika",
-    "GUI Authentication: Set User and Password": "Overjanje za grafični vmesnik: Nastavi uporabnika in geslo",
     "GUI Listen Address": "Naslov grafičnega vmesnika",
     "GUI Theme": "Slog grafičnega vmesnika",
     "General": "Splošno",
@@ -168,7 +167,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Vendar pa vaše trenutne nastavitve kažejo, da morda ne želite to omogočiti. Za vas smo onemogočili samodejno poročanje o zrušitvah.",
     "Identification": "Identifikacija",
     "If untrusted, enter encryption password": "Če ni zaupanja vreden, vnesite geslo za šifriranje",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Če želite drugim uporabnikom v tem računalniku preprečiti dostop do Syncthinga in prek njega do vaših datotek, razmislite o nastavitvi preverjanja pristnosti.",
     "Ignore": "Prezri",
     "Ignore Patterns": "Vzorec preziranja",
     "Ignore Permissions": "Prezri dovoljenja",
@@ -253,7 +251,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodično skeniranje v določenem intervalu in neuspešna nastavitev spremljanje sprememb, ponovni poskus vsake 1 minute:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Trajno ga dodajte na seznam prezrtih, tako da preprečite nadaljnja obvestila.",
     "Please consult the release notes before performing a major upgrade.": "Prosimo, da preverite opombe ob izdaji, preden izvedete nadgradnjo na glavno različico.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Prosimo, nastavite uporabnika in geslo za preverjanje pristnosti grafičnega vmesnika v pozivnem oknu Nastavitve.",
     "Please wait": "Počakajte ...",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Predpona, ki označuje, da je datoteko mogoče izbrisati, če preprečuje odstranitev imenika",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Predpona, ki označuje, da je treba vzorec ujemati brez občutljivosti velikih in malih črk",
@@ -350,7 +347,6 @@
     "Take me back": "Daj me nazaj",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Naslov grafičnega vmesnika preglasijo možnosti zagona. Spremembe tukaj ne bodo veljale, dokler je preglasitev v veljavi.",
     "The Syncthing Authors": "Syncthing avtorji",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Skrbniški vmesnik Syncthing je konfiguriran tako, da omogoča oddaljeni dostop brez gesla.",
     "The aggregated statistics are publicly available at the URL below.": "Zbrani statistični podatki so javno dostopni na spodnjem URL-ju.",
     "The cleanup interval cannot be blank.": "Interval čiščenja ne sme biti prazen.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Konfiguracija je bila shranjena, vendar ni aktivirana. Sinhronizacija se mora znova zagnati, da aktivirate novo konfiguracijo.",
@@ -385,7 +381,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Samodejno se poskuša znova in bo sinhronizirano, ko je napaka odpravljena.",
     "This Device": "Ta naprava",
     "This Month": "Ta mesec",
-    "This can easily give hackers access to read and change any files on your computer.": "To lahko hekerjem preprosto omogoči dostop do branja in spreminjanja vseh datotek v vašem računalniku.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Ta naprava ne more samodejno odkriti drugih naprav ali objaviti svojega naslova, da ga najdejo drugi. Povezujejo se lahko samo naprave s statično konfiguriranimi naslovi.",
     "This is a major version upgrade.": "To je nadgradnja glavne različice",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Ta nastavitev nadzoruje prosti prostor potreben na domačem (naprimer, indeksirana podatkovna baza) pogonu.",
@@ -416,7 +411,6 @@
     "Usage reporting is always enabled for candidate releases.": "Poročanje o uporabi je vedno omogočeno za kandidatne izdaje.",
     "Use HTTPS for GUI": "Uporabi protokol HTTPS za vmesnik",
     "Use notifications from the filesystem to detect changed items.": "Za odkrivanje spremenjenih elementov uporabite obvestila iz datotečnega sistema.",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Uporabniško ime/geslo ni bilo nastavljeno za preverjanje pristnosti na grafičnem vmesniku. Razmislite o nastavitvi.",
     "Version": "Različica",
     "Versions": "Različice",
     "Versions Path": "Pot do različic",
@@ -455,6 +449,18 @@
     "items": "predmeti",
     "modified": "spremenjeno",
     "seconds": "sekunde",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Uporabniško ime/geslo ni bilo nastavljeno za preverjanje pristnosti na grafičnem vmesniku. Razmislite o nastavitvi.",
+            "body-2": "Če želite drugim uporabnikom v tem računalniku preprečiti dostop do Syncthinga in prek njega do vaših datotek, razmislite o nastavitvi preverjanja pristnosti.",
+            "title": "Overjanje za grafični vmesnik: Nastavi uporabnika in geslo"
+        },
+        "warning": {
+            "body-1": "Skrbniški vmesnik Syncthing je konfiguriran tako, da omogoča oddaljeni dostop brez gesla.",
+            "body-2": "To lahko hekerjem preprosto omogoči dostop do branja in spreminjanja vseh datotek v vašem računalniku.",
+            "body-3": "Prosimo, nastavite uporabnika in geslo za preverjanje pristnosti grafičnega vmesnika v pozivnem oknu Nastavitve."
+        }
+    },
     "theme": {
         "name": {
             "black": "Črna",

@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "الواجهة / API وثيقة HTTPS",
     "GUI Authentication Password": "كلمة السر لتوثيق الواجهة",
     "GUI Authentication User": "اسم المستخدم لدخول واجهة الرسومية",
-    "GUI Authentication: Set User and Password": "توثيق الواجهة: أنشئ كلمة مرور للمستخدم",
     "GUI Listen Address": "عنوان ترقب الواجهة الرسومية",
     "GUI Override Directory": "مجلد إحلال الواجهة",
     "GUI Theme": "شكل الواجهة",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "ومع ذلك، تشير إعداداتك الحالية إلى أنك قد لا ترغب في تمكينه. لذلك توقف الإبلاغ التلقائي عن الأعطال.",
     "Identification": "المُعرِّف",
     "If untrusted, enter encryption password": "في حالة الرِّيبة، أدخل كلمة سر التشفير",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "إذا أردت منع المستخدمين الآخرين على هذا الحاسب من الوصول لملفاتك من خلال Syncthing، يُنصَح بإعداد وثائق الملكية.",
     "Ignore": "تجاهل",
     "Ignore Patterns": "تجاهل الأنماط",
     "Ignore Permissions": "تجاهل الصلاحيات",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "المسح الدوري خلال فترة زمنية معينة وفشل إعداد تَرقُّب التغييرات، إعادة المحاولة كل 1 دقيقة:",
     "Permanently add it to the ignore list, suppressing further notifications.": "أدرجها أبداً على قائمة التجاهل، اكتم الإشعارات مستقبلا.",
     "Please consult the release notes before performing a major upgrade.": "يرجى العودة إلى ملاحظات الإصدار قبل تنفيذ ترقية رئيسية.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "تفضل بإنشاء مستخدما موثقا للواجهة وكلمة مرور من خلال قائمة الإعدادات.",
     "Please wait": "يرجى الانتظار",
     "Prefix indicating that the file can be deleted if preventing directory removal": "سابقة تشير بإمكانية حذف الملف إذا منع إزالة المجلد",
     "Prefix indicating that the pattern should be matched without case sensitivity": "سابقة تعني عدم لزوم حالة الحرف في البحث (غير مهمة للعربية)",
@@ -415,7 +412,6 @@
     "Take me back": "رجوع",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "خيارات البدء حلَّت محل عنوان الواجهة. هذه التعديلات لن تدخل حيز التنفيذ ما بقي هذا الإحلال.",
     "The Syncthing Authors": "مُلَّاكُ Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "واجهة مدير Syncthing معدة للسماح بالوصول بغير كلمة مرور.",
     "The aggregated statistics are publicly available at the URL below.": "الإحصاءات المجمعة متاحة للجميع على العنوان التالي.",
     "The cleanup interval cannot be blank.": "المدة بين عمليات التنظيف لا يمكن تركها فارغة.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "حفظت الإعدادات ولكن لم تفعَّل بعد. يجب أعادة تشغيل Syncthing حتى تفعَّل الإعدادات.",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "تُعاد المحاولة تلقائيًا وستزامن عند إصلاح الخطأ.",
     "This Device": "هذا الجهاز",
     "This Month": "هذا الشهر",
-    "This can easily give hackers access to read and change any files on your computer.": "هذا قد يسبب في اختراق جهازك.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "لا يمكن لهذا الجهاز أن يرصد الأجهزة الأخرى تلقائيا، ولا أن يعلن عنوانه ليمكن الأجهزة الأخرى من إيجاده. الأجهزة ثابتة العناوين فقط يمكن أن تتصل.",
     "This is a major version upgrade.": "ترقية أساسية.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "هذا الخيار يتحكم في المساحة الفارغة المطلوبة من القرص الرئيسي.",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "استخدم إشعارات نظام الملفات لمعرفة الملفات المتغيرة.",
     "User": "مستخدِم",
     "User Home": "منزل المستخدم",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "اسم المستخدم/كلمة المرور لم يُنشَآ لتوثيق الواجهة. يُرجى إنشاؤهما من فضلك.",
     "Using a QUIC connection over LAN": "استخدام اتصال QUIC بدلا من LAN",
     "Using a QUIC connection over WAN": "استخدام اتصال QUIC بدلا من WAN",
     "Using a direct TCP connection over LAN": "استخدام اتصال TCP مباشر بدلا من LAN",
@@ -540,6 +534,18 @@
     "modified": "عُدِّل",
     "permit": "اسمح",
     "seconds": "ثواني",
+    "setup-auth": {
+        "notification": {
+            "body-1": "اسم المستخدم/كلمة المرور لم يُنشَآ لتوثيق الواجهة. يُرجى إنشاؤهما من فضلك.",
+            "body-2": "إذا أردت منع المستخدمين الآخرين على هذا الحاسب من الوصول لملفاتك من خلال Syncthing، يُنصَح بإعداد وثائق الملكية.",
+            "title": "توثيق الواجهة: أنشئ كلمة مرور للمستخدم"
+        },
+        "warning": {
+            "body-1": "واجهة مدير Syncthing معدة للسماح بالوصول بغير كلمة مرور.",
+            "body-2": "هذا قد يسبب في اختراق جهازك.",
+            "body-3": "تفضل بإنشاء مستخدما موثقا للواجهة وكلمة مرور من خلال قائمة الإعدادات."
+        }
+    },
     "theme": {
         "name": {
             "black": "أسوَد",

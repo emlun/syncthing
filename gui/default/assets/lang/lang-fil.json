@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "Sertipiko ng HTTPS ng GUI / API",
     "GUI Authentication Password": "Password ng Authentikasyon sa GUI",
     "GUI Authentication User": "User ng Authentikasyon sa GUI",
-    "GUI Authentication: Set User and Password": "Authentikasyon sa GUI: Magtakda ng User at Password",
     "GUI Listen Address": "Listen Address ng GUI",
     "GUI Override Directory": "Override Directory ng GUI",
     "GUI Theme": "Tema ng GUI",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Gayunpaman, ang iyong kasalukuyang mga setting ay nagpapahiwatig na maaaring hindi mo ito gustong paganahin. Hindi namin pinagana ang awtomatikong pag-uulat ng pag-crash para sa iyo.",
     "Identification": "Pagkakakilanlan",
     "If untrusted, enter encryption password": "Kapag hindi pinagkakatiwalaan, ilagay ang password ng pag-encrypt",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Kung gusto mong iwasan ang ibang mga user sa computer na ito na i-access ang Syncthing at sa iyong mga file, isaalang-alang na mag-set up ng authentikasyon.",
     "Ignore": "Huwag Pansinin",
     "Ignore Patterns": "Mga Ignore Pattern",
     "Ignore Permissions": "Huwag Pansinin ang mga Pahintulot",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Ang pana-panahon na pag-scan sa ibinigay na pagitan at nabigo ang panonood sa mga pagbabago, susubukan muli bawat 1m:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Permanenteng idagdag ito sa listahan ng huwag pansinin, pinipigilan ang mga karagdagang notification.",
     "Please consult the release notes before performing a major upgrade.": "Mangyaring kumonsulta sa mga tala sa release bago magsagawa ng malaking pag-upgrade.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Mangyaring magtakda ng Authentikasyon ng GUI na User at Password sa dialog ng Mga Setting.",
     "Please wait": "Mangyaring maghintay",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefix na nagsasaad na ang file ay maaaring burahin kung pinipigilan ang pagbura ng direktoryo",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefix na nagsasaad na ang pattern ay tutugma nang walang case sensitivity",
@@ -415,7 +412,6 @@
     "Take me back": "Ibalik mo ako",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Ang GUI address ay na-override ng mga opsyon sa pagsisimula. Ang mga pagbabago dito ay hindi magkakabisa habang ang pag-override ay nasa lugar.",
     "The Syncthing Authors": "Ang Mga Awtor ng Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Naka-configure ang Syncthing admin interface na payagan ang remote access nang walang password.",
     "The aggregated statistics are publicly available at the URL below.": "Available nang publiko ang pinagsama-samang istatistika sa URL sa ibaba.",
     "The cleanup interval cannot be blank.": "Hindi maaring walang laman ang pagitan ng paglinis.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Na-save na ang configuration ngunit hindi naka-activate. Kailangang mag-restart ang Syncthing para i-activate ang bagong configuration.",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Awtomatikong sinusubok muli ang mga ito at isi-sync kapag nalutas ang error.",
     "This Device": "Itong Device",
     "This Month": "Itong Buwan",
-    "This can easily give hackers access to read and change any files on your computer.": "Madali nitong mabibigyan ang mga hacker ng access na basahin at baguhin ang anumang mga file sa iyong computer.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Hindi awtomatikong tutuklasin ng device na ito ng mga ibang device o i-annouce ang sarili nitong address para mahanap ng iba.  Makakakonekta lamang ang mga device na may static na naka-configure na address.",
     "This is a major version upgrade.": "Ito ay isang upgrade sa major na bersyon.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Kinokontrol ng setting na ito ang kinakailangan na bakanteng espasyo sa home (hal., index database) disk.",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "Gumamit ng mga notification mula sa filesystem para mag-detect ng mga nabagong item.",
     "User": "Gumagamit",
     "User Home": "Home ng User",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Hindi nakatakda ang Username/Password para sa authentikasyon sa GUI. Isaalang-alang na i-set up.",
     "Using a QUIC connection over LAN": "Gumagamit ng QUIC na koneksyon mula sa LAN",
     "Using a QUIC connection over WAN": "Gumagamit ng QUIC na koneksyon mula sa WAN",
     "Using a direct TCP connection over LAN": "Gumagamit ng direktang TCP na koneksyon mula sa LAN",
@@ -540,6 +534,18 @@
     "modified": "binago",
     "permit": "payagan",
     "seconds": "segundo",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Hindi nakatakda ang Username/Password para sa authentikasyon sa GUI. Isaalang-alang na i-set up.",
+            "body-2": "Kung gusto mong iwasan ang ibang mga user sa computer na ito na i-access ang Syncthing at sa iyong mga file, isaalang-alang na mag-set up ng authentikasyon.",
+            "title": "Authentikasyon sa GUI: Magtakda ng User at Password"
+        },
+        "warning": {
+            "body-1": "Naka-configure ang Syncthing admin interface na payagan ang remote access nang walang password.",
+            "body-2": "Madali nitong mabibigyan ang mga hacker ng access na basahin at baguhin ang anumang mga file sa iyong computer.",
+            "body-3": "Mangyaring magtakda ng Authentikasyon ng GUI na User at Password sa dialog ng Mga Setting."
+        }
+    },
     "theme": {
         "name": {
             "black": "Itim",

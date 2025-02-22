@@ -152,7 +152,6 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS証明書",
     "GUI Authentication Password": "GUI認証パスワード",
     "GUI Authentication User": "GUI認証ユーザー名",
-    "GUI Authentication: Set User and Password": "GUI認証: ユーザー名とパスワードを設定",
     "GUI Listen Address": "GUI待ち受けアドレス",
     "GUI Override Directory": "GUI上書きディレクトリ",
     "GUI Theme": "GUIテーマ",
@@ -165,7 +164,6 @@
     "Home page": "ホームページ",
     "Identification": "ID",
     "If untrusted, enter encryption password": "信頼しない場合、暗号化パスワードを入力",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "このコンピューター上の他のユーザーがSyncthingやあなたのファイルにアクセスできないようにしたい場合は、認証の設定を検討してください。",
     "Ignore": "無視",
     "Ignore Patterns": "無視するファイル名",
     "Ignore Permissions": "パーミッションを無視する",
@@ -245,7 +243,6 @@
     "Periodic scanning at given interval and disabled watching for changes": "定期スキャンは有効で変更の監視は無効です",
     "Periodic scanning at given interval and enabled watching for changes": "定期スキャンと変更の監視はいずれも有効です",
     "Please consult the release notes before performing a major upgrade.": "メジャーアップグレードを行う前にリリースノートを参照してください。",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "設定ダイアログから、GUI認証ユーザー名とパスワードを設定してください。",
     "Please wait": "お待ちください",
     "Prefix indicating that the file can be deleted if preventing directory removal": "このファイルが中に残っているためにディレクトリを削除できない場合、このファイルごと消してもよいことを示す接頭辞",
     "Prefix indicating that the pattern should be matched without case sensitivity": "大文字・小文字を同一視してマッチさせる接頭辞",
@@ -348,7 +345,6 @@
     "Take me back": "キャンセル",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "GUIアドレスはスタートアップオプションによって上書きされています。上書きが行われている間は、ここでの変更は有効になりません。",
     "The Syncthing Authors": "Syncthingの作者",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthingの管理画面が、パスワードなしで外部からアクセスできるように設定されています。",
     "The aggregated statistics are publicly available at the URL below.": "集計結果は以下のURLで公開されています。",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "設定が保存されましたが、まだ有効になっていません。新しい設定を有効にするにはSyncthingを再起動してください。",
     "The device ID cannot be blank.": "デバイスIDを入力してください。",
@@ -381,7 +377,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "エラーが解決すると、自動的に再試行され同期されます。",
     "This Device": "このデバイス",
     "This Month": "今月",
-    "This can easily give hackers access to read and change any files on your computer.": "この設定のままでは、あなたのコンピューターにある任意のファイルを、他者が簡単に盗み見たり書き換えたりすることができます。",
     "This is a major version upgrade.": "メジャーアップグレードです。",
     "This setting controls the free space required on the home (i.e., index database) disk.": "この設定は、ホームディスク (インデックスデータベースがあるディスク) で必要な空き容量を管理します。",
     "Time": "日時",
@@ -410,7 +405,6 @@
     "Use HTTPS for GUI": "GUIにHTTPSを使用する",
     "Use notifications from the filesystem to detect changed items.": "ファイルシステムからの通知を使用して変更されたアイテムを検知します。",
     "User Home": "ユーザーホーム",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "GUI認証のためのユーザー名/パスワードが設定されていません。設定を検討してください。",
     "Using a direct TCP connection over LAN": "LANで直接TCP接続を使用中",
     "Using a direct TCP connection over WAN": "WANで直接TCP接続を使用中",
     "Version": "バージョン",
@@ -452,6 +446,18 @@
     "modified": "更新",
     "permit": "許可",
     "seconds": "秒",
+    "setup-auth": {
+        "notification": {
+            "body-1": "GUI認証のためのユーザー名/パスワードが設定されていません。設定を検討してください。",
+            "body-2": "このコンピューター上の他のユーザーがSyncthingやあなたのファイルにアクセスできないようにしたい場合は、認証の設定を検討してください。",
+            "title": "GUI認証: ユーザー名とパスワードを設定"
+        },
+        "warning": {
+            "body-1": "Syncthingの管理画面が、パスワードなしで外部からアクセスできるように設定されています。",
+            "body-2": "この設定のままでは、あなたのコンピューターにある任意のファイルを、他者が簡単に盗み見たり書き換えたりすることができます。",
+            "body-3": "設定ダイアログから、GUI認証ユーザー名とパスワードを設定してください。"
+        }
+    },
     "theme": {
         "name": {
             "black": "ブラック",

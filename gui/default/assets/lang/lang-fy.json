@@ -170,7 +170,6 @@
     "GUI": "GUI",
     "GUI Authentication Password": "Wachtwurd foar ferifikaasje yn GUI",
     "GUI Authentication User": "Brûkers-ID foar ferifikaasje yn GUI",
-    "GUI Authentication: Set User and Password": "GUI-ferifikaasje: Brûker en wachtwurd ynstelle",
     "GUI Listen Address": "GUI-harkadres",
     "GUI Theme": "Ynterfaasjetema",
     "General": "Algemien",
@@ -183,7 +182,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Lykwols, jo aktuele ynstellings litte sjen dat jo it miskien net oan sette wol. Wy hawwe automatysk rapportearjen fan fêstrinnen foar jo útsetten.",
     "Identification": "Identifikaasje",
     "If untrusted, enter encryption password": "As net fertroud, fier dan fersiferingswachtwurd yn",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "As jo wolle foarkomme dat oare brûkers op dizze kompjûter tagong krije ta Syncthing en dêrtroch jo bestannen, oerweeg dan it ynstellen fan ferifikaasje.",
     "Ignore": "Negearje",
     "Ignore Patterns": "Negear-patroanen",
     "Ignore Permissions": "Negear-rjochten",
@@ -254,7 +252,6 @@
     "Periodic scanning at given interval and enabled watching for changes": "Periodic scanning op opjûn ynterfal en feroarings wurde yn'e gaten hâlden.",
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodic scanning op opjûn ynterfal en it ynskeakeljen fan it yn'e gaten hâlden fan feroarings is mislearre, wurd eltse 1m opnij besocht:",
     "Please consult the release notes before performing a major upgrade.": "Foardat jo in wichtige fernijing ynstallearre, graach earst de fernijingsoantekenings lêze.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Graach foar GUI-ferifikaasje in brûkers-ID en wachtwurd ynstelle yn it ynstellingsdialooch.",
     "Please wait": "In amerijke",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefiks dy't oanjout dat de triem fourtsmiten wurde kin wannear dit it ferwiderjen belet.",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefiks dy't oanjout dat fergelykings mei it patroans net haadlettergefoelich wêze sille.",
@@ -343,7 +340,6 @@
     "Take me back": "Bring my werom",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "It ynterfaasje-adres waard oerskreaun troch opstart-opsjes. Feroarings wurde hjir net ynstelt wylst dizze oerskriuw-ynstelling aktyf is.",
     "The Syncthing Authors": "De Makkers fan Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "De Syncthing haadbrûker-ynterfaasje is sa ynstelt dat tagong fan ôfstân sûnder wachtwurd tastean is.",
     "The aggregated statistics are publicly available at the URL below.": "De fersammele statistiken binnen yn it publyk beskikber fia ûndersteande keppeling.",
     "The cleanup interval cannot be blank.": "It ynterfal foar opromjen kin net leech wêze.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "De konfiguraasje is bewarre mar noch net aktivearre. Syncthing moat werstarte om de nije konfiguraasje te aktivearren.",
@@ -375,7 +371,6 @@
     "There are no folders to share with this device.": "D'r binne gjin mappen te dielen mei dit apparaat.",
     "They are retried automatically and will be synced when the error is resolved.": "Sy wurde automatysk opnij probearre en sille syngronisearre wurde wannear at de flater oplost is.",
     "This Device": "Dit Apparaat",
-    "This can easily give hackers access to read and change any files on your computer.": "Dit kin samar ynkringers (hackers) tagong jaan om elke triem op jo kompjûter te besjen en te feroarjen.",
     "This is a major version upgrade.": "Dit is in wichtige ferzjefernijing.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Dizze ynstelling bepaalt de frije romte dy't noadich is op de home-skiif (fan de yndeks-databank).",
     "Time": "Tiid",
@@ -403,7 +398,6 @@
     "Usage reporting is always enabled for candidate releases.": "Brûkersrapportaazje stiet altyd oan foar ferzje kandidaten.",
     "Use HTTPS for GUI": "Brûk HTTPS foar GUI",
     "Use notifications from the filesystem to detect changed items.": "Brûk notifikaasjes fan it triemsysteem om feroare items te detektearjen.",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Brûkersnamme / wachtwurd is net ynsteld foar de GUI-ferifikaasje. Tink der asjebleaft oer nei om dit yn te stellen.",
     "Version": "Ferzje",
     "Versions": "Ferzjes",
     "Versions Path": "Ferzjes-paad",
@@ -437,6 +431,18 @@
     "full documentation": "komplete dokumintaasje",
     "items": "items",
     "seconds": "sekonden",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Brûkersnamme / wachtwurd is net ynsteld foar de GUI-ferifikaasje. Tink der asjebleaft oer nei om dit yn te stellen.",
+            "body-2": "As jo wolle foarkomme dat oare brûkers op dizze kompjûter tagong krije ta Syncthing en dêrtroch jo bestannen, oerweeg dan it ynstellen fan ferifikaasje.",
+            "title": "GUI-ferifikaasje: Brûker en wachtwurd ynstelle"
+        },
+        "warning": {
+            "body-1": "De Syncthing haadbrûker-ynterfaasje is sa ynstelt dat tagong fan ôfstân sûnder wachtwurd tastean is.",
+            "body-2": "Dit kin samar ynkringers (hackers) tagong jaan om elke triem op jo kompjûter te besjen en te feroarjen.",
+            "body-3": "Graach foar GUI-ferifikaasje in brûkers-ID en wachtwurd ynstelle yn it ynstellingsdialooch."
+        }
+    },
     "{%device%} wants to share folder \"{%folder%}\".": "{{device}} wol map \"{{folder}}\" diele.",
     "{%device%} wants to share folder \"{%folderlabel%}\" ({%folder%}).": "{{device}} wol map \"{{folderlabel}}\" ({{folder}}) diele.",
     "{%reintroducer%} might reintroduce this device.": "{{reintroducer}} kin dit apparaat opnij yntrodusearje."

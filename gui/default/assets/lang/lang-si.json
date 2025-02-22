@@ -169,7 +169,6 @@
     "GUI / API HTTPS Certificate": "GUI / යෙ.ක්‍ර.මු. HTTPS සහතිකය",
     "GUI Authentication Password": "GUI සත්‍යාපන මුරපදය",
     "GUI Authentication User": "GUI සත්‍යාපන පරිශ්‍රීලක",
-    "GUI Authentication: Set User and Password": "GUI සත්‍යාපනය: පරිශ්‍රීලක හා මුරපදය සකසන්න",
     "GUI Listen Address": "GUI සවන්දීමේ ලිපිනය",
     "GUI Override Directory": "GUI අභිබවන නාමාවලිය",
     "GUI Theme": "GUI තේමාව",
@@ -183,7 +182,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "කෙසේ වෙතත්, ඔබගේ වත්මන් සැකසුම් පෙන්නුම් කරන්නේ ඔබට එය සක්‍රිය කිරීමට අවශ්‍ය නොවිය හැකි බවයි. අපි ඔබ වෙනුවෙන් ස්වයංක්‍රීය බිඳ වැටීම් වාර්තා කිරීම අබල කර ඇත.",
     "Identification": "හැඳුනුම",
     "If untrusted, enter encryption password": "විශ්වාස කළ නොහැකි නම්, සංකේතාංකන මුරපදය ඇතුළත් කරන්න",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "ඔබට මෙම පරිගණකයේ අනෙකුත් පරිශීලකයින් සමමුහුර්තකරණයට සහ ඒ හරහා ඔබගේ ගොනු වලට ප්‍රවේශ වීම වැලැක්වීමට අවශ්‍ය නම්, සත්‍යාපනය සැකසීම සලකා බලන්න.",
     "Ignore": "නොසලකන්න",
     "Ignore Patterns": "රටා නොසලකා හරින්න",
     "Ignore Permissions": "අවසර නොසලකන්න",
@@ -272,7 +270,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "ලබා දී ඇති කාල පරතරයකදී වරින් වර ස්කෑන් කිරීම සහ වෙනස්කම් සඳහා නැරඹීම පිහිටුවීම අසාර්ථක විය, සෑම මීටර 1කට වරක් නැවත උත්සාහ කිරීම:",
     "Permanently add it to the ignore list, suppressing further notifications.": "තවදුරටත් දැනුම්දීම් යටපත් කරමින් එය නොසලකා හැරීමේ ලැයිස්තුවට ස්ථිරව එක් කරන්න.",
     "Please consult the release notes before performing a major upgrade.": "ප්‍රධාන උත්ශ්‍රේණි කිරීමක් සිදු කිරීමට පෙර කරුණාකර නිකුතු සටහන් බලන්න.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "කරුණාකර සැකසීම් සංවාදයේ GUI සත්‍යාපන පරිශීලකයෙකු සහ මුරපදයක් සකසන්න.",
     "Please wait": "රැඳෙන්න",
     "Prefix indicating that the file can be deleted if preventing directory removal": "නාමාවලිය ඉවත් කිරීම වළක්වන්නේ නම් ගොනුව මකා දැමිය හැකි බව පෙන්නුම් කරන උපසර්ගය",
     "Prefix indicating that the pattern should be matched without case sensitivity": "සංවේදිතාවකින් තොරව රටාව ගැලපිය යුතු බව පෙන්නුම් කරන උපසර්ගය",
@@ -383,7 +380,6 @@
     "Take me back": "මාව ආපසු ගන්න",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "GUI ලිපිනය ආරම්භක විකල්ප මගින් අභිබවා යයි. ප්‍රතික්‍ෂේප කිරීම ක්‍රියාත්මක වන විට මෙහි වෙනස්කම් බල නොපායි.",
     "The Syncthing Authors": "සයින්තින් කතුවරුන්",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "මුරපදයක් නොමැතිව දුරස්ථ ප්‍රවේශය සඳහා සමමුහුර්ත කිරීමේ පරිපාලක අතුරුමුහුණත වින්‍යාස කර ඇත.",
     "The aggregated statistics are publicly available at the URL below.": "එකතු කළ සංඛ්‍යාලේඛන පහත URL හි ප්‍රසිද්ධියේ ලබා ගත හැකිය.",
     "The cleanup interval cannot be blank.": "පිරිසිදු කිරීමේ පරතරය හිස් විය නොහැක.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "වින්‍යාසය සුරකින ලද නමුත් සක්‍රිය කර නැත. නව වින්‍යාසය සක්‍රිය කිරීමට සමමුහුර්ත කිරීම නැවත ආරම්භ කළ යුතුය.",
@@ -421,7 +417,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "ඒවා ස්වයංක්‍රීයව නැවත උත්සාහ කරන අතර දෝෂය නිරාකරණය වූ විට සමමුහුර්ත වේ.",
     "This Device": "මෙම උපාංගය",
     "This Month": "මේ මාසයේ",
-    "This can easily give hackers access to read and change any files on your computer.": "මෙය හැකර්වරුන්ට ඔබේ පරිගණකයේ ඇති ඕනෑම ගොනුවක් කියවීමට සහ වෙනස් කිරීමට පහසුවෙන් ප්‍රවේශය ලබා දිය හැක.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "මෙම උපාංගයට වෙනත් උපාංග ස්වයංක්‍රීයව සොයා ගැනීමට හෝ වෙනත් අය විසින් සොයා ගැනීමට එහිම ලිපිනය ප්‍රකාශ කිරීමට නොහැකිය. සම්බන්ධ විය හැක්කේ ස්ථිතිකව වින්‍යාස කළ ලිපින සහිත උපාංගවලට පමණි.",
     "This is a major version upgrade.": "මෙය ප්රධාන අනුවාදය උත්ශ්රේණි කිරීමකි.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "මෙම සිටුවම නිවසේ (එනම්, දර්ශක දත්ත ගබඩාව) තැටියේ අවශ්‍ය නිදහස් ඉඩ පාලනය කරයි.",
@@ -454,7 +449,6 @@
     "Usage reporting is always enabled for candidate releases.": "අපේක්ෂක නිකුතු සඳහා භාවිත වාර්තා කිරීම සැමවිටම සක්‍රීය කර ඇත.",
     "Use HTTPS for GUI": "GUI සඳහා HTTPS භාවිතා කරන්න",
     "Use notifications from the filesystem to detect changed items.": "වෙනස් කළ අයිතම හඳුනා ගැනීමට ගොනු පද්ධතියෙන් දැනුම්දීම් භාවිතා කරන්න.",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "GUI සත්‍යාපනය සඳහා පරිශීලක නාමය/මුරපදය සකසා නොමැත. කරුණාකර එය පිහිටුවීම සලකා බලන්න.",
     "Using a QUIC connection over LAN": "LAN හරහා QUIC සම්බන්ධතාවයක් භාවිතය",
     "Using a QUIC connection over WAN": "WAN හරහා QUIC සම්බන්ධතාවයක් භාවිතය",
     "Using a direct TCP connection over LAN": "LAN හරහා සෘජු TCP සම්බන්ධතාවයක් භාවිතය",
@@ -502,6 +496,18 @@
     "modified": "සංශෝධිතයි",
     "permit": "අවසරය",
     "seconds": "තත්පර",
+    "setup-auth": {
+        "notification": {
+            "body-1": "GUI සත්‍යාපනය සඳහා පරිශීලක නාමය/මුරපදය සකසා නොමැත. කරුණාකර එය පිහිටුවීම සලකා බලන්න.",
+            "body-2": "ඔබට මෙම පරිගණකයේ අනෙකුත් පරිශීලකයින් සමමුහුර්තකරණයට සහ ඒ හරහා ඔබගේ ගොනු වලට ප්‍රවේශ වීම වැලැක්වීමට අවශ්‍ය නම්, සත්‍යාපනය සැකසීම සලකා බලන්න.",
+            "title": "GUI සත්‍යාපනය: පරිශ්‍රීලක හා මුරපදය සකසන්න"
+        },
+        "warning": {
+            "body-1": "මුරපදයක් නොමැතිව දුරස්ථ ප්‍රවේශය සඳහා සමමුහුර්ත කිරීමේ පරිපාලක අතුරුමුහුණත වින්‍යාස කර ඇත.",
+            "body-2": "මෙය හැකර්වරුන්ට ඔබේ පරිගණකයේ ඇති ඕනෑම ගොනුවක් කියවීමට සහ වෙනස් කිරීමට පහසුවෙන් ප්‍රවේශය ලබා දිය හැක.",
+            "body-3": "කරුණාකර සැකසීම් සංවාදයේ GUI සත්‍යාපන පරිශීලකයෙකු සහ මුරපදයක් සකසන්න."
+        }
+    },
     "theme": {
         "name": {
             "black": "කළු",

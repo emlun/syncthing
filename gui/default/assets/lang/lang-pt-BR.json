@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "Certificado da interface gráfica / API HTTPS",
     "GUI Authentication Password": "Senha para acesso à interface",
     "GUI Authentication User": "Nome de usuário para acesso à interface",
-    "GUI Authentication: Set User and Password": "Autenticação da GUI: Definir Usuário e Senha",
     "GUI Listen Address": "Endereço de escuta da interface web",
     "GUI Override Directory": "Pasta de substituição da interface gráfica",
     "GUI Theme": "Tema da interface",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "No entanto, suas configurações atuais indicam que você pode não querer ativá-lo. Desativamos os relatórios automáticos de falha para você.",
     "Identification": "Identificação",
     "If untrusted, enter encryption password": "Se o dispositivo não é confiável, digite a senha de criptografia",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Se você deseja impedir que outros usuários deste computador acessem o Syncthing e, por meio dele, seus arquivos, considere configurar a autenticação.",
     "Ignore": "Ignorar",
     "Ignore Patterns": "Filtros",
     "Ignore Permissions": "Ignorar permissões",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Verificação periódica habilitada no intervalo escolhido. Não foi possível configurar a verificação automática de mudanças, tentando novamente a cada 1 minuto:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Adicione-o permanentemente à lista de ignorados, suprimindo notificações futuras.",
     "Please consult the release notes before performing a major upgrade.": "Por favor, consulte as notas de lançamento antes de atualizar para uma versão \"major\".",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Por favor, defina um nome de usuário e senha para acesso à interface web, nas configurações.",
     "Please wait": "Aguarde",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefixo indicando que o arquivo pode ser removido caso esteja impedindo a remoção do seu diretório",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefixo indicando que o filtro deve ser igualado sem distinção entre maiúsculas e minúsculas",
@@ -415,7 +412,6 @@
     "Take me back": "Tire-me daqui",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "O endereço da GUI é substituído pelas opções de inicialização. As alterações aqui não terão efeito enquanto a substituição estiver em vigor.",
     "The Syncthing Authors": "Autores do Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "A interface de administração do Syncthing está configurada para permitir acesso remoto sem uma senha.",
     "The aggregated statistics are publicly available at the URL below.": "As estatísticas agregadas estão disponíveis no endereço abaixo.",
     "The cleanup interval cannot be blank.": "O intervalo de limpeza não pode estar em branco.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "A configuração foi salva mas ainda não foi ativada. O Syncthing precisa ser reiniciado para a ativação da nova configuração.",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Serão tentadas automaticamente e sincronizadas após o erro ter sido resolvido.",
     "This Device": "Este dispositivo",
     "This Month": "Este mês",
-    "This can easily give hackers access to read and change any files on your computer.": "Isto pode dar a hackers poder de leitura e escrita de qualquer arquivo em seu dispositivo.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Este dispositivo não pode descobrir automaticamente outros dispositivos ou anunciar seu próprio endereço para ser encontrado por outros. Apenas dispositivos com endereços configurados estaticamente podem se conectar.",
     "This is a major version upgrade.": "Esta é uma atualização para uma versão \"major\".",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Este ajuste controla o espaço livre necessário no disco que contém o banco de dados do Syncthing.",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "Usar notificações do sistema de ficheiros para detectar itens alterados.",
     "User": "Usuário",
     "User Home": "Pasta do usuário",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "O Usuário/Senha não foi definido para a autenticação da GUI. Por favor, considere defini-los.",
     "Using a QUIC connection over LAN": "Usando conexão QUIC sobre LAN",
     "Using a QUIC connection over WAN": "Usando conexão QUIC sobre WAN",
     "Using a direct TCP connection over LAN": "Usando uma conexão TCP direta via LAN",
@@ -540,6 +534,18 @@
     "modified": "modificado",
     "permit": "permitir",
     "seconds": "segundos",
+    "setup-auth": {
+        "notification": {
+            "body-1": "O Usuário/Senha não foi definido para a autenticação da GUI. Por favor, considere defini-los.",
+            "body-2": "Se você deseja impedir que outros usuários deste computador acessem o Syncthing e, por meio dele, seus arquivos, considere configurar a autenticação.",
+            "title": "Autenticação da GUI: Definir Usuário e Senha"
+        },
+        "warning": {
+            "body-1": "A interface de administração do Syncthing está configurada para permitir acesso remoto sem uma senha.",
+            "body-2": "Isto pode dar a hackers poder de leitura e escrita de qualquer arquivo em seu dispositivo.",
+            "body-3": "Por favor, defina um nome de usuário e senha para acesso à interface web, nas configurações."
+        }
+    },
     "theme": {
         "name": {
             "black": "Preto",

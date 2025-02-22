@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "Certificati HTTPS GUI / API",
     "GUI Authentication Password": "Password dell'Interfaccia Grafica",
     "GUI Authentication User": "Utente dell'Interfaccia Grafica",
-    "GUI Authentication: Set User and Password": "Autenticazione GUI: usa utente e password",
     "GUI Listen Address": "Indirizzo dell'Interfaccia Grafica",
     "GUI Override Directory": "GUI Sostituisci Directory",
     "GUI Theme": "Tema GUI",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Tuttavia, le impostazioni correnti indicano che potresti non volerla attiva. Abbiamo disattivato la segnalazione automatica degli arresti anomali per te.",
     "Identification": "Identificazione",
     "If untrusted, enter encryption password": "Se non attendibile, immettere la password di crittografia",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Se vuoi impedire ad altri utenti di questo computer di accedere a Syncthing e attraverso di esso ai tuoi file, prendi in considerazione la configurazione dell'autenticazione.",
     "Ignore": "Ignora",
     "Ignore Patterns": "Schemi Esclusione File",
     "Ignore Permissions": "Ignora Permessi",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Scansione periodica a intervalli determinati e configurazione fallita del monitoraggio cambiamenti, nuovo tentativo ogni 1m:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Aggiungi in modo permanente all'elenco da ignorare, sopprimendo ulteriori notifiche.",
     "Please consult the release notes before performing a major upgrade.": "Si prega di consultare le note di rilascio prima di eseguire un aggiornamento principale.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Per favore impostare Utente e Password dell'Interfaccia Grafica nelle Impostazioni.",
     "Please wait": "Attendere prego",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefisso che indica che il file può essere eliminato se impedisce la rimozione della cartella",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefisso che indica che lo schema deve essere abbinato senza tener conto delle maiuscole",
@@ -415,7 +412,6 @@
     "Take me back": "Portami indietro",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "L'indirizzo della GUI è sovrascritto dalle opzioni di avvio. Le modifiche qui non avranno effetto finché queste opzioni sono impostate.",
     "The Syncthing Authors": "Autori di Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "L'interfaccia di amministrazione di Syncthing è configurata in modo da permettere l'accesso senza password.",
     "The aggregated statistics are publicly available at the URL below.": "Le statistiche aggregate sono disponibili pubblicamente all'URL seguente.",
     "The cleanup interval cannot be blank.": "L'intervallo di pulizia non può essere vuoto.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "La configurazione è stata salvata ma non attivata. Syncthing deve essere riavviato per attivare la nuova configurazione.",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Verranno effettuati tentativi in automatico e verranno sincronizzati quando l'errore sarà risolto.",
     "This Device": "Questo Dispositivo",
     "This Month": "Questo Mese",
-    "This can easily give hackers access to read and change any files on your computer.": "Ciò potrebbe facilmente permettere agli hackers accesso alla lettura e modifica di qualunque file del tuo computer.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Questo dispositivo non può rilevare automaticamente altri dispositivi o annunciare il proprio indirizzo per essere trovato da altri. Possono connettersi solo i dispositivi con indirizzi configurati staticamente.",
     "This is a major version upgrade.": "Questo è un aggiornamento di versione principale.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Questa impostazione controlla lo spazio libero richiesto sul disco home (cioè, database di indice).",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "Usa le notifiche dal filesystem per rilevare gli elementi modificati.",
     "User": "Utente",
     "User Home": "Home Utente",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Utente/password non sono stati impostati per autenticazione GUI. Considerane la configurazione.",
     "Using a QUIC connection over LAN": "Utilizza una connessione QUIC su LAN",
     "Using a QUIC connection over WAN": "Utilizza una connessione QUIC su WAN",
     "Using a direct TCP connection over LAN": "Utilizzo di una connessione TCP diretta su LAN",
@@ -540,6 +534,18 @@
     "modified": "modificato",
     "permit": "permettere",
     "seconds": "secondi",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Utente/password non sono stati impostati per autenticazione GUI. Considerane la configurazione.",
+            "body-2": "Se vuoi impedire ad altri utenti di questo computer di accedere a Syncthing e attraverso di esso ai tuoi file, prendi in considerazione la configurazione dell'autenticazione.",
+            "title": "Autenticazione GUI: usa utente e password"
+        },
+        "warning": {
+            "body-1": "L'interfaccia di amministrazione di Syncthing è configurata in modo da permettere l'accesso senza password.",
+            "body-2": "Ciò potrebbe facilmente permettere agli hackers accesso alla lettura e modifica di qualunque file del tuo computer.",
+            "body-3": "Per favore impostare Utente e Password dell'Interfaccia Grafica nelle Impostazioni."
+        }
+    },
     "theme": {
         "name": {
             "black": "Nero",

@@ -273,7 +273,7 @@ func (s *service) Serve(ctx context.Context) error {
 	if ok && deviceCfg.Name != "" {
 		deviceName = deviceCfg.Name
 	}
-	webauthnService, err := newWebauthnService(guiCfg, deviceName, s.evLogger, s.miscDB, "webauthn")
+	webauthnService, err := newWebauthnService(guiCfg, deviceName, s.evLogger, s.miscDB.Subspace("webauthn"), "")
 	if err != nil {
 		return err
 	}

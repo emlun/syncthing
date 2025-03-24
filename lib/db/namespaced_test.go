@@ -157,6 +157,29 @@ func TestNamespacedReset(t *testing.T) {
 	}
 }
 
+func TestNamespacedSubspace(t *testing.T) {
+	ldb := newLowlevelMemory(t)
+	defer ldb.Close()
+
+	nfoo := NewNamespacedKV(ldb, "foo")
+	nbar := NewNamespacedKV(ldb, "bar")
+
+	if err := nfoo.Subspace("bar").PutString("test", "yo"); err != nil {
+		t.Fatal(err)
+	}
+
+	if v, ok, err := nbar.String("test"); err != nil {
+		t.Error("Unexpected error:", err)
+	} else if v != "" || ok {
+		t.Errorf("Incorrect return v %q != \"\" || ok %v != false", v, ok)
+	}
+	if v, ok, err := nfoo.String("bartest"); err != nil {
+		t.Error("Unexpected error:", err)
+	} else if v != "yo" || !ok {
+		t.Errorf("Incorrect return v %q != \"yo\" || ok %v != true", v, ok)
+	}
+}
+
 // reset removes all entries in this namespace.
 func reset(n *NamespacedKV) {
 	tr, err := n.db.NewWriteTransaction()

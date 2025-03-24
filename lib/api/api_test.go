@@ -2142,7 +2142,7 @@ type ApiWebauthnCredentialsState struct {
 	Credentials []ApiWebauthnCredentialState `json:"credentials"`
 }
 
-// Duplicate of apiproto.WebauthnCredentialVolatileState to verify JSON serialization stability
+// Duplicate of apiproto.WebauthnCredentialState to verify JSON serialization stability
 type ApiWebauthnCredentialState struct {
 	ID          string    `json:"id"`
 	SignCount   uint32    `json:"signCount"`
@@ -2258,17 +2258,17 @@ func TestWebauthnRegistration(t *testing.T) {
 			t.Errorf("Wrong Nickname in registration success response")
 		}
 
-		var volState ApiWebauthnCredentialsState
-		getVolStateResp := httpGetCsrf(baseURL+"/rest/webauthn/state", csrfTokenName, csrfTokenValue, t)
-		err = unmarshalTo(getVolStateResp.Body, &volState)
+		var state ApiWebauthnCredentialsState
+		getStateResp := httpGetCsrf(baseURL+"/rest/webauthn/state", csrfTokenName, csrfTokenValue, t)
+		err = unmarshalTo(getStateResp.Body, &state)
 		if err != nil {
 			t.Fatal(err)
 		}
-		credVolState := sliceutil.Find(volState.Credentials, func(c *ApiWebauthnCredentialState) bool { return c.ID == pendingCred.ID })
-		if !(time.Since(credVolState.LastUseTime) < 10*time.Second) {
+		credState := sliceutil.Find(state.Credentials, func(c *ApiWebauthnCredentialState) bool { return c.ID == pendingCred.ID })
+		if !(time.Since(credState.LastUseTime) < 10*time.Second) {
 			t.Errorf("Wrong LastUseTime after registration success")
 		}
-		if credVolState.SignCount != 42 {
+		if credState.SignCount != 42 {
 			t.Errorf("Wrong SignCount after registration success")
 		}
 
@@ -2636,20 +2636,20 @@ func TestWebauthnAuthentication(t *testing.T) {
 				}
 			}
 
-			var volState ApiWebauthnCredentialsState
-			getVolStateResp := httpGet("/rest/webauthn/state", testAPIKey, csrfTokenName, csrfTokenValue)
-			err := unmarshalTo(getVolStateResp.Body, &volState)
+			var state ApiWebauthnCredentialsState
+			getStateResp := httpGet("/rest/webauthn/state", testAPIKey, csrfTokenName, csrfTokenValue)
+			err := unmarshalTo(getStateResp.Body, &state)
 			if err != nil {
 				t.Fatal(err)
 			}
-			credVolState := sliceutil.Find(volState.Credentials, func(c *ApiWebauthnCredentialState) bool { return c.ID == cred.ID })
-			if credVolState == nil {
+			credState := sliceutil.Find(state.Credentials, func(c *ApiWebauthnCredentialState) bool { return c.ID == cred.ID })
+			if credState == nil {
 				t.Fatalf("Failed to get credential state")
 			}
-			if !(time.Since(credVolState.LastUseTime) < 10*time.Second) {
+			if !(time.Since(credState.LastUseTime) < 10*time.Second) {
 				t.Errorf("Wrong LastUseTime after authentication success")
 			}
-			if credVolState.SignCount != 42 {
+			if credState.SignCount != 42 {
 				t.Errorf("Wrong SignCount after authentication success")
 			}
 		})

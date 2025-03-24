@@ -367,8 +367,8 @@ func (s *webauthnService) cleanupExpiredRequests() {
 	}
 }
 
-func newCredentialState() *apiproto.WebauthnCredentialVolatileState {
-	return &apiproto.WebauthnCredentialVolatileState{}
+func newCredentialState(credID string) *apiproto.WebauthnCredentialVolatileState {
+	return &apiproto.WebauthnCredentialVolatileState{Id: credID}
 }
 
 // Load WebAuthn credential state with a read lock during loading.
@@ -383,17 +383,17 @@ func (s *webauthnService) loadCredentialStateRLocked(credID string) *apiproto.We
 	stateBytes, ok, err := s.miscDB.Bytes(credID)
 	if err != nil {
 		l.Warnf("Failed to load WebAuthn credential state: %v", err)
-		return newCredentialState()
+		return newCredentialState(credID)
 	}
 	if !ok {
-		return newCredentialState()
+		return newCredentialState(credID)
 	}
 
-	state := newCredentialState()
+	state := newCredentialState(credID)
 	err = proto.Unmarshal(stateBytes, state)
 	if err != nil {
 		l.Warnf("Failed to unmarshal WebAuthn credential state: %v", err)
-		return newCredentialState()
+		return newCredentialState(credID)
 	}
 	return state
 }
@@ -434,9 +434,8 @@ func (s *webauthnService) getVolatileState(guiCfg config.GUIConfiguration) http.
 		defer s.volStateMut.RUnlock()
 
 		var state apiproto.WebauthnVolatileState
-		state.Credentials = make(map[string]*apiproto.WebauthnCredentialVolatileState, len(guiCfg.WebauthnCredentials)+len(s.credentialsPendingRegistration))
 		for _, cred := range slices.Concat(guiCfg.WebauthnCredentials, s.credentialsPendingRegistration) {
-			state.Credentials[cred.ID] = s.loadCredentialStateRLocked(cred.ID)
+			state.Credentials = append(state.Credentials, s.loadCredentialStateRLocked(cred.ID))
 		}
 		w.WriteHeader(http.StatusOK)
 		sendProtobufJSON(w, &state)

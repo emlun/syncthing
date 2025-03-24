@@ -34,3 +34,13 @@ func Filter[E any, S ~[]E, P func(*E) bool](s S, pred P) S {
 	}
 	return result
 }
+
+// Return the first element for which the predicate `pred` returns `true`, or nil if none matches.
+func Find[E any, S ~[]E, P func(*E) bool](s S, pred P) *E {
+	for _, e := range s {
+		if pred(&e) {
+			return &e
+		}
+	}
+	return nil
+}

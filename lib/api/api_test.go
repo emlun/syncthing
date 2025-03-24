@@ -55,6 +55,7 @@ import (
 	modelmocks "github.com/syncthing/syncthing/lib/model/mocks"
 	"github.com/syncthing/syncthing/lib/protocol"
 	"github.com/syncthing/syncthing/lib/rand"
+	"github.com/syncthing/syncthing/lib/sliceutil"
 	"github.com/syncthing/syncthing/lib/structutil"
 	"github.com/syncthing/syncthing/lib/svcutil"
 	"github.com/syncthing/syncthing/lib/sync"
@@ -2136,12 +2137,16 @@ type ApiWebauthnCredential struct {
 	CreateTime    time.Time `json:"createTime"`
 }
 
-// Duplicate of api.WebauthnVolatileState to verify JSON serialization stability
+// Duplicate of apiproto.WebauthnVolatileState to verify JSON serialization stability
 type ApiWebauthnCredentialsState struct {
-	Credentials map[string]struct {
-		SignCount   uint32    `json:"signCount"`
-		LastUseTime time.Time `json:"lastUseTime"`
-	} `json:"credentials"`
+	Credentials []ApiWebauthnCredentialState `json:"credentials"`
+}
+
+// Duplicate of apiproto.WebauthnCredentialVolatileState to verify JSON serialization stability
+type ApiWebauthnCredentialState struct {
+	ID          string    `json:"id"`
+	SignCount   uint32    `json:"signCount"`
+	LastUseTime time.Time `json:"lastUseTime"`
 }
 
 func TestWebauthnRegistration(t *testing.T) {
@@ -2259,7 +2264,7 @@ func TestWebauthnRegistration(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		credVolState := volState.Credentials[pendingCred.ID]
+		credVolState := sliceutil.Find(volState.Credentials, func(c *ApiWebauthnCredentialState) bool { return c.ID == pendingCred.ID })
 		if !(time.Since(credVolState.LastUseTime) < 10*time.Second) {
 			t.Errorf("Wrong LastUseTime after registration success")
 		}
@@ -2637,8 +2642,8 @@ func TestWebauthnAuthentication(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			credVolState, ok := volState.Credentials[cred.ID]
-			if !ok {
+			credVolState := sliceutil.Find(volState.Credentials, func(c *ApiWebauthnCredentialState) bool { return c.ID == cred.ID })
+			if credVolState == nil {
 				t.Fatalf("Failed to get credential state")
 			}
 			if !(time.Since(credVolState.LastUseTime) < 10*time.Second) {

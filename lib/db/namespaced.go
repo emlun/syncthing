@@ -29,6 +29,13 @@ func NewNamespacedKV(db backend.Backend, prefix string) *NamespacedKV {
 	}
 }
 
+// Create a new `NamespacedKV` with the same leveldb backend, and the current
+// prefix appended with `keyPrefix`.
+// `n.Subspace(subpre).PutString(k)` is equivalent to `n.PutString(subpre + k)`.
+func (n *NamespacedKV) Subspace(keyPrefix string) *NamespacedKV {
+	return NewNamespacedKV(n.db, n.prefix+keyPrefix)
+}
+
 // PutInt64 stores a new int64. Any existing value (even if of another type)
 // is overwritten.
 func (n *NamespacedKV) PutInt64(key string, val int64) error {

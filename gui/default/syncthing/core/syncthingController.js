@@ -799,7 +799,17 @@ angular.module('syncthing.core')
 
         function refreshWebauthnState() {
             return $http.get(urlbase + '/webauthn/state').success(function (data) {
-                $scope.webauthn.state = data;
+                $scope.webauthn.state = {
+                    credentials: ((data || {}).credentials || [])
+                        .reduce(
+                            // Transform list to map
+                            function (credentials, cred) {
+                                credentials[cred.id] = cred;
+                                return credentials;
+                            },
+                            {},
+                        ),
+                };
             });
         }
 

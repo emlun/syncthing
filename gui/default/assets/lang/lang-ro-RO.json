@@ -167,7 +167,6 @@
     "GUI": "GUI",
     "GUI Authentication Password": "Parolă Interfaţă",
     "GUI Authentication User": "User Interfaţă",
-    "GUI Authentication: Set User and Password": "GUI Authentication: Set User and Password",
     "GUI Listen Address": "GUI Listen Address",
     "GUI Theme": "GUI Theme",
     "General": "General",
@@ -180,7 +179,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.",
     "Identification": "Identification",
     "If untrusted, enter encryption password": "If untrusted, enter encryption password",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.",
     "Ignore": "Ignoră",
     "Ignore Patterns": "Reguli de excludere",
     "Ignore Permissions": "Ignoră Permisiuni",
@@ -252,7 +250,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Permanently add it to the ignore list, suppressing further notifications.",
     "Please consult the release notes before performing a major upgrade.": "Please consult the release notes before performing a major upgrade.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Please set a GUI Authentication User and Password in the Settings dialog.",
     "Please wait": "Aşteaptă",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefix indicating that the file can be deleted if preventing directory removal",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefix indicating that the pattern should be matched without case sensitivity",
@@ -347,7 +344,6 @@
     "Take me back": "Take me back",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.",
     "The Syncthing Authors": "The Syncthing Authors",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "The Syncthing admin interface is configured to allow remote access without a password.",
     "The aggregated statistics are publicly available at the URL below.": "The aggregated statistics are publicly available at the URL below.",
     "The cleanup interval cannot be blank.": "The cleanup interval cannot be blank.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Configuraţia a fost salvată dar nu şi activată. Syncthing trebuie să repornească pentru a activa noua configuraţie.",
@@ -380,7 +376,6 @@
     "There are no folders to share with this device.": "There are no folders to share with this device.",
     "They are retried automatically and will be synced when the error is resolved.": "They are retried automatically and will be synced when the error is resolved.",
     "This Device": "This Device",
-    "This can easily give hackers access to read and change any files on your computer.": "This can easily give hackers access to read and change any files on your computer.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.",
     "This is a major version upgrade.": "This is a major version upgrade.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "This setting controls the free space required on the home (i.e., index database) disk.",
@@ -408,7 +403,6 @@
     "Uptime": "Uptime",
     "Usage reporting is always enabled for candidate releases.": "Usage reporting is always enabled for candidate releases.",
     "Use HTTPS for GUI": "Foloseşte HTTPS pentru interfaţă",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Username/Password has not been set for the GUI authentication. Please consider setting it up.",
     "Version": "Versiune",
     "Versions": "Versions",
     "Versions Path": "Locaţie Versiuni",
@@ -442,6 +436,18 @@
     "full documentation": "toată documentaţia",
     "items": "obiecte",
     "seconds": "seconds",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Username/Password has not been set for the GUI authentication. Please consider setting it up.",
+            "body-2": "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.",
+            "title": "GUI Authentication: Set User and Password"
+        },
+        "warning": {
+            "body-1": "The Syncthing admin interface is configured to allow remote access without a password.",
+            "body-2": "This can easily give hackers access to read and change any files on your computer.",
+            "body-3": "Please set a GUI Authentication User and Password in the Settings dialog."
+        }
+    },
     "{%device%} wants to share folder \"{%folder%}\".": "{{Dispozitivul}} vrea să transmită mapa {{Mapa}}",
     "{%device%} wants to share folder \"{%folderlabel%}\" ({%folder%}).": "{{device}} wants to share folder \"{{folderlabel}}\" ({{folder}}).",
     "{%reintroducer%} might reintroduce this device.": "{{reintroducer}} might reintroduce this device."

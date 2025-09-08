@@ -171,7 +171,6 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS 證書",
     "GUI Authentication Password": "圖形管理界面密碼",
     "GUI Authentication User": "圖形管理界面用戶名",
-    "GUI Authentication: Set User and Password": "GUI身份驗證：設置用戶和密碼",
     "GUI Listen Address": "GUI 監聽地址",
     "GUI Override Directory": "GUI 覆蓋目錄",
     "GUI Theme": "GUI 主題",
@@ -185,7 +184,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "我們已經為您關閉了自動崩潰報告發送功能，因為您當前的設置顯示您可能並不想啟用該功能。",
     "Identification": "識別",
     "If untrusted, enter encryption password": "如果不受信任，請輸入加密密碼",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "如果要阻止此計算機上的其他用戶訪問Syncthing並通過它訪問文件，請考慮設置身份驗證。",
     "Ignore": "忽略",
     "Ignore Patterns": "忽略模式",
     "Ignore Permissions": "忽略文件權限",
@@ -273,7 +271,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "正以給定的間隔定期掃瞄但設置更改監視失敗，正在以每 1m 一次重試：",
     "Permanently add it to the ignore list, suppressing further notifications.": "Permanently add it to the ignore list, suppressing further notifications.",
     "Please consult the release notes before performing a major upgrade.": "請在進行重大更新前查看發佈說明。",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "請在設置對話框中設置 GUI 驗證用戶及其密碼。",
     "Please wait": "請稍候",
     "Prefix indicating that the file can be deleted if preventing directory removal": "表示如果刪除了阻止目錄則文件可被刪除的前綴",
     "Prefix indicating that the pattern should be matched without case sensitivity": "此前綴表示，後面的模式在匹配時不區分大小寫",
@@ -385,7 +382,6 @@
     "Take me back": "帶我回去",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "GUI 地址已被啟動選項覆蓋。當覆蓋存在時，此處的更改就不會生效。",
     "The Syncthing Authors": "Syncthing的作者",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "當前配置允許在不使用密碼的情況下遠程訪問 Syncthing 管理界面。",
     "The aggregated statistics are publicly available at the URL below.": "全局統計數據公佈於以下 URL。",
     "The cleanup interval cannot be blank.": "清理間隔不能為空。",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "設置已經保存，但是還未生效。Syncthing 需要重啟以啟用新的設置。",
@@ -423,7 +419,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "系統將會自動重試，當錯誤被解決時，它們將會被同步。",
     "This Device": "當前設備",
     "This Month": "本月",
-    "This can easily give hackers access to read and change any files on your computer.": "這會讓駭客能夠輕而易舉地訪問及修改您的文件。",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "該設備不能自動發現其他設備或宣布自己的地址被其他人發現。只有具有靜態配置地址的設備才能連接。",
     "This is a major version upgrade.": "這是一個重大版本更新。",
     "This setting controls the free space required on the home (i.e., index database) disk.": "此設置控制主（例如索引數據庫）磁盤上需要的可用空間。",
@@ -457,7 +452,6 @@
     "Use HTTPS for GUI": "使用加密連接到圖形管理頁面",
     "Use notifications from the filesystem to detect changed items.": "使用來自文件系統的通知來檢測更改的項目。",
     "User Home": "用戶主頁",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "尚未為GUI身份驗證設置用戶名/密碼。 請考慮進行設置。",
     "Using a direct TCP connection over LAN": "通過內聯網使用直接 TCP 連接",
     "Using a direct TCP connection over WAN": "通過互聯網網使用直接 TCP 連接",
     "Version": "版本",
@@ -497,6 +491,18 @@
     "full documentation": "完整文檔",
     "items": "條目",
     "seconds": "秒",
+    "setup-auth": {
+        "notification": {
+            "body-1": "尚未為GUI身份驗證設置用戶名/密碼。 請考慮進行設置。",
+            "body-2": "如果要阻止此計算機上的其他用戶訪問Syncthing並通過它訪問文件，請考慮設置身份驗證。",
+            "title": "GUI身份驗證：設置用戶和密碼"
+        },
+        "warning": {
+            "body-1": "當前配置允許在不使用密碼的情況下遠程訪問 Syncthing 管理界面。",
+            "body-2": "這會讓駭客能夠輕而易舉地訪問及修改您的文件。",
+            "body-3": "請在設置對話框中設置 GUI 驗證用戶及其密碼。"
+        }
+    },
     "{%device%} wants to share folder \"{%folder%}\".": "{{device}} 想將 「{{folder}}」 文件夾共享給您。",
     "{%device%} wants to share folder \"{%folderlabel%}\" ({%folder%}).": "{{device}} 想要共享「{{folderlabel}}」（{{folder}}）文件夾給您。",
     "{%reintroducer%} might reintroduce this device.": "{{reintroducer}} 可能會重新引入此設備。"

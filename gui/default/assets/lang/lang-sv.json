@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "HTTPS-certifikat för gränssnitt / API",
     "GUI Authentication Password": "Autentiseringslösenord för gränssnitt",
     "GUI Authentication User": "Autentiseringsanvändare för gränssnitt",
-    "GUI Authentication: Set User and Password": "Autentisering för det grafiska gränssnittet: Ställ in användare och lösenord",
     "GUI Listen Address": "Lyssnaradress för gränssnitt",
     "GUI Override Directory": "Åsidosätt mapp för gränssnitt",
     "GUI Theme": "Tema för gränssnitt",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Dina aktuella inställningar indikerar dock att du kanske inte vill att ha det aktiverat. Vi har inaktiverat automatisk kraschrapportering för dig.",
     "Identification": "Identifiering",
     "If untrusted, enter encryption password": "Om opålitlig, ange krypteringslösenord",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Om du vill förhindra att andra användare på denna dator får åtkomst till Syncthing och genom det dina filer, överväg att ställa in autentisering.",
     "Ignore": "Ignorera",
     "Ignore Patterns": "Ignoreringsmönster",
     "Ignore Permissions": "Ignorera rättigheter",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodisk skanning vid givet intervall och misslyckades med att ställa in bevakning av ändringar, försöker igen var 1:e minut:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Lägg till det permanent i ignoreringslistan och undertryck ytterligare aviseringar.",
     "Please consult the release notes before performing a major upgrade.": "Läs igenom versionsnyheterna innan du utför en större uppgradering.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Ställ in en autentiseringsanvändare och ett lösenord för det grafiska användargränssnittet i inställningsdialogrutan.",
     "Please wait": "Vänta",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefix som indikerar att filen kan tas bort om den förhindrar mappborttagning",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefix som indikerar att mönstret ska matchas utan skiftlägeskänslighet",
@@ -417,7 +414,6 @@
     "Take me back": "Ta mig tillbaka",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Den grafiska gränssnittsadressen åsidosätts av startalternativ. Ändringar här träder inte i kraft så länge åsidosättningen är på plats.",
     "The Syncthing Authors": "Syncthing-upphovsmän",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Administratörsgränssnittet för Syncthing är konfigurerat för att möjliggöra fjärråtkomst utan lösenord.",
     "The aggregated statistics are publicly available at the URL below.": "Den aggregerade statistiken är offentligt tillgänglig på webbadressen nedan.",
     "The cleanup interval cannot be blank.": "Rensningsintervallet kan inte vara tomt.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Konfigurationen har sparats men inte aktiverats. Syncthing måste startas om för att aktivera den nya konfigurationen.",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "De omprövas automatiskt och kommer att synkroniseras när felet är löst.",
     "This Device": "Denna enhet",
     "This Month": "Denna månad",
-    "This can easily give hackers access to read and change any files on your computer.": "Detta kan lätt ge hackare tillgång till att läsa och ändra några filer på datorn.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Denna enhet kan inte automatiskt upptäcka andra enheter eller meddela sin egen adress som andra kan hitta. Endast enheter med statiskt konfigurerade adresser kan ansluta.",
     "This is a major version upgrade.": "Det här är en stor uppgradering.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Denna inställning styr hur mycket ledigt utrymme som krävs på hemdisken (dvs. indexdatabasen).",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "Använd aviseringar från filsystemet för att upptäcka ändrade objekt.",
     "User": "Användare",
     "User Home": "Användarhem",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Användarnamn/lösenord har inte ställts in för autentisering av det grafiska gränssnittet. Överväg att ställa in det.",
     "Using a QUIC connection over LAN": "Använder en QUIC-anslutning över LAN",
     "Using a QUIC connection over WAN": "Använder en QUIC-anslutning över WAN",
     "Using a direct TCP connection over LAN": "Använda en direkt TCP-anslutning över LAN",
@@ -542,6 +536,18 @@
     "modified": "ändrad",
     "permit": "tillåt",
     "seconds": "sekunder",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Användarnamn/lösenord har inte ställts in för autentisering av det grafiska gränssnittet. Överväg att ställa in det.",
+            "body-2": "Om du vill förhindra att andra användare på denna dator får åtkomst till Syncthing och genom det dina filer, överväg att ställa in autentisering.",
+            "title": "Autentisering för det grafiska gränssnittet: Ställ in användare och lösenord"
+        },
+        "warning": {
+            "body-1": "Administratörsgränssnittet för Syncthing är konfigurerat för att möjliggöra fjärråtkomst utan lösenord.",
+            "body-2": "Detta kan lätt ge hackare tillgång till att läsa och ändra några filer på datorn.",
+            "body-3": "Ställ in en autentiseringsanvändare och ett lösenord för det grafiska användargränssnittet i inställningsdialogrutan."
+        }
+    },
     "theme": {
         "name": {
             "black": "Svart",

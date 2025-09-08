@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "Certificat HTTPS GUI/API",
     "GUI Authentication Password": "Mot de passe d'authentification GUI",
     "GUI Authentication User": "Utilisateur autorisé GUI",
-    "GUI Authentication: Set User and Password": "Authentification à l'interface graphique : régler nom d'utilisateur et mot de passe",
     "GUI Listen Address": "Adresse d'écoute du GUI",
     "GUI Override Directory": "Répertoire de remplacement GUI",
     "GUI Theme": "Thème graphique",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Cependant, vos réglages indiquent que vous pourriez souhaiter ne pas l'activer. Nous avons désactivé pour vous l'envoi automatique des rapports.",
     "Identification": "Identifiant abrégé",
     "If untrusted, enter encryption password": "Entrez un mot de passe pour chiffrer",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Si vous voulez empêcher d'autres utilisateurs de cet appareil à accéder à Syncthing, et via Syncthing à vos fichiers, prenez quelques secondes pour régler l'authentification.",
     "Ignore": "Refuser",
     "Ignore Patterns": "Exclusions",
     "Ignore Permissions": "Ignorer les permissions",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Analyse périodique à intervalle défini et échec d'activation de la surveillance des changements. Nouvel essai toutes les 1mn :",
     "Permanently add it to the ignore list, suppressing further notifications.": "L'ajouter à la liste des ignorés pour éviter des notifications ultérieures.",
     "Please consult the release notes before performing a major upgrade.": "Veuillez consulter les notes de version avant de réaliser une mise à jour majeure.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Veuillez définir un nom d'utilisateur et un mot de passe dans la fenêtre de Configuration.",
     "Please wait": "Merci de patienter",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Ce préfixe autorise la suppression des fichiers pour permettre la suppression de répertoires",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Ce préfixe, inutile sur Windows et Mac OS, indique que le masque d'exclusion est insensible à la casse",
@@ -417,7 +414,6 @@
     "Take me back": "Vérifier",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "L'adresse de l'interface graphique est remplacée par une ou des options de lancement. Les modifications apportées ici ne seront pas effectives tant que ces options seront utilisées.",
     "The Syncthing Authors": "Les concepteurs de Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "L'interface d'administration de Syncthing est paramétrée pour autoriser les accès à distance sans mot de passe.",
     "The aggregated statistics are publicly available at the URL below.": "Les statistiques agrégées sont disponibles publiquement à l'adresse ci-dessous.",
     "The cleanup interval cannot be blank.": "L'intervalle de purge ne peut pas être vide.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "La configuration a été enregistrée mais pas activée. Syncthing doit redémarrer afin d'activer la nouvelle configuration.",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Ils seront automatiquement retentés et synchronisés quand l'erreur sera résolue.",
     "This Device": "Cet appareil",
     "This Month": "Ce mois-ci",
-    "This can easily give hackers access to read and change any files on your computer.": "Ceci peut aisément permettre à un intrus de lire et modifier n'importe quel fichier de votre ordinateur.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Cet appareil ne peut ni découvrir automatiquement les autres, ni annoncer sa propre présence pour être découvert pas les autres. Seuls les appareils configurés avec des connexions statiques peuvent se connecter.",
     "This is a major version upgrade.": "Il s'agit d'une mise à jour majeure.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Ce réglage contrôle l'espace disque requis dans le disque qui abrite votre répertoire utilisateur (pour la base de données d'indexation).",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "Utiliser les notifications du système de fichiers pour détecter les éléments modifiés.",
     "User": "Utilisateur",
     "User Home": "Répertoire de base de l'utilisateur",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Utilisateur/Mot de passe n'ont pas été définis pour l'accès à l'interface graphique. Envisagez de le faire.",
     "Using a QUIC connection over LAN": "Connexion QUIC sur LAN",
     "Using a QUIC connection over WAN": "Connexion QUIC sur WAN",
     "Using a direct TCP connection over LAN": "Connexion TCP directe LAN",
@@ -542,6 +536,18 @@
     "modified": "modifié",
     "permit": "partager tous les attributs",
     "seconds": "secondes",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Utilisateur/Mot de passe n'ont pas été définis pour l'accès à l'interface graphique. Envisagez de le faire.",
+            "body-2": "Si vous voulez empêcher d'autres utilisateurs de cet appareil à accéder à Syncthing, et via Syncthing à vos fichiers, prenez quelques secondes pour régler l'authentification.",
+            "title": "Authentification à l'interface graphique : régler nom d'utilisateur et mot de passe"
+        },
+        "warning": {
+            "body-1": "L'interface d'administration de Syncthing est paramétrée pour autoriser les accès à distance sans mot de passe.",
+            "body-2": "Ceci peut aisément permettre à un intrus de lire et modifier n'importe quel fichier de votre ordinateur.",
+            "body-3": "Veuillez définir un nom d'utilisateur et un mot de passe dans la fenêtre de Configuration."
+        }
+    },
     "theme": {
         "name": {
             "black": "Noir",

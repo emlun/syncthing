@@ -231,7 +231,6 @@
     "Periodic scanning at given interval and enabled watching for changes": "Ajoitettu skannaus ja muutosten seuranta päällä",
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Ajoitettu skannaus päällä. Muutosten seurannan käyttöönotto epäonnistui, yritetään uudelleen minuutin välein:",
     "Please consult the release notes before performing a major upgrade.": "Tutustu julkaisutietoihin ennen kuin teet pääversion päivityksen.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Ole hyvä ja aseta käyttäjätunnus ja salasana käyttöliittymää varten asetusvalikossa.",
     "Please wait": "Ole hyvä ja odota",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Etuliite, joka määrittää että tiedosto voidaan poistaa, mikäli se estää kansion poistamisen.",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Etuliite, joka määrittää että isot ja pienet kirjaimet eivät merkitse",
@@ -318,7 +317,6 @@
     "Syncthing seems to be experiencing a problem processing your request. Please refresh the page or restart Syncthing if the problem persists.": "Syncthing ei pysty käsittelemään pyyntöäsi. Ole hyvä ja päivitä sivu tai käynnistä Syncthing uudelleen, jos ongelma jatkuu.",
     "Take me back": "Takaisin",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Käyttöliittymän osoite on asetettu käynnistysparametreillä. Muutokset täällä tulevat voimaan vasta, kun käynnistysparametrejä ei käytetä.",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthingin hallintakäyttöliittymä on asetettu sallimaan ulkoiset yhteydet ilman salasanaa.",
     "The aggregated statistics are publicly available at the URL below.": "Koostetut tilastot ovat julkisesti saatavilla alla olevassa osoitteessa.",
     "The cleanup interval cannot be blank.": "Puhdistusväli ei voi olla tyhjä.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Asetukset on tallennettu, mutta niitä ei ole otettu käyttöön. Syncthingin täytyy käynnistyä uudelleen, jotta uudet asetukset saadaan käyttöön.",
@@ -349,7 +347,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Niiden synkronointia yritetään uudelleen automaattisesti.",
     "This Device": "Tämä laite",
     "This Month": "Tässä kuussa",
-    "This can easily give hackers access to read and change any files on your computer.": "Tämä voi helposti sallia vihamielisille tahoille pääsyn lukea ja muokata kaikkia tiedostojasi",
     "This is a major version upgrade.": "Tämä on pääversion päivitys.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Tämä asetus määrittää vaaditun vapaan levytilan kotikansiossa (se missä index-tietokanta on).",
     "Time": "Aika",
@@ -413,6 +410,13 @@
     "items": "kohteet",
     "modified": "muokattu",
     "seconds": "sekuntia",
+    "setup-auth": {
+        "warning": {
+            "body-1": "Syncthingin hallintakäyttöliittymä on asetettu sallimaan ulkoiset yhteydet ilman salasanaa.",
+            "body-2": "Tämä voi helposti sallia vihamielisille tahoille pääsyn lukea ja muokata kaikkia tiedostojasi",
+            "body-3": "Ole hyvä ja aseta käyttäjätunnus ja salasana käyttöliittymää varten asetusvalikossa."
+        }
+    },
     "theme": {
         "name": {
             "black": "Musta",

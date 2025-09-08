@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "Сертификат на интерфейса / ППИ през HTTPS",
     "GUI Authentication Password": "Парола за интерфейса",
     "GUI Authentication User": "Потребител за интерфейса",
-    "GUI Authentication: Set User and Password": "Удостоверяване на графичния интерфейс: потребител и парола",
     "GUI Listen Address": "Адрес на слушане",
     "GUI Override Directory": "Папка за промяна на интерфейса",
     "GUI Theme": "Тема на графичния интерфейс",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Текущите настройки обаче показват, че може би не искате да бъде включена. За това автоматичното докладване на сривове е изключено.",
     "Identification": "Идентифициране",
     "If untrusted, enter encryption password": "При недоверено задайте парола за шифроване",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Ако желаете да предотвратите достъпа на другите потребители на устройството до Syncthing, а чрез него и до файловете ви, помислете за удостоверяване на графичния интерфейс.",
     "Ignore": "Пренебрегване",
     "Ignore Patterns": "Шаблони за пренебрегване",
     "Ignore Permissions": "Пренебрегване на права",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Периодично обхождане и грешка при започване на наблюдението за промени, прави се опит всяка минута:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Добавяне за постоянно в списъка с пренебрегнати елементи, потискайки бъдещи известия.",
     "Please consult the release notes before performing a major upgrade.": "Прочетете бележките по изданието преди да пристъпите към обновяване към значимо издание.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Задайте потребителско име и парола за графичния интерфейс в настройките.",
     "Please wait": "Изчакайте",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Представка, указваща че файлът може да бъде изтрит ако пречи при премахване на папката",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Представка, указваща че шаблонът не прави разлика в регистъра на буквите",
@@ -417,7 +414,6 @@
     "Take me back": "Назад",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Адресът на интерфейса не се взима под внимание заради параметри при стартиране. Промените тук няма да бъдат отразени докато параметрите не бъдат променени.",
     "The Syncthing Authors": "Автори на Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Администраторският панел на Syncthing разрешава дистанционен достъп без да изисква парола.",
     "The aggregated statistics are publicly available at the URL below.": "Обобщените статистически данни са публично достъпни на адреса по-долу.",
     "The cleanup interval cannot be blank.": "Интервалът на почистване не може да бъде празен.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Настройките са запазени, но не са приложени. За да влязат в сила Syncthing трябва да се рестартира.",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Ще бъдат спрени и автоматично синхронизирани, когато грешката бъде отстранена.",
     "This Device": "Това устройство",
     "This Month": "Този месец",
-    "This can easily give hackers access to read and change any files on your computer.": "Така се предоставя лесен достъп за четене и промяна на всеки файл на компютъра.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Устройството не може автоматично да открива други устройства или да обяви своя адрес, за да бъде намерено от другите. Само устройствата със статично настроени адреси могат да се свързват.",
     "This is a major version upgrade.": "Това е обновяване на значимо издание.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Тази настройка управлява нужното свободното място на основния (пр. този с банката от данни) диск.",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "Използва съобщения от файловата система, за да открива променени елементи.",
     "User": "Потребител",
     "User Home": "Папка на потребителя",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Потребителският интерфейс не е защитен с потребителско име и парола. Настройте защита.",
     "Using a QUIC connection over LAN": "Използване на връзка чрез QUIC в LAN",
     "Using a QUIC connection over WAN": "Използване на връзка чрез QUIC в WAN",
     "Using a direct TCP connection over LAN": "Използване на директна свързаност с TCP през местна мрежа",
@@ -542,6 +536,18 @@
     "modified": "променено",
     "permit": "разрешаване",
     "seconds": "секунди",
+    "setup-auth": {
+      "notification": {
+        "body-1": "Потребителският интерфейс не е защитен с потребителско име и парола. Настройте защита.",
+        "body-2": "Ако желаете да предотвратите достъпа на другите потребители на устройството до Syncthing, а чрез него и до файловете ви, помислете за удостоверяване на графичния интерфейс.",
+        "title": "Удостоверяване на графичния интерфейс: потребител и парола"
+      },
+      "warning": {
+        "body-1": "Администраторският панел на Syncthing разрешава дистанционен достъп без да изисква парола.",
+        "body-2": "Така се предоставя лесен достъп за четене и промяна на всеки файл на компютъра.",
+        "body-3": "Задайте потребителско име и парола за графичния интерфейс в настройките."
+      }
+    },
     "theme": {
         "name": {
             "black": "Черна",

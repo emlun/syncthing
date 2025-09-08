@@ -176,7 +176,6 @@
     "GUI / API HTTPS Certificate": "Certificat HTTPS GUI / API",
     "GUI Authentication Password": "Password d'autenticació de l'Interfície Gràfica d'Usuari (GUI)",
     "GUI Authentication User": "Autenticació de l'usuari de l'Interfície Gràfica d'Usuari (GUI)",
-    "GUI Authentication: Set User and Password": "Autenticació de la interfície gràfica d'usuari: defineix l'usuari i la contrasenya",
     "GUI Listen Address": "Adreça d'escolta de la Interfície Gràfica d'Usuari (GUI)",
     "GUI Override Directory": "Directori de substitució de la interfície gràfica d'usuari",
     "GUI Theme": "Tema de l'Interfície Gràfica d'Usuari (GUI)",
@@ -191,7 +190,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Tanmateix, la vostra configuració actual indica que potser no voleu que estigui activada. Hem desactivat l'informe automàtic d'errors.",
     "Identification": "Identificació",
     "If untrusted, enter encryption password": "Si no és de confiança, introduïu la contrasenya de xifratge",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Si voleu evitar que altres usuaris d'aquest ordinador accedeixin a Syncthing i a través d'ell els vostres fitxers, penseu a configurar l'autenticació.",
     "Ignore": "Ignorar",
     "Ignore Patterns": "Patrons a ignorar",
     "Ignore Permissions": "Permisos a ignorar",
@@ -282,7 +280,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Escaneig periòdic a l'interval determinat i errada al activar el rastreig continu de canvis, reintentant cada 1 minut:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Afegeix-lo permanentment a la llista d'ignorar, suprimint més notificacions.",
     "Please consult the release notes before performing a major upgrade.": "Per favor, consultar les notes de la versió abans de fer una actualització important.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Per favor, estableix un usuari i password per a l'Interfície Gràfica d'Usuari en el menú d'Adjustos.",
     "Please wait": "Per favor, espere",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefix que indica que el fitxer pot ser eliminat encara que estiga restringida l'eliminació del directori",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefix que indica que el patró deu coincidir sense tindre en compte les majúscules",
@@ -398,7 +395,6 @@
     "Take me back": "Porta'm enrere",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "L'adreça del GUI és sobreescrita per les opcions d'inici. Els canvis ací no surtiràn efecte mentre la sobreescritura estiga en marxa.",
     "The Syncthing Authors": "Els autors de Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "L'interfície d'administració de Syncthing està configurat per a permetre l'accés remot sense una contrasenya.",
     "The aggregated statistics are publicly available at the URL below.": "Les estadístiques agregades estàn disponibles en la URL que figura a continuació.",
     "The cleanup interval cannot be blank.": "L'interval de neteja no pot estar en blanc.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "La configuració ha sigut gravada però no activada. Syncthing deu reiniciar per tal d'activar la nova configuració.",
@@ -436,7 +432,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Es reintenta automàticament i es sincronitzaràn quant el resolga l'error.",
     "This Device": "Aquest Dispositiu",
     "This Month": "Aquest mes",
-    "This can easily give hackers access to read and change any files on your computer.": "Açò pot donar accés fàcilment als hackers per a llegir i canviar qualsevol fitxer al teu ordinador.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Aquest dispositiu no pot detectar automàticament altres dispositius ni anunciar la seva pròpia adreça perquè altres puguin trobar. Només es poden connectar dispositius amb adreces configurades estàticament.",
     "This is a major version upgrade.": "Aquesta és una actualització important de la versió.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Aquest ajust controla l'espai lliure requerit en el disc inicial (per exemple, la base de dades de l'index).",
@@ -471,7 +466,6 @@
     "Use HTTPS for GUI": "Utilitzar HTTPS per a l'Interfície Gràfica d'Usuari (GUI)",
     "Use notifications from the filesystem to detect changed items.": "Usar notificacions del sistema de fitxers per a detectar els ítems canviats.",
     "User Home": "Carpeta d'inici de l'usuari",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "El nom d'usuari/contrasenya no s'ha establert per a l'autenticació de la interfície gràfica d'usuari. Penseu a configurar-ho.",
     "Using a direct TCP connection over LAN": "Utilitzant una connexió TCP directa per LAN",
     "Using a direct TCP connection over WAN": "Utilitzant una connexió TCP directa a través de WAN",
     "Version": "Versió",
@@ -517,6 +511,18 @@
     "modified": "modificat",
     "permit": "permís",
     "seconds": "segons",
+    "setup-auth": {
+        "notification": {
+            "body-1": "El nom d'usuari/contrasenya no s'ha establert per a l'autenticació de la interfície gràfica d'usuari. Penseu a configurar-ho.",
+            "body-2": "Si voleu evitar que altres usuaris d'aquest ordinador accedeixin a Syncthing i a través d'ell els vostres fitxers, penseu a configurar l'autenticació.",
+            "title": "Autenticació de la interfície gràfica d'usuari: defineix l'usuari i la contrasenya"
+        },
+        "warning": {
+            "body-1": "L'interfície d'administració de Syncthing està configurat per a permetre l'accés remot sense una contrasenya.",
+            "body-2": "Açò pot donar accés fàcilment als hackers per a llegir i canviar qualsevol fitxer al teu ordinador.",
+            "body-3": "Per favor, estableix un usuari i password per a l'Interfície Gràfica d'Usuari en el menú d'Adjustos."
+        }
+    },
     "theme": {
         "name": {
             "black": "Negre",

@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "Certyfikat GUI / API HTTPS",
     "GUI Authentication Password": "Hasło uwierzytelniające GUI",
     "GUI Authentication User": "Użytkownik uwierzytelniający GUI",
-    "GUI Authentication: Set User and Password": "Uwierzytelnianie GUI: ustaw nazwę użytkownika i hasło",
     "GUI Listen Address": "Adres nasłuchu GUI",
     "GUI Override Directory": "Katalog nadpisywania GUI",
     "GUI Theme": "Motyw GUI",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Niemniej jednak, obecne ustawienia wskazują, że możesz nie chcieć włączać tej funkcji. Automatyczne zgłaszanie awarii zostało więc wyłączone na tym urządzeniu.",
     "Identification": "Identyfikator",
     "If untrusted, enter encryption password": "Jeżeli folder jest niezaufany, wprowadź szyfrujące hasło",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Jeżeli chcesz zakazać innym użytkownikom tego komputera dostępu do programu Syncthing, a przez niego do swoich plików, zastanów się nad włączeniem uwierzytelniania.",
     "Ignore": "Ignoruj",
     "Ignore Patterns": "Wzorce ignorowania",
     "Ignore Permissions": "Ignorowanie uprawnień",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Okresowe skanowanie w podanym przedziale czasowym oraz nieudane ustawienie obserwowania zmian; ponawiam co minutę:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Dodaje na stałe od listy ignorowanych wyciszając kolejne powiadomienia.",
     "Please consult the release notes before performing a major upgrade.": "Prosimy zapoznać się z informacjami o wydaniu przed przeprowadzeniem dużej aktualizacji.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Ustaw nazwę użytkownika i hasło do uwierzytelniania GUI w oknie Ustawień.",
     "Please wait": "Proszę czekać",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Przedrostek wskazujący, że plik może zostać usunięty, gdy blokuje on usunięcie katalogu",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Przedrostek wskazujący, że wzorzec ma być wyszukiwany bez rozróżniania wielkości liter",
@@ -417,7 +414,6 @@
     "Take me back": "Powrót",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Adres GUI jest nadpisywany przez opcje uruchamiania. Zmiany dokonane tutaj nie będą obowiązywać, dopóki nadpisywanie jest w użyciu.",
     "The Syncthing Authors": "Twórcy Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Ustawienia interfejsu administracyjnego programu Syncthing zezwalają na dostęp zdalny bez hasła.",
     "The aggregated statistics are publicly available at the URL below.": "Zebrane statystyki są publicznie dostępne pod poniższym adresem.",
     "The cleanup interval cannot be blank.": "Przedział czasowy czyszczenia nie może być pusty.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Ustawienia zostały zapisane, ale nie są jeszcze aktywne. Syncthing musi zostać uruchomiony ponownie, aby aktywować nowe ustawienia.",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Ponowne próby zachodzą automatycznie, a synchronizacja nastąpi po usunięciu błędu.",
     "This Device": "To urządzenie",
     "This Month": "Ten miesiąc",
-    "This can easily give hackers access to read and change any files on your computer.": "Może to umożliwić hakerom dostęp do odczytu i zmian dowolnych plików na tym komputerze.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "To urządzenie nie jest w stanie automatycznie odnajdować innych urządzeń oraz ogłaszać swojego adresu, aby mogło ono zostać znalezione przez nie. Tylko urządzenia z adresem ustawionym statycznie są w stanie się połączyć.",
     "This is a major version upgrade.": "To jest duża aktualizacja.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "To ustawienie kontroluje ilość wolnej przestrzeni na dysku domowym (np. do indeksowania bazy danych).",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "Używaj powiadomień systemu plików do wykrywania zmienionych elementów.",
     "User": "Użytkownik",
     "User Home": "Katalog domowy użytkownika",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Nazwa użytkownika i hasło do uwierzytelniania GUI nie zostały skonfigurowane. Zastanów się nad ich ustawieniem.",
     "Using a QUIC connection over LAN": "Używane jest połączenie przez protokół QUIC w sieci lokalnej LAN",
     "Using a QUIC connection over WAN": "Używane jest połączenie przez protokół QUIC w sieci rozległej WAN",
     "Using a direct TCP connection over LAN": "Używane jest bezpośrednie połączenie przez protokół TCP w sieci lokalnej LAN",
@@ -542,6 +536,18 @@
     "modified": "modyfikacja",
     "permit": "zezwól",
     "seconds": "sekundy",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Nazwa użytkownika i hasło do uwierzytelniania GUI nie zostały skonfigurowane. Zastanów się nad ich ustawieniem.",
+            "body-2": "Jeżeli chcesz zakazać innym użytkownikom tego komputera dostępu do programu Syncthing, a przez niego do swoich plików, zastanów się nad włączeniem uwierzytelniania.",
+            "title": "Uwierzytelnianie GUI: ustaw nazwę użytkownika i hasło"
+        },
+        "warning": {
+            "body-1": "Ustawienia interfejsu administracyjnego programu Syncthing zezwalają na dostęp zdalny bez hasła.",
+            "body-2": "Może to umożliwić hakerom dostęp do odczytu i zmian dowolnych plików na tym komputerze.",
+            "body-3": "Ustaw nazwę użytkownika i hasło do uwierzytelniania GUI w oknie Ustawień."
+        }
+    },
     "theme": {
         "name": {
             "black": "Czarny",

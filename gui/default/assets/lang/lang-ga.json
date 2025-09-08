@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "Teastas GUI / API HTTPS",
     "GUI Authentication Password": "Pasfhocal Fíordheimhnithe GUI",
     "GUI Authentication User": "Úsáideoir Fíordheimhnithe GUI",
-    "GUI Authentication: Set User and Password": "Fíordheimhniú Grafach: Socraigh Úsáideoir agus Pasfhocal",
     "GUI Listen Address": "Seoladh Éisteachta GUI",
     "GUI Override Directory": "Comhadlann Sáraithe GUI",
     "GUI Theme": "Téama grafach",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Mar sin féin, léiríonn do shocruithe reatha go mb'fhéidir nár mhaith leat é a chumasú. Tá tuairisciú uathoibríoch tuairteála díchumasaithe againn duit.",
     "Identification": "Aitheantas",
     "If untrusted, enter encryption password": "Mura bhfuil muinín agat as, iontráil focal faire criptithe",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Más mian leat cosc a chur ar úsáideoirí eile ar an ríomhaire seo rochtain a fháil ar Syncthing agus trí do chuid comhad, smaoinigh ar fhíordheimhniú a bhunú.",
     "Ignore": "Déan neamhaird de",
     "Ignore Patterns": "Déan neamhaird de Phatrúin",
     "Ignore Permissions": "Déan neamhaird de cheadanna",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Scanadh tréimhsiúil ag eatramh áirithe agus theip ar shocrú faire le haghaidh athruithe, ag triail gach 1m:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Cuir go buan é leis an liosta neamhairde, ag cur fógraí breise faoi chois.",
     "Please consult the release notes before performing a major upgrade.": "Féach ar na nótaí scaoilte sula ndéanfaidh tú uasghrádú mór.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Socraigh Úsáideoir Fíordheimhnithe GUI agus Pasfhocal sa dialóg Socruithe.",
     "Please wait": "Fan, le do thoil",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Réimír a léiríonn gur féidir an comhad a scriosadh má chuirtear cosc ar bhaint eolaire",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Réimír a léiríonn gur chóir an patrún a mheaitseáil gan íogaireacht cáis",
@@ -417,7 +414,6 @@
     "Take me back": "Tóg ar ais mé",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Tá an seoladh GUI sáraithe ag roghanna tosaithe. Ní thiocfaidh athruithe anseo i bhfeidhm fad is atá an sárú i bhfeidhm.",
     "The Syncthing Authors": "Na húdair sioncronaithe",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Tá an comhéadan riaracháin Syncthing cumraithe chun cianrochtain a cheadú gan phasfhocal.",
     "The aggregated statistics are publicly available at the URL below.": "Tá na staitisticí comhiomlánaithe ar fáil go poiblí ag an URL thíos.",
     "The cleanup interval cannot be blank.": "Ní féidir leis an eatramh glanta a bheith bán.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Sábháladh an chumraíocht ach níor cuireadh i ngníomh í. Ní mór sioncronú a atosú chun an chumraíocht nua a ghníomhachtú.",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Déantar iad a aisghabháil go huathoibríoch agus déanfar iad a shioncronú nuair a réitítear an earráid.",
     "This Device": "An Gléas seo",
     "This Month": "An mhí seo",
-    "This can easily give hackers access to read and change any files on your computer.": "Is féidir é seo a thabhairt go héasca hackers rochtain a léamh agus aon chomhaid ar do ríomhaire a athrú.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Ní féidir leis an ngléas seo gléasanna eile a aimsiú go huathoibríoch ná a sheoladh féin a fhógairt le haimsiú ag daoine eile.  Ní féidir ach le gléasanna le seoltaí atá cumraithe go statically ceangal.",
     "This is a major version upgrade.": "Is uasghrádú mór leagan é seo.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Rialaíonn an socrú seo an spás saor in aisce a theastaíonn ar an diosca baile (i.e., bunachar sonraí innéacs).",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "Bain úsáid as fógraí ón gcóras comhad chun míreanna athraithe a bhrath.",
     "User": "Úsáideoir",
     "User Home": "Baile Úsáideora",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Níor socraíodh ainm úsáideora/pasfhocal le haghaidh fíordheimhniú an GUI. Smaoinigh, le do thoil, ar é a chur ar bun.",
     "Using a QUIC connection over LAN": "Ag baint úsáide as nasc QUIC thar LAN",
     "Using a QUIC connection over WAN": "Ag baint úsáide as nasc QUIC thar WAN",
     "Using a direct TCP connection over LAN": "Ag baint úsáide as nasc TCP díreach thar LAN",
@@ -542,6 +536,18 @@
     "modified": "modhnaithe",
     "permit": "cead",
     "seconds": "soicind",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Níor socraíodh ainm úsáideora/pasfhocal le haghaidh fíordheimhniú an GUI. Smaoinigh, le do thoil, ar é a chur ar bun.",
+            "body-2": "Más mian leat cosc a chur ar úsáideoirí eile ar an ríomhaire seo rochtain a fháil ar Syncthing agus trí do chuid comhad, smaoinigh ar fhíordheimhniú a bhunú.",
+            "title": "Fíordheimhniú Grafach: Socraigh Úsáideoir agus Pasfhocal"
+        },
+        "warning": {
+            "body-1": "Tá an comhéadan riaracháin Syncthing cumraithe chun cianrochtain a cheadú gan phasfhocal.",
+            "body-2": "Is féidir é seo a thabhairt go héasca hackers rochtain a léamh agus aon chomhaid ar do ríomhaire a athrú.",
+            "body-3": "Socraigh Úsáideoir Fíordheimhnithe GUI agus Pasfhocal sa dialóg Socruithe."
+        }
+    },
     "theme": {
         "name": {
             "black": "Dubh",

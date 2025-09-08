@@ -83,7 +83,6 @@
     "Pause": "Peata",
     "Pause All": "Peata Kõik",
     "Paused": "Peatatud",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Palun seadista GUI Autentimise Kasutajatunnus ning Salasõna Seadistuste dialoogist.",
     "Please wait": "Palun oota",
     "Preview": "Eelvaade",
     "Random": "Juhuslik",
@@ -124,6 +123,11 @@
     "Use HTTPS for GUI": "Kasuta HTTPS'i GUI jaoks",
     "Version": "Versioon",
     "Yes": "Jah",
+    "setup-auth": {
+        "warning": {
+            "body-3": "Palun seadista GUI Autentimise Kasutajatunnus ning Salasõna Seadistuste dialoogist."
+        }
+    },
     "{%device%} wants to share folder \"{%folder%}\".": "{{device}} soovib jagada kausta \"{{folder}}\".",
     "{%device%} wants to share folder \"{%folderlabel%}\" ({%folder%}).": "{{device}} soovib jagada kausta \"{{folderlabel}}\" ({{folder}})."
 }

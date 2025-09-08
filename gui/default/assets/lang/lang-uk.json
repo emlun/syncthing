@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "HTTPS сертифікат для GUI / API",
     "GUI Authentication Password": "Пароль аутентифікації у графічному інтерфейсі",
     "GUI Authentication User": "Користувач аутентифікації у графічному інтерфейсі",
-    "GUI Authentication: Set User and Password": "Доступ до панелі керування: встановіть ім'я користувача та пароль",
     "GUI Listen Address": "Адреса прослуховування для панелі керування",
     "GUI Override Directory": "Перевизначення адреси панелі керування",
     "GUI Theme": "Тема інтерфейсу",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Однак ваші поточні налаштування вказують, що ви, можливо, не хочете, щоб це було ввімкнено. Ми вимкнули автоматичне повідомлення про аварійне завершення роботи.",
     "Identification": "Ідентифікатор",
     "If untrusted, enter encryption password": "Якщо пристрій ненадійний, введіть пароль для шифрування",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Якщо ви хочете заборонити іншим користувачам цього комп’ютера отримувати доступ до Syncthing і через нього до своїх файлів, подумайте про налаштування автентифікації.",
     "Ignore": "Ігнорувати",
     "Ignore Patterns": "Шаблони винятків",
     "Ignore Permissions": "Ігнорувати права доступу до файлів",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Періодичне сканування через визначений інтервал та невдале відстеження змін, повторні спроби кожну 1 хв.:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Додати до чорного списку, щоб ігнорувати подальші сповіщення.",
     "Please consult the release notes before performing a major upgrade.": "Будь ласка, перегляньте примітки до випуску перед мажорним оновленням. ",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Будь ласка, встановіть у налаштуваннях ім'я користувача та пароль до панелі керування.",
     "Please wait": "Будь ласка, зачекайте",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Префікс означає, що файл може бути видалений при запобіганні видаленню директорії",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Префікс означає, що шаблон має збігатися без чутливості до регістру",
@@ -417,7 +414,6 @@
     "Take me back": "Поверніть мене назад",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Адреса панелі керування користувача перевизначена стартовими налаштуваннями. Зміни зроблені тут не матимуть ефекту доки перевизначення в дії.",
     "The Syncthing Authors": "Автори Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Інтерфейс адміністрування Syncthing налаштовано на дозвіл віддаленого доступу без пароля.",
     "The aggregated statistics are publicly available at the URL below.": "Зібрана статистика публічно доступна за наступним посиланням.",
     "The cleanup interval cannot be blank.": "Інтервал очищення не може бути порожнім.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Конфігурацію збережено, але не активовано. Необхідно перезапустити Syncthing для того, щоби активувати нову конфігурацію.",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Вони будуть автоматично повторно синхронізовані, коли помилку буде усунено. ",
     "This Device": "Локальний пристрій",
     "This Month": "Цього місяця",
-    "This can easily give hackers access to read and change any files on your computer.": "Це легко може дати хакерам доступ на читання та внесення змін до будь-яких файлів на вашому комп'ютері.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Цей пристрій не може автоматично виявляти інших або оголошувати свою власну адресу іншим. Підключатися можуть лише пристрої зі статично налаштованими адресами.",
     "This is a major version upgrade.": "Це мажорне оновлення.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Це налаштування визначає необхідний вільний простір на домашньому (тобто той, що містить базу даних) диску.",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "Використовувати сповіщення від файлової системи для виявлення змінених об'єктів.",
     "User": "Користувач",
     "User Home": "Домашня директорія користувача",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Логін/пароль не встановлені для автентифікації в панелі керування. Будь ласка, налаштуйте їх.",
     "Using a QUIC connection over LAN": "З використанням QUICK з'єднання у LAN",
     "Using a QUIC connection over WAN": "З використанням QUICK з'єднання у WAN",
     "Using a direct TCP connection over LAN": "Використовується пряме TCP-з'єднання через локальну мережу",
@@ -542,6 +536,18 @@
     "modified": "змінено",
     "permit": "дозволь",
     "seconds": "секунд",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Логін/пароль не встановлені для автентифікації в панелі керування. Будь ласка, налаштуйте їх.",
+            "body-2": "Якщо ви хочете заборонити іншим користувачам цього комп’ютера отримувати доступ до Syncthing і через нього до своїх файлів, подумайте про налаштування автентифікації.",
+            "title": "Доступ до панелі керування: встановіть ім'я користувача та пароль"
+        },
+        "warning": {
+            "body-1": "Інтерфейс адміністрування Syncthing налаштовано на дозвіл віддаленого доступу без пароля.",
+            "body-2": "Це легко може дати хакерам доступ на читання та внесення змін до будь-яких файлів на вашому комп'ютері.",
+            "body-3": "Будь ласка, встановіть у налаштуваннях ім'я користувача та пароль до панелі керування."
+        }
+    },
     "theme": {
         "name": {
             "black": "Чорна",

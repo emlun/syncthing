@@ -171,7 +171,6 @@
     "GUI / API HTTPS Certificate": "",
     "GUI Authentication Password": "Valdymo skydelio slaptažodis",
     "GUI Authentication User": "Valdymo skydelio naudotojo vardas",
-    "GUI Authentication: Set User and Password": "Valdymo skydelio tapatybės nustatymas: Nustatyti naudotoją ir slaptažodį",
     "GUI Listen Address": "Valdymo skydelio adresas",
     "GUI Theme": "Valdymo skydelio apipavidalinimas",
     "General": "Bendra",
@@ -184,7 +183,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Vis dėlto, jūsų esami nustatymai nurodo, kad jūs, greičiausiai, nenorite turėti jas įjungtas. Mes jums išjungėme automatines ataskaitas apie strigtis.",
     "Identification": "Identifikavimas",
     "If untrusted, enter encryption password": "Jei nepatikimas, įveskite šifravimo slaptažodį",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Jei norite neleisti kitiems šio kompiuterio naudotojams gauti prieigą prie Syncthing, o per ją, prieigą prie jūsų failų, tuomet apsvarstykite galimybę nusistatyti tapatybės nustatymą.",
     "Ignore": "Nepaisyti",
     "Ignore Patterns": "Nepaisyti šablonų",
     "Ignore Permissions": "Nepaisyti failų prieigos leidimų",
@@ -271,7 +269,6 @@
     "Periodic scanning at given interval and enabled watching for changes": "Periodinis nuskaitymas nurodytu intervalu ir įjungtas pakeitimų stebėjimas",
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodinis nuskaitymas nurodytu intervalu ir nepavykęs nustatyti pakeitimų stebėjimas, bandoma iš naujo kas 1 min.:",
     "Please consult the release notes before performing a major upgrade.": "Peržvelkite laidos informaciją prieš atlikdami stambų atnaujinimą.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Prašome nustatymų dialoge nustatyti valdymo skydelio naudotojo vardą ir slaptažodį.",
     "Please wait": "Prašome palaukti",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Priešdelis, nurodantis, kad failas gali būti ištrintas tuo atveju, jei neleidžia šalinti katalogo",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Priešdelis, nurodantis, kad šablonas turėtų būti atitiktas neskiriant raidžių dydžio",
@@ -376,7 +373,6 @@
     "Take me back": "Sugrąžinkite mane",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Valdymo skydelio adresas yra nustelbiamas paleidimo parametrų. Čia esantys pakeitimai neįsigalios tol, kol yra nustelbimas.",
     "The Syncthing Authors": "Syncthing autoriai",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthing administratoriaus sąsaja yra sukonfigūruota taip, kad be slaptažodžio leistų nuotolinę prieigą.",
     "The aggregated statistics are publicly available at the URL below.": "Naudojimosi ataskaitą galite peržiūrėti žemiau nurodytu URL adresu.",
     "The cleanup interval cannot be blank.": "Išvalymo intervalas negali būti tuščias.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Konfigūracija įrašyta, bet neaktyvuota. Syncthing privalo būti paleista iš naujo, kad aktyvuotų naują konfigūraciją.",
@@ -411,7 +407,6 @@
     "There are no folders to share with this device.": "Nėra aplankų, kuriuos bendrinti su šiuo įrenginiu.",
     "They are retried automatically and will be synced when the error is resolved.": "Failus bus automatiškai bandoma parsiųsti dar kartą kai išspręsite klaidas.",
     "This Device": "Šis įrenginys",
-    "This can easily give hackers access to read and change any files on your computer.": "Tai gali suteikti programišiams lengvą prieigą skaityti ir keisti bet kokius failus jūsų kompiuteryje.",
     "This is a major version upgrade.": "Tai yra stambus atnaujinimas.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Šis nustatymas valdo laisvą vietą, kuri yra reikalinga namų (duomenų bazės) diske.",
     "Time": "Laikas",
@@ -443,7 +438,6 @@
     "Use HTTPS for GUI": "Valdymo skydeliui naudoti saugų ryšį ",
     "Use notifications from the filesystem to detect changed items.": "Naudoti pranešimus iš failų sistemos, norint aptikti pakeistus elementus.",
     "User": "Naudotojas",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Valdymo skydelio tapatybės nustatymui nebuvo nustatytas naudotojo vardas/slaptažodis. Apsvarstykite galimybę jį nusistatyti.",
     "Using a QUIC connection over LAN": "Naudoja QUIC ryšį per vietinį tinklą (LAN)",
     "Using a QUIC connection over WAN": "Naudoja QUIC ryšį per platųjį tinklą (WAN)",
     "Using a direct TCP connection over LAN": "Naudoja tiesioginį TCP ryšį per vietinį tinklą (LAN)",
@@ -488,6 +482,18 @@
     "items": "įrašai",
     "modified": "modifikuotas",
     "seconds": "sek.",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Valdymo skydelio tapatybės nustatymui nebuvo nustatytas naudotojo vardas/slaptažodis. Apsvarstykite galimybę jį nusistatyti.",
+            "body-2": "Jei norite neleisti kitiems šio kompiuterio naudotojams gauti prieigą prie Syncthing, o per ją, prieigą prie jūsų failų, tuomet apsvarstykite galimybę nusistatyti tapatybės nustatymą.",
+            "title": "Valdymo skydelio tapatybės nustatymas: Nustatyti naudotoją ir slaptažodį"
+        },
+        "warning": {
+            "body-1": "Syncthing administratoriaus sąsaja yra sukonfigūruota taip, kad be slaptažodžio leistų nuotolinę prieigą.",
+            "body-2": "Tai gali suteikti programišiams lengvą prieigą skaityti ir keisti bet kokius failus jūsų kompiuteryje.",
+            "body-3": "Prašome nustatymų dialoge nustatyti valdymo skydelio naudotojo vardą ir slaptažodį."
+        }
+    },
     "theme": {
         "name": {
             "black": "Juodas",

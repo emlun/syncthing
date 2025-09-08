@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS Sertifikat",
     "GUI Authentication Password": "Passord for GUI-autenisering",
     "GUI Authentication User": "Bruker for GUI-autenisering",
-    "GUI Authentication: Set User and Password": "GUI Autentifisering: Lagre bruker og passord",
     "GUI Listen Address": "Lytteadresse for grafisk brukergrensesnitt",
     "GUI Override Directory": "GUI Overstyr katalog",
     "GUI Theme": "GUI-tema",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Imdlertid indikerer dine nåværende innstillinger at du ikke vil ha det aktivert. Vi har deaktivert automatiske krasjrapporter for deg.",
     "Identification": "Identifikasjon",
     "If untrusted, enter encryption password": "Hvis ikke sikkert, legg til krypterings-passord",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Hvis du vil hindre andre brukere på denne maskinen fra tilgang til Syncthing, og gjennom det dine filer, vurder å sette opp autentisering.",
     "Ignore": "Ignorer",
     "Ignore Patterns": "Utelatelsesmønster",
     "Ignore Permissions": "Ignorer rettigheter",
@@ -281,7 +279,6 @@
     "Periodic scanning at given interval and enabled watching for changes": "Periodisk skanning på gitte intervall og påskrudd oppsyn med endringer",
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodisk skanning på gitte intervall og mislyktes i å sette opp oppsyn med endringer, prøver igjen hvert minutt:",
     "Please consult the release notes before performing a major upgrade.": "Sjekk utgivelsesnotatene før en storoppgradering utføres.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Vennligst angi bruker og passord for GUI-autentisering i innstillingsvinduet.",
     "Please wait": "Vent",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefiks som indikerer at fila kan slettes hvis den forhindrer fjerning av mappe",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefiks som indikerer at mønsteret skal samsvare uten versalsensitivitet",
@@ -373,7 +370,6 @@
     "Syncthing seems to be experiencing a problem processing your request. Please refresh the page or restart Syncthing if the problem persists.": "Syncthing ser ut til å ha støtt på et problem under behandling av din forespørsel. Gjenoppfrisk nettleseren eller start Syncthing på nytt dersom problemet vedvarer.",
     "Take me back": "Gå tilbake",
     "The Syncthing Authors": "Syncthings forfattere",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Grensesnittet for administrering av Syncthing er satt til å tillate ekstern tilgang uten et passord.",
     "The aggregated statistics are publicly available at the URL below.": "Innsamlet statistikk er åpent tilgjengelig via nettadressen angitt nedenfor.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Innstillingene har blitt lagret men ikke aktivert. Syncthing må starte på ny for å aktivere de nye innstillingene.",
     "The device ID cannot be blank.": "Enhets-ID kan ikke være tom.",
@@ -401,7 +397,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Disse hentes automatisk og vil synkroniseres når feilen er blitt utbedret.",
     "This Device": "Denne enheten",
     "This Month": "Denne måned",
-    "This can easily give hackers access to read and change any files on your computer.": "Dette kan lett gi hackere tilgang til å lese og endre alle filer på datamaskinen din.",
     "This is a major version upgrade.": "Dette er en stor versjonsoppgradering.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Denne innstillingen kontrollerer ledig diskplass krevd på hjemme- (f.eks. indekseringsdatabase-) disken.",
     "Time": "Klokkeslett",
@@ -470,6 +465,17 @@
     "modified": "endret",
     "permit": "tillat",
     "seconds": "sekunder",
+    "setup-auth": {
+        "notification": {
+            "body-2": "Hvis du vil hindre andre brukere på denne maskinen fra tilgang til Syncthing, og gjennom det dine filer, vurder å sette opp autentisering.",
+            "title": "GUI Autentifisering: Lagre bruker og passord"
+        },
+        "warning": {
+            "body-1": "Grensesnittet for administrering av Syncthing er satt til å tillate ekstern tilgang uten et passord.",
+            "body-2": "Dette kan lett gi hackere tilgang til å lese og endre alle filer på datamaskinen din.",
+            "body-3": "Vennligst angi bruker og passord for GUI-autentisering i innstillingsvinduet."
+        }
+    },
     "theme": {
         "name": {
             "black": "Sort",

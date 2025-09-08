@@ -132,7 +132,6 @@
     "Pause": "Tạm dừng",
     "Paused": "Đã t.dừng",
     "Please consult the release notes before performing a major upgrade.": "Hãy xem kỹ lịch sử phát hành trước khi tiến hành bản cập nhật q.trọng.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Hãy thiết lập tên ng.dùng và mật khẩu xác minh GUI trong hộp thoại Cài đặt.",
     "Please wait": "Xin chờ",
     "Preview": "Xem trước",
     "Preview Usage Report": "Xem trước báo cáo s.dụng",
@@ -180,7 +179,6 @@
     "Syncthing is upgrading.": "Syncthing đang n.cấp.",
     "Syncthing seems to be down, or there is a problem with your Internet connection. Retrying…": "Có vẻ như Syncthing đang bị nghẽn hoặc là mạng của bạn có vấn đề. Đang thử lại...",
     "Syncthing seems to be experiencing a problem processing your request. Please refresh the page or restart Syncthing if the problem persists.": "Có vẻ như Syncthing đang gặp phải v.đề khi x.lý yêu cầu của bạn. Xin làm mới trang hoặc kh.động lại Syncthing nếu v.đề vẫn còn tiếp diễn.",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Giao diện q.trị của Syncthing được c.hình nhằm cho phép tr.cập từ xa không cần mật khẩu.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Cấu hình đã được lưu nhưng chưa được kích hoạt. Syncthing phải khởi động lại để kích hoạt cấu hình mới. ",
     "The device ID cannot be blank.": "Không được để trống ID thiết bị.",
     "The device ID to enter here can be found in the \"Actions > Show ID\" dialog on the other device. Spaces and dashes are optional (ignored).": "ID thiết bị cần nhập có thể được tìm thấy trong hộp thoại \"Thao tác > Hiển thị ID\" trên thiết bị kia. Khoảng trắng và gạch ngang là tuỳ chọn (bỏ qua).",
@@ -202,7 +200,6 @@
     "The rescan interval must be a non-negative number of seconds.": "Khoảng thời gian quét lại phải là một số giây không âm.",
     "They are retried automatically and will be synced when the error is resolved.": "Chúng sẽ được tự động thử lại và đồng bộ khi lỗi được khắc phục.",
     "This Device": "Thiết bị này",
-    "This can easily give hackers access to read and change any files on your computer.": "Th.tác này có thể khiến tin tặc dễ dàng tr.cập để đọc và th.đổi bất kỳ t.tin nào trên máy của bạn.",
     "This is a major version upgrade.": "Đây là bản nâng cấp quan trọng.",
     "Trash Can File Versioning": "Kiểu thùng rác",
     "Unknown": "Không biết",
@@ -236,6 +233,13 @@
     "files": "Các tệp tin",
     "full documentation": "tài liệu đầy đủ",
     "items": "Các mục",
+    "setup-auth": {
+        "warning": {
+            "body-1": "Giao diện q.trị của Syncthing được c.hình nhằm cho phép tr.cập từ xa không cần mật khẩu.",
+            "body-2": "Th.tác này có thể khiến tin tặc dễ dàng tr.cập để đọc và th.đổi bất kỳ t.tin nào trên máy của bạn.",
+            "body-3": "Hãy thiết lập tên ng.dùng và mật khẩu xác minh GUI trong hộp thoại Cài đặt."
+        }
+    },
     "{%device%} wants to share folder \"{%folder%}\".": "{{device}} muốn chia sẻ thư mục \"{{folder}}\".",
     "{%device%} wants to share folder \"{%folderlabel%}\" ({%folder%}).": "{{device}} muốn chia sẻ thư mục \"{{folderlabel}}\" \"{{folder}}\"."
 }

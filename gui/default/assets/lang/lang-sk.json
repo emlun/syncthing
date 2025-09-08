@@ -179,7 +179,6 @@
     "GUI / API HTTPS Certificate": "Certifikát GUI / API HTTPS",
     "GUI Authentication Password": "Prihlasovacie heslo do GUI",
     "GUI Authentication User": "Prihlasovacie meno do GUI",
-    "GUI Authentication: Set User and Password": "Autentifikácia do webového rozhrania: Nastavenie mena a hesla",
     "GUI Listen Address": "Adresa pre prístup do GUI",
     "GUI Override Directory": "Adresár pre GUI Override",
     "GUI Theme": "Grafická téma GUI",
@@ -194,7 +193,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Vaše aktuálne nastavenia naznačujú, že funkciu nechcete povoliť. Automatické hlásenia zlyhaní boli vypnuté.",
     "Identification": "Identifikácia",
     "If untrusted, enter encryption password": "Ak nie je dôveryhodný, uveďte heslo na dešifrovanie",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Ak chcete ostatným používateľom tohto počítača zabrániť v prístupe k službe Syncthing a prostredníctvom nej k vašim súborom, zvážte nastavenie overenia.",
     "Ignore": "Ignorovať",
     "Ignore Patterns": "Ignorované vzory",
     "Ignore Permissions": "Ignorované práva",
@@ -294,7 +292,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Pravidelné skenovanie v danom intervale a neúspešné nastavenie sledovania zmien, opakovanie každú 1 m:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Natrvalo pridať do zoznamu ignorovaných, čím potlačíte ďalšie upozornenia.",
     "Please consult the release notes before performing a major upgrade.": "Pred spustením hlavnej aktualizácie si prosím prečítajte poznámky k vydaniu.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Zadajte prosím prihlasovanie meno a heslo v dialógovom okne nastavení.",
     "Please wait": "Prosím čakajte",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefix označujúci, že súbor môže byť odstránený, ak bráni odstráneniu adresára",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefix označujúci, že vzory by mali ignorovať veľkosť písma",
@@ -412,7 +409,6 @@
     "Take me back": "Späť",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Adresa GUI je potlačená možnosťami pri spustení. Kým trvá potlačenie, tu vykonané zmeny sú bez účinku.",
     "The Syncthing Authors": "Autori Syncthing",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Rozhranie správcu Syncthing je nakonfigurované tak, aby umožňovalo vzdialený prístup bez hesla.",
     "The aggregated statistics are publicly available at the URL below.": "Súhrnné štatistiky sú verejne dostupné na uvedenej URL.",
     "The cleanup interval cannot be blank.": "Interval čistenia nemôže byť prázdny.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "Konfigurácia bola uložená, ale nebola aktivovaná. Aby sa aktivovala nová konfigurácia, musíte reštartovať Syncthing.",
@@ -452,7 +448,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Automaticky sa zopakujú a po odstránení chyby sa zosynchronizujú.",
     "This Device": "Toto zariadenie",
     "This Month": "Tento mesiac",
-    "This can easily give hackers access to read and change any files on your computer.": "Toto môže jednoducho umožniť hackerom čítať a meniť všetky súbory na vašom počítači.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Toto zariadenie nemôže automaticky objaviť iné zariadenia ani oznámiť svoju vlastnú adresu, aby ju našli ostatní. Pripojiť sa môžu iba zariadenia so staticky nakonfigurovanými adresami.",
     "This is a major version upgrade.": "Toto je hlavná aktualizácia.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Toto nastavenie kontroluje voľné miesto požadované na domovskom disku (napr. indexová databáza).",
@@ -488,7 +483,6 @@
     "Use notifications from the filesystem to detect changed items.": "Na zistenie zmenených položiek použite upozornenia zo súborového systému.",
     "User": "Používateľ",
     "User Home": "Domovský adresár",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Používateľské meno/heslo nebolo nastavené pre overenie GUI. Zvážte jeho nastavenie.",
     "Using a QUIC connection over LAN": "Používam pripojenie QUIC over LAN",
     "Using a QUIC connection over WAN": "Používam pripojenie QUIC over WAN",
     "Using a direct TCP connection over LAN": "Použitie priameho pripojenia TCP cez LAN",
@@ -537,6 +531,18 @@
     "modified": "zmenené",
     "permit": "povolenie",
     "seconds": "sekúnd",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Používateľské meno/heslo nebolo nastavené pre overenie GUI. Zvážte jeho nastavenie.",
+            "body-2": "Ak chcete ostatným používateľom tohto počítača zabrániť v prístupe k službe Syncthing a prostredníctvom nej k vašim súborom, zvážte nastavenie overenia.",
+            "title": "Autentifikácia do webového rozhrania: Nastavenie mena a hesla"
+        },
+        "warning": {
+            "body-1": "Rozhranie správcu Syncthing je nakonfigurované tak, aby umožňovalo vzdialený prístup bez hesla.",
+            "body-2": "Toto môže jednoducho umožniť hackerom čítať a meniť všetky súbory na vašom počítači.",
+            "body-3": "Zadajte prosím prihlasovanie meno a heslo v dialógovom okne nastavení."
+        }
+    },
     "theme": {
         "name": {
             "black": "Čierna",

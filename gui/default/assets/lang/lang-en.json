@@ -189,11 +189,9 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS Certificate",
     "GUI Authentication Password": "GUI Authentication Password",
     "GUI Authentication User": "GUI Authentication User",
-    "GUI Authentication: Setup Required": "GUI Authentication: Setup Required",
     "GUI Listen Address": "GUI Listen Address",
     "GUI Override Directory": "GUI Override Directory",
     "GUI Theme": "GUI Theme",
-    "GUI authentication has not been configured. Please consider setting up a username and password, or enrolling a WebAuthn credential (passkey).": "GUI authentication has not been configured. Please consider setting up a username and password, or enrolling a WebAuthn credential (passkey).",
     "General": "General",
     "Generate": "Generate",
     "Global Discovery": "Global Discovery",
@@ -205,7 +203,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.",
     "Identification": "Identification",
     "If untrusted, enter encryption password": "If untrusted, enter encryption password",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.",
     "Ignore": "Ignore",
     "Ignore Patterns": "Ignore Patterns",
     "Ignore Permissions": "Ignore Permissions",
@@ -311,7 +308,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Permanently add it to the ignore list, suppressing further notifications.",
     "Please consult the release notes before performing a major upgrade.": "Please consult the release notes before performing a major upgrade.",
-    "Please set up GUI authentication in the Settings dialog.": "Please set up GUI authentication in the Settings dialog.",
     "Please wait": "Please wait",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Prefix indicating that the file can be deleted if preventing directory removal",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Prefix indicating that the pattern should be matched without case sensitivity",
@@ -439,7 +435,6 @@
     "Take me back": "Take me back",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.",
     "The Syncthing Authors": "The Syncthing Authors",
-    "The Syncthing admin interface is configured to allow remote access without authentication.": "The Syncthing admin interface is configured to allow remote access without authentication.",
     "The aggregated statistics are publicly available at the URL below.": "The aggregated statistics are publicly available at the URL below.",
     "The cleanup interval cannot be blank.": "The cleanup interval cannot be blank.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.",
@@ -480,7 +475,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "They are retried automatically and will be synced when the error is resolved.",
     "This Device": "This Device",
     "This Month": "This Month",
-    "This can easily give hackers access to read and change any files on your computer.": "This can easily give hackers access to read and change any files on your computer.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.",
     "This device or security key is already registered. Please use a different one.": "This device or security key is already registered. Please use a different one.",
     "This device or security key is not registered. Please try a different one.": "This device or security key is not registered. Please try a different one.",
@@ -583,6 +577,18 @@
                     "rpId": "RP ID:"
                 }
             }
+        }
+    },
+    "setup-auth": {
+        "notification": {
+            "body-1": "GUI authentication has not been configured. Please consider setting up a username and password, or enrolling a WebAuthn credential (passkey).",
+            "body-2": "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.",
+            "title": "GUI Authentication: Setup Required"
+        },
+        "warning": {
+            "body-1": "The Syncthing admin interface is configured to allow remote access without authentication.",
+            "body-2": "This can easily give hackers access to read and change any files on your computer.",
+            "body-3": "Please set up GUI authentication in the Settings dialog."
         }
     },
     "theme": {

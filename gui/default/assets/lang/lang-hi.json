@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS प्रमाणपत्र",
     "GUI Authentication Password": "GUI प्रमाणीकरण पासवर्ड",
     "GUI Authentication User": "GUI प्रमाणीकरण उपयोक्ता",
-    "GUI Authentication: Set User and Password": "जीयूआई प्रमाणीकरण: उपयोक्ता और पासवर्ड निर्धारित करें",
     "GUI Listen Address": "GUI सुनने का पता",
     "GUI Override Directory": "GUI अध्यारोहण निर्देशिका",
     "GUI Theme": "GUI थीम",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "हालांकि, आपकी वर्तमान सेटिंग्स इंगित करती हैं कि आप शायद इसे सक्षम नहीं करना चाहेंगे। हमने आपके लिए स्वचालित क्रैश रिपोर्टिंग अक्षम कर दी है।",
     "Identification": "पहचान",
     "If untrusted, enter encryption password": "यदि अविश्वसनीय है, तो कूटलेखन पासवर्ड दर्ज करें",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "यदि आप इस कंप्यूटर पर अन्य उपयोक्ताओं को Syncthing और इसके माध्यम से अपनी फाइलों तक पहुँचने से रोकना चाहते हैं, तो प्रमाणीकरण स्थापित करने पर विचार करें।",
     "Ignore": "नजरअंदाज करें",
     "Ignore Patterns": "नजरअंदाज प्रतिमान",
     "Ignore Permissions": "अनुमतियां नजरअंदाज करें",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "दिए गए अंतराल पर आवधिक स्कैनिंग और परिवर्तनों को देखने के लिए स्थापना विफल, हर 1मि में पुन: प्रयास:",
     "Permanently add it to the ignore list, suppressing further notifications.": "आगे की सूचनाओं को दबाते हुए, इसे स्थायी रूप से अनदेखा सूची में जोड़ें।",
     "Please consult the release notes before performing a major upgrade.": "कृपया कोई बड़ा उन्नयन करने से पहले रिलीज़ नोट्स से परामर्श लें।",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "कृपया सेटिंग्स संवाद में एक GUI प्रमाणीकरण उपयोक्ता और पासवर्ड निर्धारित करें।",
     "Please wait": "कृपया प्रतीक्षा करें",
     "Prefix indicating that the file can be deleted if preventing directory removal": "उपसर्ग यह दर्शाता है कि निर्देशिका हटाने से रोकने पर फाइल को मिटाया जा सकता है",
     "Prefix indicating that the pattern should be matched without case sensitivity": "उपसर्ग यह दर्शाता है कि प्रतिमान को केस संवेदनशीलता के बिना मिलान किया जाना चाहिए",
@@ -415,7 +412,6 @@
     "Take me back": "मुझे वापस ले जाएं",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "GUI पता स्टार्टअप विकल्पों द्वारा अध्यारोहण किया गया है। अध्यारोहण लागू होने तक यहां परिवर्तन प्रभावी नहीं होंगे।",
     "The Syncthing Authors": "Syncthing के रचयिता",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthing व्यवस्थापक इंटरफ़ेस को पासवर्ड के बिना रिमोट पहुंच की अनुमति देने के लिए विन्यस्त किया गया है।",
     "The aggregated statistics are publicly available at the URL below.": "एकत्रित आंकड़े नीचे दिए गए URL पर सार्वजनिक रूप से उपलब्ध हैं।",
     "The cleanup interval cannot be blank.": "सफाई अंतराल रिक्त नहीं हो सकता।",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "विन्यास सहेजा गया है लेकिन सक्रिय नहीं किया गया है। नए विन्यास को सक्रिय करने के लिए Syncthing को पुनरारंभ करना होगा।",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "वे स्वचालित रूप से पुनः प्रयास किए जाते हैं और त्रुटि हल होने पर समन्वयित हो जाएंगे।",
     "This Device": "यह उपकरण",
     "This Month": "इस महीने",
-    "This can easily give hackers access to read and change any files on your computer.": "इससे हैकर्स को आसानी से आपके कंप्यूटर पर किसी भी फाइल को पढ़ने और बदलने की सुविधा मिल सकती है।",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "यह उपकरण स्वचालित रूप से अन्य उपकरणों की खोज नहीं कर सकता है या दूसरों द्वारा ढूंढे जाने के लिए अपने स्वयं के पते की घोषणा नहीं कर सकता है। केवल स्थिर रूप से विन्यस्त पते वाले उपकरण ही जुड़ सकते हैं।",
     "This is a major version upgrade.": "यह प्रमुख संस्करण उन्नयन है।",
     "This setting controls the free space required on the home (i.e., index database) disk.": "यह सेटिंग होम (यानी, अनुक्रमणिका डेटाबेस) डिस्क पर आवश्यक खाली स्थान को नियंत्रित करती है।",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "परिवर्तित वस्तुओं का पता लगाने के लिए फाइल सिस्टम से सूचनाओं का उपयोग करें।",
     "User": "उपयोक्ता",
     "User Home": "उपयोक्ता होम",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "GUI प्रमाणीकरण के लिए उपयोक्तानाम/पासवर्ड निर्धारित नहीं किया गया है। कृपया इसे स्थापित करने पर विचार करें।",
     "Using a QUIC connection over LAN": "LAN पर QUIC कनेक्शन का उपयोग किया जा रहा है",
     "Using a QUIC connection over WAN": "WAN पर QUIC कनेक्शन का उपयोग किया जा रहा है",
     "Using a direct TCP connection over LAN": "LAN पर सीधे TCP कनेक्शन का उपयोग किया जा रहा है",
@@ -540,6 +534,18 @@
     "modified": "संशोधित",
     "permit": "अनुमति",
     "seconds": "सेकंड",
+    "setup-auth": {
+        "notification": {
+            "body-1": "GUI प्रमाणीकरण के लिए उपयोक्तानाम/पासवर्ड निर्धारित नहीं किया गया है। कृपया इसे स्थापित करने पर विचार करें।",
+            "body-2": "यदि आप इस कंप्यूटर पर अन्य उपयोक्ताओं को Syncthing और इसके माध्यम से अपनी फाइलों तक पहुँचने से रोकना चाहते हैं, तो प्रमाणीकरण स्थापित करने पर विचार करें।",
+            "title": "जीयूआई प्रमाणीकरण: उपयोक्ता और पासवर्ड निर्धारित करें"
+        },
+        "warning": {
+            "body-1": "Syncthing व्यवस्थापक इंटरफ़ेस को पासवर्ड के बिना रिमोट पहुंच की अनुमति देने के लिए विन्यस्त किया गया है।",
+            "body-2": "इससे हैकर्स को आसानी से आपके कंप्यूटर पर किसी भी फाइल को पढ़ने और बदलने की सुविधा मिल सकती है।",
+            "body-3": "कृपया सेटिंग्स संवाद में एक GUI प्रमाणीकरण उपयोक्ता और पासवर्ड निर्धारित करें।"
+        }
+    },
     "theme": {
         "name": {
             "black": "काली",

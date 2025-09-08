@@ -181,7 +181,6 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS 憑證",
     "GUI Authentication Password": "GUI 驗證密碼",
     "GUI Authentication User": "GUI 驗證使用者名稱",
-    "GUI Authentication: Set User and Password": "GUI 驗證：設定使用者名稱與密碼",
     "GUI Listen Address": "GUI 監聽位址",
     "GUI Override Directory": "GUI 覆蓋目錄",
     "GUI Theme": "主題",
@@ -196,7 +195,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "但是，當前設定表明您可能不希望啟用它。我們為您停用了當機自動回報。",
     "Identification": "識別碼",
     "If untrusted, enter encryption password": "如未受信任，請輸入加密密碼",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "如果您想防止在此電腦上的其他使用者存取 Syncthing 及其文件，請考慮設定身份驗證。",
     "Ignore": "忽略",
     "Ignore Patterns": "忽略樣式",
     "Ignore Permissions": "忽略權限",
@@ -296,7 +294,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "在一定的時間間隔，定期掃描，無法設定觀察變動，每 1 分鐘重試：",
     "Permanently add it to the ignore list, suppressing further notifications.": "永久加入忽略清單，不再進一步通知。",
     "Please consult the release notes before performing a major upgrade.": "執行重大更新前請先參閱版本資訊。",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "請在設定對話框內設置 GUI 驗證使用者名稱及密碼。",
     "Please wait": "請稍候",
     "Prefix indicating that the file can be deleted if preventing directory removal": "前綴表示當此檔案阻礙了資料夾刪除時，可一併刪除此檔",
     "Prefix indicating that the pattern should be matched without case sensitivity": "前綴表示此樣式不區分大小寫",
@@ -415,7 +412,6 @@
     "Take me back": "帶我回去",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "GUI 位址已被自啟動選項覆寫。當覆寫啟用時，此處變更將不會生效。",
     "The Syncthing Authors": "Syncthing 作者們",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthing 管理介面被設定允許無密碼的遠端存取。",
     "The aggregated statistics are publicly available at the URL below.": "匯總統計資訊可於下方網址取得。",
     "The cleanup interval cannot be blank.": "清除間隔不能為空白。",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "組態已經儲存但尚未啟用。Syncthing 必須重新啟動以便啟用新的組態。",
@@ -455,7 +451,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "解決問題後，將會自動重試和同步。",
     "This Device": "本機",
     "This Month": "本月",
-    "This can easily give hackers access to read and change any files on your computer.": "這能給駭客輕易的來讀取、變更電腦中的任何檔案。",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "此裝置無法自動尋找其他裝置，或公開自身地址讓其他裝置找到。只有設定了固定位址的裝置才能進行連線。",
     "This is a major version upgrade.": "這是一個重大版本更新。",
     "This setting controls the free space required on the home (i.e., index database) disk.": "此設定控制家目錄（即：索引資料庫）的必須可用空間。",
@@ -491,7 +486,6 @@
     "Use notifications from the filesystem to detect changed items.": "使用來自檔案系統的通知以檢測變動的項目。",
     "User": "使用者",
     "User Home": "使用者主目錄",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "尚未設定GUI 驗證的使用者名稱/密碼。請考慮進行設定。",
     "Using a QUIC connection over LAN": "通過區域網路使用 QUIC 連線",
     "Using a QUIC connection over WAN": "通過廣域網路使用 QUIC 連線",
     "Using a direct TCP connection over LAN": "通過區域網路使用直接 TCP 連線",
@@ -540,6 +534,18 @@
     "modified": "已修改",
     "permit": "允許",
     "seconds": "秒",
+    "setup-auth": {
+        "notification": {
+            "body-1": "尚未設定GUI 驗證的使用者名稱/密碼。請考慮進行設定。",
+            "body-2": "如果您想防止在此電腦上的其他使用者存取 Syncthing 及其文件，請考慮設定身份驗證。",
+            "title": "GUI 驗證：設定使用者名稱與密碼"
+        },
+        "warning": {
+            "body-1": "Syncthing 管理介面被設定允許無密碼的遠端存取。",
+            "body-2": "這能給駭客輕易的來讀取、變更電腦中的任何檔案。",
+            "body-3": "請在設定對話框內設置 GUI 驗證使用者名稱及密碼。"
+        }
+    },
     "theme": {
         "name": {
             "black": "黑色",

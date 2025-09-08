@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "GUI/API HTTPS 证书",
     "GUI Authentication Password": "GUI 身份验证密码",
     "GUI Authentication User": "GUI 身份验证用户",
-    "GUI Authentication: Set User and Password": "GUI 身份验证：设置用户和密码",
     "GUI Listen Address": "GUI 监听地址",
     "GUI Override Directory": "GUI 覆盖目录",
     "GUI Theme": "GUI 主题",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "我们已经为您禁用了自动发送崩溃报告，因为您当前的设置表明您可能并不想启用该选项。",
     "Identification": "标识",
     "If untrusted, enter encryption password": "如果不受信任，请输入加密密码",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "如果要阻止此计算机上的其他用户访问 Syncthing 并通过它访问文件，请考虑设置身份验证。",
     "Ignore": "忽略",
     "Ignore Patterns": "忽略模式",
     "Ignore Permissions": "忽略权限",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "正在以给定间隔进行定期扫描，但设置更改监视失败，正在每分钟重试一次：",
     "Permanently add it to the ignore list, suppressing further notifications.": "将其永久添加到忽略列表中，以抑制进一步的通知。",
     "Please consult the release notes before performing a major upgrade.": "请在进行重大更新前查看发布说明。",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "请在设置对话框中设置 GUI 身份验证用户和密码。",
     "Please wait": "请稍候",
     "Prefix indicating that the file can be deleted if preventing directory removal": "此前缀表示，如果文件阻止删除目录则文件可被删除",
     "Prefix indicating that the pattern should be matched without case sensitivity": "此前缀表示，后面的模式在匹配时不区分大小写",
@@ -417,7 +414,6 @@
     "Take me back": "返回",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "GUI 地址已被启动选项覆盖。当覆盖存在时，此处的更改就不会生效。",
     "The Syncthing Authors": "Syncthing 作者",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "Syncthing 管理界面配置为允许无密码远程访问。",
     "The aggregated statistics are publicly available at the URL below.": "汇总统计可在以下 URL 公开获取。",
     "The cleanup interval cannot be blank.": "清除间隔不能为空。",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "配置已保存但未激活。Syncthing 必须重启才能激活新配置。",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "系统将会自动重试，并在错误解决后同步。",
     "This Device": "此设备",
     "This Month": "本月",
-    "This can easily give hackers access to read and change any files on your computer.": "这会让骇客能够轻而易举地访问及修改您的文件。",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "此设备无法自动发现其他设备，也无法向其他人宣布自己的地址。只有具有静态配置地址的设备才能连接。",
     "This is a major version upgrade.": "这是一次重大版本升级。",
     "This setting controls the free space required on the home (i.e., index database) disk.": "此设置控制主磁盘（即索引数据库）上所需的可用空间。",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "使用来自文件系统的通知来检测更改的项目。",
     "User": "用户",
     "User Home": "用户主目录",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "尚未为 GUI 身份验证设置用户名/密码。请考虑设置。",
     "Using a QUIC connection over LAN": "正在通过局域网使用 QUIC 连接",
     "Using a QUIC connection over WAN": "正在通过广域网使用 QUIC 连接",
     "Using a direct TCP connection over LAN": "正在通过局域网使用直接 TCP 连接",
@@ -542,6 +536,18 @@
     "modified": "已修改",
     "permit": "允许",
     "seconds": "秒",
+    "setup-auth": {
+        "notification": {
+            "body-1": "尚未为 GUI 身份验证设置用户名/密码。请考虑设置。",
+            "body-2": "如果要阻止此计算机上的其他用户访问 Syncthing 并通过它访问文件，请考虑设置身份验证。",
+            "title": "GUI 身份验证：设置用户和密码"
+        },
+        "warning": {
+            "body-1": "Syncthing 管理界面配置为允许无密码远程访问。",
+            "body-2": "这会让骇客能够轻而易举地访问及修改您的文件。",
+            "body-3": "请在设置对话框中设置 GUI 身份验证用户和密码。"
+        }
+    },
     "theme": {
         "name": {
             "black": "黑色",

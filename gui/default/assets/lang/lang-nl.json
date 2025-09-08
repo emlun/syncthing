@@ -183,7 +183,6 @@
     "GUI / API HTTPS Certificate": "GUI / API HTTPS-certificaat",
     "GUI Authentication Password": "GUI-wachtwoord",
     "GUI Authentication User": "GUI-gebruikersnaam",
-    "GUI Authentication: Set User and Password": "GUI-authenticatie: gebruikersnaam en wachtwoord instellen",
     "GUI Listen Address": "GUI-luisteradres",
     "GUI Override Directory": "GUI Override-map",
     "GUI Theme": "GUI-thema",
@@ -198,7 +197,6 @@
     "However, your current settings indicate you might not want it enabled. We have disabled automatic crash reporting for you.": "Jouw huidige instellingen geven echter aan dat je het misschien niet wil inschakelen. We hebben de automatische crashrapportage voor je uitgeschakeld.",
     "Identification": "Identificatie",
     "If untrusted, enter encryption password": "Indien niet vertrouwd, versleutelingswachtwoord opgeven",
-    "If you want to prevent other users on this computer from accessing Syncthing and through it your files, consider setting up authentication.": "Als je wil voorkomen dat andere gebruikers op deze computer toegang krijgen tot Syncthing en daardoor jouw bestanden, kun je overwegen om authenticatie in te stellen.",
     "Ignore": "Negeren",
     "Ignore Patterns": "Negeerpatronen",
     "Ignore Permissions": "Machtigingen negeren",
@@ -298,7 +296,6 @@
     "Periodic scanning at given interval and failed setting up watching for changes, retrying every 1m:": "Regelmatig scannen met opgegeven interval; instellen van opvolgen van wijzigingen mislukt. Elke minuut wordt opnieuw geprobeerd:",
     "Permanently add it to the ignore list, suppressing further notifications.": "Permanent toevoegen aan de negeerlijst zodat verdere meldingen worden onderdrukt.",
     "Please consult the release notes before performing a major upgrade.": "Lees eerst de release-opmerkingen voordat u een grote upgrade uitvoert.",
-    "Please set a GUI Authentication User and Password in the Settings dialog.": "Stel een gebruikersnaam en wachtwoord voor GUI-authenticatie in via het instellingen-venster.",
     "Please wait": "Even geduld",
     "Prefix indicating that the file can be deleted if preventing directory removal": "Voorvoegsel dat aangeeft dat het bestand kan verwijderd worden als het bestand het verwijderen van een map voorkomt",
     "Prefix indicating that the pattern should be matched without case sensitivity": "Voorvoegsel dat aangeeft dat het patroon niet hoofdlettergevoelig moet overeenkomen",
@@ -417,7 +414,6 @@
     "Take me back": "Terugkeren",
     "The GUI address is overridden by startup options. Changes here will not take effect while the override is in place.": "Het GUI-adres wordt overschreven door opstart-opties. Wijzigingen hier zullen geen effect hebben terwijl de overschrijving van kracht is.",
     "The Syncthing Authors": "De Syncthing-auteurs",
-    "The Syncthing admin interface is configured to allow remote access without a password.": "De beheerdersinterface van Syncthing is ingesteld om externe toegang zonder wachtwoord toe te staan.",
     "The aggregated statistics are publicly available at the URL below.": "De verzamelde statistieken zijn publiek beschikbaar op de onderstaande URL.",
     "The cleanup interval cannot be blank.": "Het opruiminterval mag niet leeg zijn.",
     "The configuration has been saved but not activated. Syncthing must restart to activate the new configuration.": "De configuratie is opslagen maar nog niet ingeschakeld. Syncthing moet opnieuw gestart worden om de nieuwe configuratie in te schakelen.",
@@ -457,7 +453,6 @@
     "They are retried automatically and will be synced when the error is resolved.": "Ze worden automatisch opnieuw geprobeerd en zullen gesynchroniseerd worden wanneer de fout opgelost is.",
     "This Device": "Dit apparaat",
     "This Month": "Deze maand",
-    "This can easily give hackers access to read and change any files on your computer.": "Dit kan hackers eenvoudig toegang geven om bestanden op je computer te lezen en te wijzigen.",
     "This device cannot automatically discover other devices or announce its own address to be found by others.  Only devices with statically configured addresses can connect.": "Dit apparaat kan andere apparaten niet automatisch detecteren of zijn eigen adres aankondigen om door anderen gevonden te worden. Alleen apparaten met statisch geconfigureerde adressen kunnen verbinding maken.",
     "This is a major version upgrade.": "Dit is een grote versie-upgrade.",
     "This setting controls the free space required on the home (i.e., index database) disk.": "Deze instelling bepaalt de benodigde vrije ruimte op de home-schijf (d.w.z. de indexdatabase).",
@@ -493,7 +488,6 @@
     "Use notifications from the filesystem to detect changed items.": "Meldingen van het bestandssysteem gebruiken om gewijzigde items te detecteren.",
     "User": "Gebruiker",
     "User Home": "Thuismap gebruiker",
-    "Username/Password has not been set for the GUI authentication. Please consider setting it up.": "Gebruikersnaam/wachtwoord is niet ingesteld voor de GUI-authenticatie. Overweeg om het in te stellen.",
     "Using a QUIC connection over LAN": "Een QUIC-verbinding via LAN gebruiken",
     "Using a QUIC connection over WAN": "Een QUIC-verbinding via WAN gebruiken",
     "Using a direct TCP connection over LAN": "Een directe TCP-verbinding via LAN gebruiken",
@@ -542,6 +536,18 @@
     "modified": "gewijzigd",
     "permit": "toestaan",
     "seconds": "seconden",
+    "setup-auth": {
+        "notification": {
+            "body-1": "Gebruikersnaam/wachtwoord is niet ingesteld voor de GUI-authenticatie. Overweeg om het in te stellen.",
+            "body-2": "Als je wil voorkomen dat andere gebruikers op deze computer toegang krijgen tot Syncthing en daardoor jouw bestanden, kun je overwegen om authenticatie in te stellen.",
+            "title": "GUI-authenticatie: gebruikersnaam en wachtwoord instellen"
+        },
+        "warning": {
+            "body-1": "De beheerdersinterface van Syncthing is ingesteld om externe toegang zonder wachtwoord toe te staan.",
+            "body-2": "Dit kan hackers eenvoudig toegang geven om bestanden op je computer te lezen en te wijzigen.",
+            "body-3": "Stel een gebruikersnaam en wachtwoord voor GUI-authenticatie in via het instellingen-venster."
+        }
+    },
     "theme": {
         "name": {
             "black": "Zwart",
